@@ -61,7 +61,7 @@ void Edificios::mostar(){
     cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
     cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
     cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
-    cout << "\t║\t\t       ║   Piedra    ║   Madera    ║    Metal    ║\t\t\t    ║" << endl;
+    cout << "\t║                      ║   Piedra    ║   Madera    ║    Metal    ║                          ║" << endl;
     cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
 
     for (int i = 0; i < this->total_edificios; i++){
