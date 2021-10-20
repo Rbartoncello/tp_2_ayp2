@@ -38,9 +38,13 @@ class Edificios{
 
         void procesar_archivo();
 
+        void mostar();
+
+    private:
+    
         void agregar_edificio(Edificio* edificio);
 
-        void mostar();
+        
 };
 
 #endif
