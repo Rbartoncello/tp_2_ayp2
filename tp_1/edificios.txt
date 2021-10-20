@@ -1,0 +1,9 @@
+yacimiento 125 280 0 0 2
+escuela 152 298 45 1 1
+fabrica 100 100 258 0 4
+aserradero 100 58 50 1 2
+carcel 45 58 47 0 2
+hospital 78 97 50 4 5
+estadio 500 78 50 0 1
+jardin 248 47 50 1 2
+policia 500 78 50 0 1
