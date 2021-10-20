@@ -1,6 +1,9 @@
 #include "edificio.h"
 #include <fstream>
 #include <iostream>
+#include <cstdlib>
+#include <unistd.h>
+#include <iomanip>
 
 const string PATH_EDIFICIO = "edificios.txt";
 
@@ -54,8 +57,24 @@ void Edificios::procesar_archivo(){
 }
 
 void Edificios::mostar(){
-    for (int i = 0; i < this->total_edificios; i++)
-        this->edificios[i]->mostar();    
+
+    cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
+    cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
+    cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
+    cout << "\t║\t\t       ║   Piedra    ║   Madera    ║    Metal    ║\t\t\t    ║" << endl;
+    cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
+
+    for (int i = 0; i < this->total_edificios; i++){
+        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre() << setfill(' ') << setw(9);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->cant_piedra_necesaria() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->cant_madera_necesaria() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->cant_metal_necesaria() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(14) << this->edificios[i]->maximo_permitidos() << setfill(' ') << setw(15) << "║" << endl;
+        if(i < this->total_edificios - 1)
+            cout << "\t╠──────────────────────┼─────────────┼─────────────┼─────────────┼──────────────────────────╣" << endl;
+        else
+            cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩══════════════════════════╝" << endl;
+    }  
 }
 
 void Edificio::mostar(){
