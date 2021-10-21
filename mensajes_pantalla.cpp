@@ -25,6 +25,22 @@ void mensaje_bienvenida(){
   MM   8M   MM     YM.    , YA.   ,A9   MM    MM  L.   I8   MM      MM       MM    MM  YM.    , YM.    ,    MM  YA.   ,A9   MM    MM  \n\
 .JMML.`Moo9^Yo.     YMbmd'   `Ybmd9'  .JMML  JMML.M9mmmP'   `Mbmo .JMML.     `MbodYML.  YMbmd'   YMbmd'   .JMML. `Ybmd9'  .JMML  JMML. \n" 
     << END_COLOR << endl;
+    cout << "\
+    \t\t\tLuego de muchos años de espera Andy finalmente encontró el lugar perfecto para\n\
+    \t\tasentarse y comenzar a armar su pequeño paraíso. Como primera medida decidió nombrar\n\
+    \t\tsu nuevo hogar como Andypolis, la maravillosa ciudad de los programadores.\n\
+    \t\t\tPoco a poco con el pasar de los días el rumor del surgimiento de una ciudad exclusiva para\n\
+    \t\tprogramadores se fue difundiendo y la gente comenzó a llegar a ella y se armó un programa\n\
+    \t\tque ayude a contabilizar los materiales y edificios de la ciudad.\n\
+    \t\t\tFue tanta la popularidad de este programa que llegaron aún más programadores a ayudar y\n\
+    \t\tpasar el diseño de Andypolis al programa, pero algunos de ellos, fanáticos de los\n\
+    \t\tvideojuegos, decidieron darle una pequeña vuelta de tuerca…\n\
+    \t\t\tPasaron unas semanas y los habitantes de Andypolis nos pidieron ayuda para generar una\n\
+    \t\tnueva versión de nuestro programa. Como la dificultad del programa aumentó nos pidieron\n\
+    \t\tque dos programadores se unan y desarrollen su programa en conjunto." << endl << endl;
+    cout << "\t\t\t\t\t\tPresione [ENTER] para continuar"<< endl;
+    cin.get();
+    system("clear");
 }
 
 void imprimir_mensaje_error(){
