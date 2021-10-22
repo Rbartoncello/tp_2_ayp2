@@ -1,6 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 #include <string>
+#include "edificio.h"
 
 using namespace std;
 
@@ -44,7 +45,7 @@ void validar_opcion_ingresada(int &opcion_elegida);
  * PRE: -
  * POST: Realiza la opcion pedida
  */
-void procesar_opcion(int opcion);
+void procesar_opcion(int opcion, Edificios edificios);
 
 /*
  * PRE: -

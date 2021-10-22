@@ -69,7 +69,7 @@ void validar_opcion_ingresada(int &opcion_elegida){
     }
 }
 
-void procesar_opcion(int opcion){
+void procesar_opcion(int opcion, Edificios edificios){
 
     switch (opcion){
         case CONSTRUIR_EDIFICIO_NOMBRE:
@@ -77,6 +77,7 @@ void procesar_opcion(int opcion){
         case LISTAR_EDIFICIOS_CONSTRUIDOS:
             break;
         case LISTAR_TODOS_EDIFICIOS:
+            edificios.mostar();
             break;
         case DEMOLER_EDIFICIO_COORDENADA:
             break;

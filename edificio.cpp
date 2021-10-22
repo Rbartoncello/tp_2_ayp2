@@ -1,4 +1,6 @@
 #include "edificio.h"
+#include "colors.h"
+#include "mensajes_pantalla.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -42,27 +44,34 @@ void Edificios::procesar_archivo(){
     ifstream archivo(PATH_EDIFICIO);
     string nombre, piedra, madera, metal, max_cant_permitidos;
 
-    while ( archivo >> nombre ){
-        archivo >> piedra;
-        archivo >> madera;
-        archivo >> metal;
-        archivo >> max_cant_permitidos;
+    if (!archivo.is_open()){
+        cout << "No se pudo abrir el archivo: " << PATH_EDIFICIO << endl;
+    } else {
+        while ( archivo >> nombre ){
+            archivo >> piedra;
+            archivo >> madera;
+            archivo >> metal;
+            archivo >> max_cant_permitidos;
 
-        Edificio* edificio  = new Edificio (nombre, stoi(piedra), stoi(madera), stoi(metal), stoi(max_cant_permitidos));
+            Edificio* edificio  = new Edificio (nombre, stoi(piedra), stoi(madera), stoi(metal), stoi   (max_cant_permitidos));
 
-        agregar_edificio(edificio);
+            agregar_edificio(edificio);
+        }
+
+        archivo.close();
     }
-
-    archivo.close();
 }
 
 void Edificios::mostar(){
+    system("clear");
 
+    cout << TXT_BOLD;
     cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
     cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
     cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
     cout << "\t║                      ║   Piedra    ║   Madera    ║    Metal    ║                          ║" << endl;
     cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
+    cout << END_COLOR;
 
     for (int i = 0; i < this->total_edificios; i++){
         cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre() << setfill(' ') << setw(9);
@@ -75,6 +84,7 @@ void Edificios::mostar(){
         else
             cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩══════════════════════════╝" << endl;
     }  
+    imprimir_mensaje_esperar(10);
 }
 
 void Edificio::mostar(){
