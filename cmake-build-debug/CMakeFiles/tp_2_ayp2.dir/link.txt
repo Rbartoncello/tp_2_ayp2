@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/tp_2_ayp2.dir/main.cpp.o CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o -o tp_2_ayp2 

@@ -3,6 +3,7 @@
 
 #include "iostream"
 #include <string>
+#include "colors.h"
 
 
 class Casillero{
@@ -13,10 +14,12 @@ class Casillero{
 
     public:
         Casillero(char tipo_terreno, int pos_x, int pos_y);
+        
         Casillero();
+        
         ~Casillero();
 
-        virtual void mostrar();
+        virtual void mostrar() = 0;
 
         char devolver_tipo_terreno();
 

@@ -22,8 +22,6 @@ Casillero::~Casillero(){
     
 }
 
-void Casillero::mostrar(){
-}
 
 char Casillero::devolver_tipo_terreno(){
     return this->tipo_terreno;

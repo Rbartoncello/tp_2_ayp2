@@ -3,4 +3,4 @@ project(tp_2_ayp2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tp_2_ayp2 main.cpp mapa.h casillero.h casillero.cpp mapa.cpp casillero_contruible.cpp casillero_contruible.h casillero_transitable.cpp casillero_transitable.h colors.h  cmake-build-debug/mapa.txt casillero_no_transitable.cpp casillero_no_transitable.h)
+add_executable(tp_2_ayp2 main.cpp casillero.cpp casillero.h casillero_construible.h casillero_construible.cpp casillero_inaccesible.h casillero_inaccesible.cpp casillero_transitable.cpp casillero_transitable.h mapa.h mapa.cpp)
