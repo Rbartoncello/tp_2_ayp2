@@ -14,13 +14,19 @@ Edificios::Edificios(){
 }
 
 Edificio::Edificio(string nombre, int piedra, int madera, int metal, int max_cant_permitidos){
-    this->nombre = nombre;
+    this->nombre_edificio = nombre;
     this->piedra = piedra;
     this->madera = madera;
     this->metal = metal;
-    this->max_cant_permitidos = max_cant_permitidos;   
+    this->maxima_cantidad_permitidos = max_cant_permitidos;   
 }
 
+Edificios::~Edificios(){
+    for (int i = 0; i < this->total_edificios; i++){
+        delete this->edificios[i];
+    }
+    delete [] this->edificios;
+}
 
 void Edificios::agregar_edificio(Edificio* edificio){
     int tope_viejo = this->total_edificios;
@@ -74,11 +80,11 @@ void Edificios::mostar(){
     cout << END_COLOR;
 
     for (int i = 0; i < this->total_edificios; i++){
-        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre() << setfill(' ') << setw(9);
-        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->cant_piedra_necesaria() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->cant_madera_necesaria() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->cant_metal_necesaria() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(14) << this->edificios[i]->maximo_permitidos() << setfill(' ') << setw(15) << "║" << endl;
+        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre_edificio() << setfill(' ') << setw(9);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_piedra() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_madera() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_metal() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(14) << this->edificios[i]->devolver_maxima_cantidad_permitidos() << setfill(' ') << setw(15) << "║" << endl;
         if(i < this->total_edificios - 1)
             cout << "\t╠──────────────────────┼─────────────┼─────────────┼─────────────┼──────────────────────────╣" << endl;
         else
@@ -88,25 +94,25 @@ void Edificios::mostar(){
 }
 
 void Edificio::mostar(){
-    cout << devolver_nombre() << " " << cant_piedra_necesaria() << " " << cant_madera_necesaria() << " " << cant_metal_necesaria() << " " << maximo_permitidos() << endl;
+    cout << devolver_nombre_edificio() << " " << devolver_piedra() << " " << devolver_madera() << " " << devolver_metal() << " " << devolver_maxima_cantidad_permitidos() << endl;
 }
 
-string Edificio::devolver_nombre(){
-    return this->nombre;
+string Edificio::devolver_nombre_edificio(){
+    return this->nombre_edificio;
 }
 
-int Edificio::cant_piedra_necesaria(){
+int Edificio::devolver_piedra(){
     return this->piedra;
 }
 
-int Edificio::cant_madera_necesaria(){
+int Edificio::devolver_madera(){
     return this->madera;
 }
 
-int Edificio::cant_metal_necesaria(){
+int Edificio::devolver_metal(){
     return this->metal;
 }
 
-int Edificio::maximo_permitidos(){
-    return this->max_cant_permitidos;
+int Edificio::devolver_maxima_cantidad_permitidos(){
+    return this->maxima_cantidad_permitidos;
 }

@@ -7,6 +7,7 @@
 
 int main() {
     Edificios edificios;
+    
     edificios.procesar_archivo();
 
     mensaje_bienvenida();

@@ -6,26 +6,56 @@ using namespace std;
 
 class Edificio{
     private:
-        string nombre;
+        string nombre_edificio;
         int piedra;
         int madera;
         int metal;
-        int max_cant_permitidos;
+        int maxima_cantidad_permitidos;
     public:
-        Edificio(string nombre, int piedra, int madera, int metal, int max_cant_permitidos);
-        /* ~Edificio(); */
+        /*
+         * Constructor:
+         * PRE: -.
+         * POST: Me va a crear el objeto edificio.
+         */
+        Edificio(string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
+        
+        //~Edificio();
 
+        /*
+         * PRE: -
+         * POST: Me muestra por pantalla el objeto tipo Edificio.
+         */
         void mostar();
 
-        string devolver_nombre();
+        /*
+         * PRE: -
+         * POST: Me devuelve el nombre_edificio.
+         */
+        string devolver_nombre_edificio();
 
-        int cant_piedra_necesaria();
+        /*
+         * PRE: -
+         * POST: Me devuelve el piedra.
+         */
+        int devolver_piedra();
 
-        int cant_madera_necesaria();
+        /*
+         * PRE: -
+         * POST: Me devuelve el madera.
+         */
+        int devolver_madera();
 
-        int cant_metal_necesaria();
+        /*
+         * PRE: -
+         * POST: Me devuelve el metal.
+         */
+        int devolver_metal();
 
-        int maximo_permitidos();
+        /*
+         * PRE: -
+         * POST: Me devuelve el maxima_cantidad_permitidos.
+         */
+        int devolver_maxima_cantidad_permitidos();
 };
 
 class Edificios{
@@ -33,18 +63,40 @@ class Edificios{
         Edificio** edificios;
         int total_edificios;
     public:
-        Edificios();
-        /* ~Edificios(); */
 
+        /*
+         * Constructor:
+         * PRE: -.
+         * POST: Me va a crear el objeto edificios con total_edificios = 0.
+         */
+        Edificios();
+
+        /*
+         * Destructor:
+         * PRE: -.
+         * POST: Me va a descruir el objeto edificios.
+         */
+        ~Edificios();
+
+        /*
+         * PRE: -
+         * POST: Guarda cada linea en un objeto Edificio
+         */
         void procesar_archivo();
 
+        /*
+         * PRE: -
+         * POST: Me muestra lista por pantalla toso los objetos del tipo Edificio.
+         */
         void mostar();
 
     private:
-    
-        void agregar_edificio(Edificio* edificio);
 
-        
+        /*
+         * PRE: Recibe un objeto Edificio.
+         * POST: Ingresa el objeto en un vector dinámico.
+         */
+        void agregar_edificio(Edificio* edificio);     
 };
 
 #endif
