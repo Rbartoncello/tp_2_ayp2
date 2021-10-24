@@ -19,18 +19,18 @@ Mapa::Mapa(){
 Mapa::Mapa(int filas, int columnas){
     this->cantidad_filas = filas;
     this->cantidad_columnas = columnas;
-    this->casilleros = new Casillero*[this->cantidad_filas];
+    this->casilleros = new Casillero**[this->cantidad_filas];
     for (int i = 0; i < this->cantidad_filas; i++){
-        casilleros[i] = new Casillero[this->cantidad_columnas];
+        casilleros[i] = new Casillero*[this->cantidad_columnas];
     }
 }
 
 Mapa::~Mapa(){
     for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            delete [] casilleros[i][j];
+        }
         delete [] this->casilleros[i];
-    }
-    if (this-> cantidad_filas== 0){
-        delete [] this->casilleros[0];
     }
     delete [] this->casilleros;
     this->casilleros = nullptr;
@@ -49,17 +49,31 @@ void Mapa::procesar_archivo(){
     this->cantidad_columnas = stoi(columna);
 
     //Mapa mapa_aux(this->cantidad_filas, this->cantidad_columnas);
-    this->casilleros = new Casillero*[this->cantidad_filas];
+    this->casilleros = new Casillero**[this->cantidad_filas];
     for (int i = 0; i < this->cantidad_filas; i++){
-        casilleros[i] = new Casillero[this->cantidad_columnas];
+        casilleros[i] = new Casillero*[this->cantidad_columnas];
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            casilleros[i][j] = nullptr;
+        }
     }
     
     for (int i = 0; i < this->cantidad_filas; i++){
         for (int j = 0; j < this->cantidad_columnas; j++){
             if(archivo >> tipo_terreno){
-                this->casilleros[i][j].modificar_tipo_terreno(tipo_terreno);
-                this->casilleros[i][j].modificar_pos_x(i);
-                this->casilleros[i][j].modificar_pos_y(j);
+                switch (tipo_terreno){
+                    case LAGO:
+                        this->casilleros[i][j] = new Casillero_no_transitable(tipo_terreno, i, j);
+                        break;
+                    case CAMINO:
+                        this->casilleros[i][j] = new Casillero_transitable(tipo_terreno, i, j);
+                        break;
+                    case TERRENO:
+                        this->casilleros[i][j] = new Casillero_contruible(tipo_terreno, i, j);
+                        break;
+                }
+                //this->casilleros[i][j].modificar_tipo_terreno(tipo_terreno);
+                //this->casilleros[i][j].modificar_pos_x(i);
+                //this->casilleros[i][j].modificar_pos_y(j);
             }
         }
     }
@@ -71,10 +85,10 @@ void Mapa::procesar_archivo(){
     archivo.close();
 }
 
-void Mapa::mostar(){
+void Mapa::mostrar(){
     for (int i = 0; i < this->cantidad_filas; i++){
         for (int j = 0; j < this->cantidad_columnas; j++){
-            this->casilleros[i][j].mostar_letra();
+            this->casilleros[i][j]->mostrar();
         }
         cout << endl;
     }

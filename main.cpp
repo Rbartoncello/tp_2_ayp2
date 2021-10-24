@@ -5,7 +5,7 @@ int main(){
     Mapa mapa;
 
     mapa.procesar_archivo();
-    mapa.mostar();
+    mapa.mostrar();
 
     return 0;
 }

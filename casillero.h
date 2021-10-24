@@ -4,9 +4,6 @@
 #include "iostream"
 #include <string>
 
-const char LAGO = 'L';
-const char TERRENO = 'T';
-const char CAMINO = 'C';
 
 class Casillero{
     private:
@@ -19,7 +16,7 @@ class Casillero{
         Casillero();
         ~Casillero();
 
-        void mostar_letra();
+        virtual void mostrar();
 
         char devolver_tipo_terreno();
 

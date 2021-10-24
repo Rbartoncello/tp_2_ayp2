@@ -16,7 +16,11 @@ class Casillero_transitable : public Casillero{
 
         Casillero_transitable();
 
+        ~Casillero_transitable();
+
         bool esta_ocupado();
+
+        void mostrar();
 
         //void añadir_matrial(s*Material material;
 

@@ -1,5 +1,6 @@
 #include "casillero_contruible.h"
 #include <iostream>
+#include "colors.h"
 
 using namespace std;
 
@@ -16,5 +17,6 @@ Casillero_contruible::~Casillero_contruible(){
 }
 
 void Casillero_contruible::mostrar(){
-    cout << devolver_tipo_terreno();
+    Casillero::mostrar();
+    cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
 }

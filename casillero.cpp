@@ -22,21 +22,7 @@ Casillero::~Casillero(){
     
 }
 
-void Casillero::mostar_letra(){
-    switch (devolver_tipo_terreno())
-    {
-    case LAGO:
-        cout << BGND_LIGHT_BLUE_68 << "  " << END_COLOR;
-        break;
-    case TERRENO:
-        cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
-        break;
-    case CAMINO:
-        cout << BGND_GRAY_243 << "  " << END_COLOR;
-        break;
-    default:
-        break;
-    }
+void Casillero::mostrar(){
 }
 
 char Casillero::devolver_tipo_terreno(){
