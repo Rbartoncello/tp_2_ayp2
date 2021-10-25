@@ -3,8 +3,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o"
   "CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o"
   "CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o"
+  "CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o"
   "CMakeFiles/tp_2_ayp2.dir/main.cpp.o"
   "CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o"
+  "CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o"
+  "CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o"
+  "CMakeFiles/tp_2_ayp2.dir/menu.cpp.o"
   "tp_2_ayp2"
   "tp_2_ayp2.pdb"
 )

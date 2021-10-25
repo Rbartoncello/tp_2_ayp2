@@ -106,6 +106,18 @@
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.cpp">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/emojis.h">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
@@ -113,6 +125,24 @@
 			<Option target="tp_2_ayp2"/>
 		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.cpp">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/menu.cpp">
+			<Option target="tp_2_ayp2"/>
+		</Unit>
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/menu.h">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/CMakeLists.txt">

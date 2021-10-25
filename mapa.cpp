@@ -1,4 +1,5 @@
 #include "mapa.h"
+#include "mensajes_pantalla.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -78,10 +79,17 @@ void Mapa::procesar_archivo(){
 }
 
 void Mapa::mostrar(){
+    system("clear");
     for (int i = 0; i < this->cantidad_filas; i++){
+        cout << "\t" << BGND_BROWN_94 << " " << END_COLOR;
         for (int j = 0; j < this->cantidad_columnas; j++){
             this->casilleros[i][j]->mostrar();
         }
+        cout << BGND_BROWN_94 << " " << END_COLOR;
         cout << endl;
     }
+    cout << "Presione [ENTER] para continuar"<< endl;
+    cin.get();
+    cin.get();
+    system("clear");
 }

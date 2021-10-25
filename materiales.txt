@@ -1,0 +1,7 @@
+piedra 562
+metal 4826
+madera 4531
+oro 5000
+tierra 4573
+arena 4776
+plata 5000
