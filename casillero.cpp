@@ -18,10 +18,6 @@ Casillero::Casillero(){
     this->pos_y = 0;
 }
 
-Casillero::~Casillero(){
-    
-}
-
 
 char Casillero::devolver_tipo_terreno(){
     return this->tipo_terreno;

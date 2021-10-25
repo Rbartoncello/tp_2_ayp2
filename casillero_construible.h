@@ -10,7 +10,7 @@ class Casillero_construible : public Casillero{
         
         Casillero_construible();
         
-        ~Casillero_construible();
+        //~Casillero_construible();
 
         void mostrar();
 

@@ -10,19 +10,14 @@ const string PATH_MAPA = "mapa.txt";
 Mapa::Mapa(){
     this->cantidad_filas = 0;
     this->cantidad_columnas = 0;
-}
-
-Mapa::Mapa(int filas, int columnas){
-    this->cantidad_filas = filas;
-    this->cantidad_columnas = columnas;
-    this->casilleros = new Casillero**[this->cantidad_filas];
-    for (int i = 0; i < this->cantidad_filas; i++){
-        casilleros[i] = new Casillero*[this->cantidad_columnas];
-    }
+    this->casilleros = nullptr;
 }
 
 Mapa::~Mapa(){
     for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            delete this->casilleros[i][j];
+        }
         delete [] this->casilleros[i];
     }
     delete [] this->casilleros;

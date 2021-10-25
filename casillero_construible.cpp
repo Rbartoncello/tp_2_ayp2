@@ -11,9 +11,9 @@ Casillero_construible::Casillero_construible(): Casillero() {
     this->ocupado = false;
 }
 
-Casillero_construible::~Casillero_construible(){
+/* Casillero_construible::~Casillero_construible(){
 
-}
+} */
 
 void Casillero_construible::mostrar(){
     cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;

@@ -8,7 +8,7 @@ public:
 
     Casillero_inaccesible();
 
-    ~Casillero_inaccesible();
+    //~Casillero_inaccesible();
 
     void mostrar();
 

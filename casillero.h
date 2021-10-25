@@ -17,7 +17,7 @@ class Casillero{
         
         Casillero();
         
-        ~Casillero();
+        virtual ~Casillero(){};
 
         virtual void mostrar() = 0;
 
