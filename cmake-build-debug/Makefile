@@ -225,6 +225,30 @@ casillero_transitable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.s
 .PHONY : casillero_transitable.cpp.s
 
+edificios.o: edificios.cpp.o
+.PHONY : edificios.o
+
+# target to build an object file
+edificios.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o
+.PHONY : edificios.cpp.o
+
+edificios.i: edificios.cpp.i
+.PHONY : edificios.i
+
+# target to preprocess a source file
+edificios.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.i
+.PHONY : edificios.cpp.i
+
+edificios.s: edificios.cpp.s
+.PHONY : edificios.s
+
+# target to generate assembly for a file
+edificios.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s
+.PHONY : edificios.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -273,6 +297,78 @@ mapa.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s
 .PHONY : mapa.cpp.s
 
+materiales.o: materiales.cpp.o
+.PHONY : materiales.o
+
+# target to build an object file
+materiales.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o
+.PHONY : materiales.cpp.o
+
+materiales.i: materiales.cpp.i
+.PHONY : materiales.i
+
+# target to preprocess a source file
+materiales.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/materiales.cpp.i
+.PHONY : materiales.cpp.i
+
+materiales.s: materiales.cpp.s
+.PHONY : materiales.s
+
+# target to generate assembly for a file
+materiales.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/materiales.cpp.s
+.PHONY : materiales.cpp.s
+
+mensajes_pantalla.o: mensajes_pantalla.cpp.o
+.PHONY : mensajes_pantalla.o
+
+# target to build an object file
+mensajes_pantalla.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o
+.PHONY : mensajes_pantalla.cpp.o
+
+mensajes_pantalla.i: mensajes_pantalla.cpp.i
+.PHONY : mensajes_pantalla.i
+
+# target to preprocess a source file
+mensajes_pantalla.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.i
+.PHONY : mensajes_pantalla.cpp.i
+
+mensajes_pantalla.s: mensajes_pantalla.cpp.s
+.PHONY : mensajes_pantalla.s
+
+# target to generate assembly for a file
+mensajes_pantalla.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.s
+.PHONY : mensajes_pantalla.cpp.s
+
+menu.o: menu.cpp.o
+.PHONY : menu.o
+
+# target to build an object file
+menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/menu.cpp.o
+.PHONY : menu.cpp.o
+
+menu.i: menu.cpp.i
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/menu.cpp.i
+.PHONY : menu.cpp.i
+
+menu.s: menu.cpp.s
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/menu.cpp.s
+.PHONY : menu.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,12 +390,24 @@ help:
 	@echo "... casillero_transitable.o"
 	@echo "... casillero_transitable.i"
 	@echo "... casillero_transitable.s"
+	@echo "... edificios.o"
+	@echo "... edificios.i"
+	@echo "... edificios.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mapa.o"
 	@echo "... mapa.i"
 	@echo "... mapa.s"
+	@echo "... materiales.o"
+	@echo "... materiales.i"
+	@echo "... materiales.s"
+	@echo "... mensajes_pantalla.o"
+	@echo "... mensajes_pantalla.i"
+	@echo "... mensajes_pantalla.s"
+	@echo "... menu.o"
+	@echo "... menu.i"
+	@echo "... menu.s"
 .PHONY : help
 
 

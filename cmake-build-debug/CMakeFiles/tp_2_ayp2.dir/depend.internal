@@ -20,14 +20,23 @@ CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.cpp
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.cpp
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h
 CMakeFiles/tp_2_ayp2.dir/main.cpp.o
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/menu.h
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.h
@@ -36,3 +45,27 @@ CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.cpp
  /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h
+CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h
+CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/emojis.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.cpp
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h
+CMakeFiles/tp_2_ayp2.dir/menu.cpp.o
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/emojis.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mensajes_pantalla.h
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/menu.cpp
+ /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/menu.h

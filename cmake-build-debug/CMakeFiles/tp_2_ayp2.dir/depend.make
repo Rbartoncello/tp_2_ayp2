@@ -20,14 +20,23 @@ CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: \
  ../casillero_transitable.cpp \
  ../casillero_transitable.h \
  ../colors.h
+CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: \
+ ../colors.h \
+ ../edificios.cpp \
+ ../edificios.h \
+ ../mensajes_pantalla.h
 CMakeFiles/tp_2_ayp2.dir/main.cpp.o: \
  ../casillero.h \
  ../casillero_construible.h \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../edificios.h \
  ../main.cpp \
- ../mapa.h
+ ../mapa.h \
+ ../materiales.h \
+ ../mensajes_pantalla.h \
+ ../menu.h
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
  ../casillero.h \
  ../casillero_construible.h \
@@ -35,4 +44,28 @@ CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
  ../casillero_transitable.h \
  ../colors.h \
  ../mapa.cpp \
- ../mapa.h
+ ../mapa.h \
+ ../mensajes_pantalla.h
+CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: \
+ ../colors.h \
+ ../materiales.cpp \
+ ../materiales.h \
+ ../mensajes_pantalla.h
+CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o: \
+ ../colors.h \
+ ../emojis.h \
+ ../mensajes_pantalla.cpp \
+ ../mensajes_pantalla.h
+CMakeFiles/tp_2_ayp2.dir/menu.cpp.o: \
+ ../casillero.h \
+ ../casillero_construible.h \
+ ../casillero_inaccesible.h \
+ ../casillero_transitable.h \
+ ../colors.h \
+ ../edificios.h \
+ ../emojis.h \
+ ../mapa.h \
+ ../materiales.h \
+ ../mensajes_pantalla.h \
+ ../menu.cpp \
+ ../menu.h

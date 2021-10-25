@@ -42,3 +42,7 @@ void Casillero::modificar_pos_x(int x){
 void Casillero::modificar_pos_y(int y){
     this->pos_y = y;
 }
+
+void Casillero::mostrar(){
+    
+}
