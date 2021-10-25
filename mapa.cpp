@@ -24,6 +24,37 @@ Mapa::~Mapa(){
     this->casilleros = nullptr;
 }
 
+void Mapa::crear_matriz_casilleros(){
+    this->casilleros = new Casillero**[this->cantidad_filas];
+    for (int i = 0; i < this->cantidad_filas; i++){
+        casilleros[i] = new Casillero*[this->cantidad_columnas];
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            casilleros[i][j] = nullptr;
+        }
+    }
+}
+
+void Mapa::agregar_casillero(ifstream &archivo){
+    char tipo_terreno;
+
+    for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            if(archivo >> tipo_terreno){
+                switch (tipo_terreno){
+                    case LAGO:
+                        this->casilleros[i][j] = new Casillero_inaccesible(tipo_terreno, i, j);
+                        break;
+                    case CAMINO:
+                        this->casilleros[i][j] = new Casillero_transitable(tipo_terreno, i, j);
+                        break;
+                    case TERRENO:
+                        this->casilleros[i][j] = new Casillero_construible(tipo_terreno, i, j);
+                        break;
+                }
+            }
+        }
+    }
+}
 void Mapa::procesar_archivo(){
     ifstream archivo(PATH_MAPA);
     
@@ -31,38 +62,16 @@ void Mapa::procesar_archivo(){
         cout << "No se puedo abrir el archivo: " << PATH_MAPA << endl;
     } else {
         string fila, columna;
-        char tipo_terreno;
 
-        archivo >> fila;
-        archivo >> columna;
+        if(archivo >> fila){
+            archivo >> columna;
 
-        this->cantidad_filas = stoi(fila);
-        this->cantidad_columnas = stoi(columna);
+            this->cantidad_filas = stoi(fila);
+            this->cantidad_columnas = stoi(columna);
 
-        this->casilleros = new Casillero**[this->cantidad_filas];
-        for (int i = 0; i < this->cantidad_filas; i++){
-            casilleros[i] = new Casillero*[this->cantidad_columnas];
-            for (int j = 0; j < this->cantidad_columnas; j++){
-                casilleros[i][j] = nullptr;
-            }
-        }
+            crear_matriz_casilleros();
 
-        for (int i = 0; i < this->cantidad_filas; i++){
-            for (int j = 0; j < this->cantidad_columnas; j++){
-                if(archivo >> tipo_terreno){
-                    switch (tipo_terreno){
-                        case LAGO:
-                            this->casilleros[i][j] = new Casillero_inaccesible(tipo_terreno, i, j);
-                            break;
-                        case CAMINO:
-                            this->casilleros[i][j] = new Casillero_transitable(tipo_terreno, i, j);
-                            break;
-                        case TERRENO:
-                            this->casilleros[i][j] = new Casillero_construible(tipo_terreno, i, j);
-                            break;
-                    }
-                }
-            }
+            agregar_casillero(archivo);
         }
         archivo.close();
     }
