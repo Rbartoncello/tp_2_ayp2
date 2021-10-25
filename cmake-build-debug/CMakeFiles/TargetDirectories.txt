@@ -1,0 +1,3 @@
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir
