@@ -1,6 +1,5 @@
 #include "edificios.h"
 #include "colors.h"
-#include "mensajes_pantalla.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -89,11 +88,12 @@ void Edificios::procesar_archivo(){
     }
 }
 
-
+/*
 Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
     for(int i = 0; i < this->total_edificios; i++ ) {
         if (nombre == this->edificios[i]->devolver_nombre_edificio()) {
             return this->edificios[i];
         }
     }
-};
+}
+*/

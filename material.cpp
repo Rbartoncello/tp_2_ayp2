@@ -2,7 +2,6 @@
 // Created by juan on 25/10/21.
 //
 #include "colors.h"
-#include "mensajes_pantalla.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>

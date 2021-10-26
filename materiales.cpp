@@ -1,6 +1,5 @@
 #include "materiales.h"
 #include "colors.h"
-#include "mensajes_pantalla.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>

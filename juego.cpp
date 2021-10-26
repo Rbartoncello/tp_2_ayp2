@@ -9,25 +9,6 @@
 #include <iomanip>
 
 
-const string PATH_UBICACIONES = "ubicaciones.txt";
-
-const int MIN_OPCION = 1;
-const int MAX_OPCION = 10;
-
-const int ERROR = -1;
-
-const int CONSTRUIR_EDIFICIO_NOMBRE = 1;
-const int LISTAR_EDIFICIOS_CONSTRUIDOS = 2;
-const int LISTAR_TODOS_EDIFICIOS = 3;
-const int DEMOLER_EDIFICIO_COORDENADA = 4;
-const int MOSTAR_MAPA = 5;
-const int CONSULTAR_COORDENADA = 6;
-const int MOSTRAR_INVENTARIO = 7;
-const int RECOLECTAR_RECURSOS = 8;
-const int LLUVIA_RECURSOS = 9;
-const int GUARDA_SALIR = 10;
-
-const string VERSION_PGM = "2.0";
 
 
 Juego::Juego(){
@@ -41,28 +22,23 @@ Juego::Juego(){
     this->materiales = materiales;
 }
 
-Juego::Juego(Mapa* mapa, Edificios* edificios, Materiales* materiales){
-    this->mapa = mapa;
-    this->edificios = edificios;
-    this->materiales = materiales;
-}
+//Juego::Juego(Mapa* mapa, Edificios* edificios, Materiales* materiales){
+//   this->mapa = mapa;
+//    this->edificios = edificios;
+//    this->materiales = materiales;
+//}   
 
-Juego::~Juego(){
-    this->mapa->~Mapa();
-    this->edificios->~Edificios();
-    this->materiales->~Materiales();
-}
 
 void Juego::cargar_juego() {
     this->materiales->procesar_archivo();
     this->mapa->procesar_archivo();
     this->edificios->procesar_archivo();
-    this->procesar_archivo_ubicaciones();
+    //this->procesar_archivo_ubicaciones();
 }
 
-void Juego::jugar(){
+/*void Juego::jugar(){
 
-    int opcion_elegida = 0;
+    //int opcion_elegida = 0;
 
     this->mostrar_opciones();
 
@@ -85,7 +61,8 @@ void Juego::procesar_archivo_ubicaciones() {
     ifstream archivo(PATH_UBICACIONES);
     string nombre, fila, columna, basura;
 
-    if (!archivo.is_open()) {
+
+     if (!archivo.is_open()) {
         cout << "No se pudo abrir el archivo: " << PATH_UBICACIONES << endl;
     } else {
         while (getline(archivo, nombre, '(')) {
@@ -106,10 +83,11 @@ void Juego::procesar_archivo_ubicaciones() {
 }
 
 
+
 void Juego::mensaje_bienvenida() {
     system("clear");
-    cout << TXT_BOLD << TXT_DARK_YELLOW_3 << "\
-\t\t     ___      .__   __.  _______  ____    ____ .______     ______    __       __       _______.             \n\
+       cout << TXT_B
+  __      .__   __.  _______  ____    ____ .______     ______    __       __       _______.             \n\
 \t\t    /   \\     |  \\ |  | |       \\ \\   \\  /   / |   _  \\   /  __  \\  |  |     |  |     /       | _    \n\
 \t\t   /  ^  \\    |   \\|  | |  .--.  | \\   \\/   /  |  |_)  | |  |  |  | |  |     |  |    |   (----`(_)      \n\
 \t\t  /  /_\\  \\   |  . `  | |  |  |  |  \\_    _/   |   ___/  |  |  |  | |  |     |  |     \\   \\            \n\
@@ -161,8 +139,8 @@ void Juego::imprimir_mensaje_esperar(int tiempo) {
 }
 
 void Juego::imprimir_mensaje_opcion_afirmativa_negativa() {
-        cout << TXT_BOLD << TXT_GREEN_118 /* <<  AFIRMATIVO */ << END_COLOR << " , en caso afirmativo, o ";
-        cout << TXT_BOLD << TXT_LIGHT_RED_9 /* <<  NEGATIVO */ << END_COLOR << " , en caso negativo." << endl;
+        cout << TXT_BOLD << TXT_GREEN_118  <<  AFIRMATIVO  << END_COLOR << " , en caso afirmativo, o ";
+        cout << TXT_BOLD << TXT_LIGHT_RED_9  <<  NEGATIVO  << END_COLOR << " , en caso negativo." << endl;
 }
 
 void Juego::mostrar_opciones(){
@@ -200,10 +178,10 @@ int Juego::pedir_opcion(){
     return opcion_elegida;
 }
 
-/*
+
  * Pre: -
  * Post: Devuelve TRUE si MIN_OPCION <= opcion <= MAX_OPCION y FALSE en caso contrario.
-*/
+
 bool Juego::es_opcion_valida(int opcion){
     return( ( opcion >= MIN_OPCION ) && ( opcion <= MAX_OPCION ) );
 }
@@ -263,3 +241,5 @@ void Juego::imprimir_mensaje_guardado() {
 
 
 }
+
+*/

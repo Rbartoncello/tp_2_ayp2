@@ -45,7 +45,7 @@ class Edificios{
         void agregar_edificio(Edificio* edificio);
 
 
-        Edificio* buscar_edificio_por_nombre(string nombre);
+        //Edificio* buscar_edificio_por_nombre(string nombre);
 };
 
 #endif

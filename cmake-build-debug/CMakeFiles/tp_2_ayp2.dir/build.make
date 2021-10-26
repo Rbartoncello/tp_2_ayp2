@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/juan/Desktop/tp_2_ayp2
+CMAKE_SOURCE_DIR = /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/juan/Desktop/tp_2_ayp2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tp_2_ayp2.dir/depend.make
@@ -68,146 +68,146 @@ include CMakeFiles/tp_2_ayp2.dir/flags.make
 
 CMakeFiles/tp_2_ayp2.dir/main.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tp_2_ayp2.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/main.cpp.o -c /home/juan/Desktop/tp_2_ayp2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tp_2_ayp2.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/main.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp
 
 CMakeFiles/tp_2_ayp2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/main.cpp > CMakeFiles/tp_2_ayp2.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp > CMakeFiles/tp_2_ayp2.dir/main.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/main.cpp -o CMakeFiles/tp_2_ayp2.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp -o CMakeFiles/tp_2_ayp2.dir/main.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o: ../casillero.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o -c /home/juan/Desktop/tp_2_ayp2/casillero.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.cpp
 
 CMakeFiles/tp_2_ayp2.dir/casillero.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/casillero.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/casillero.cpp > CMakeFiles/tp_2_ayp2.dir/casillero.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.cpp > CMakeFiles/tp_2_ayp2.dir/casillero.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/casillero.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/casillero.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/casillero.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: ../casillero_construible.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o -c /home/juan/Desktop/tp_2_ayp2/casillero_construible.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.cpp
 
 CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/casillero_construible.cpp > CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.cpp > CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/casillero_construible.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o: ../casillero_inaccesible.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o -c /home/juan/Desktop/tp_2_ayp2/casillero_inaccesible.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.cpp
 
 CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/casillero_inaccesible.cpp > CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.cpp > CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/casillero_inaccesible.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: ../casillero_transitable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o -c /home/juan/Desktop/tp_2_ayp2/casillero_transitable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.cpp
 
 CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/casillero_transitable.cpp > CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.cpp > CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/casillero_transitable.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.cpp -o CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: ../mapa.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o -c /home/juan/Desktop/tp_2_ayp2/mapa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.cpp
 
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/mapa.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/mapa.cpp > CMakeFiles/tp_2_ayp2.dir/mapa.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.cpp > CMakeFiles/tp_2_ayp2.dir/mapa.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/mapa.cpp -o CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.cpp -o CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: ../edificios.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o -c /home/juan/Desktop/tp_2_ayp2/edificios.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.cpp
 
 CMakeFiles/tp_2_ayp2.dir/edificios.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/edificios.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/edificios.cpp > CMakeFiles/tp_2_ayp2.dir/edificios.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.cpp > CMakeFiles/tp_2_ayp2.dir/edificios.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/edificios.cpp -o CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.cpp -o CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: ../materiales.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o -c /home/juan/Desktop/tp_2_ayp2/materiales.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp
 
 CMakeFiles/tp_2_ayp2.dir/materiales.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/materiales.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/materiales.cpp > CMakeFiles/tp_2_ayp2.dir/materiales.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp > CMakeFiles/tp_2_ayp2.dir/materiales.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/materiales.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/materiales.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/materiales.cpp -o CMakeFiles/tp_2_ayp2.dir/materiales.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp -o CMakeFiles/tp_2_ayp2.dir/materiales.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/juego.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/juego.cpp.o: ../juego.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/tp_2_ayp2.dir/juego.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/juego.cpp.o -c /home/juan/Desktop/tp_2_ayp2/juego.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/tp_2_ayp2.dir/juego.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/juego.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.cpp
 
 CMakeFiles/tp_2_ayp2.dir/juego.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/juego.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/juego.cpp > CMakeFiles/tp_2_ayp2.dir/juego.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.cpp > CMakeFiles/tp_2_ayp2.dir/juego.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/juego.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/juego.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/juego.cpp -o CMakeFiles/tp_2_ayp2.dir/juego.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.cpp -o CMakeFiles/tp_2_ayp2.dir/juego.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/material.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/material.cpp.o: ../material.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/tp_2_ayp2.dir/material.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/material.cpp.o -c /home/juan/Desktop/tp_2_ayp2/material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/tp_2_ayp2.dir/material.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/material.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.cpp
 
 CMakeFiles/tp_2_ayp2.dir/material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/material.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/material.cpp > CMakeFiles/tp_2_ayp2.dir/material.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.cpp > CMakeFiles/tp_2_ayp2.dir/material.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/material.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/material.cpp -o CMakeFiles/tp_2_ayp2.dir/material.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.cpp -o CMakeFiles/tp_2_ayp2.dir/material.cpp.s
 
 CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o: CMakeFiles/tp_2_ayp2.dir/flags.make
 CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o: ../Edificio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o -c /home/juan/Desktop/tp_2_ayp2/Edificio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o -c /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.cpp
 
 CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Desktop/tp_2_ayp2/Edificio.cpp > CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.cpp > CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.i
 
 CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Desktop/tp_2_ayp2/Edificio.cpp -o CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.cpp -o CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.s
 
 # Object files for target tp_2_ayp2
 tp_2_ayp2_OBJECTS = \
@@ -239,7 +239,7 @@ tp_2_ayp2: CMakeFiles/tp_2_ayp2.dir/material.cpp.o
 tp_2_ayp2: CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o
 tp_2_ayp2: CMakeFiles/tp_2_ayp2.dir/build.make
 tp_2_ayp2: CMakeFiles/tp_2_ayp2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable tp_2_ayp2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable tp_2_ayp2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tp_2_ayp2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -251,6 +251,6 @@ CMakeFiles/tp_2_ayp2.dir/clean:
 .PHONY : CMakeFiles/tp_2_ayp2.dir/clean
 
 CMakeFiles/tp_2_ayp2.dir/depend:
-	cd /home/juan/Desktop/tp_2_ayp2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/juan/Desktop/tp_2_ayp2 /home/juan/Desktop/tp_2_ayp2 /home/juan/Desktop/tp_2_ayp2/cmake-build-debug /home/juan/Desktop/tp_2_ayp2/cmake-build-debug /home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tp_2_ayp2.dir/depend
 
