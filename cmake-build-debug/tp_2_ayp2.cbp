@@ -82,43 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.cpp">
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.cpp">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h">
+		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.h">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificio.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificio.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/emojis.h">
@@ -131,12 +101,6 @@
 			<Option target="tp_2_ayp2"/>
 		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
 		<Unit filename="/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.cpp">

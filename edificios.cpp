@@ -13,15 +13,6 @@ Edificios::Edificios(){
     this->total_edificios = 0;
 }
 
-Edificio::Edificio(string nombre, string emoji, int piedra, int madera, int metal, int max_cant_permitidos){
-    this->nombre_edificio = nombre;
-    this->emoji = emoji;
-    this->piedra = piedra;
-    this->madera = madera;
-    this->metal = metal;
-    this->maxima_cantidad_permitidos = max_cant_permitidos;   
-}
-
 Edificios::~Edificios(){
     for (int i = 0; i < this->total_edificios; i++){
         delete this->edificios[i];

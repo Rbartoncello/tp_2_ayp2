@@ -11,6 +11,7 @@ const string EDIFICIO_FABRICA = "fabrica";
 const string EDIFICIO_ESCUELA = "escuela";
 const string EDIFICIO_OBELISCO = "obelisco";
 const string EDIFICIO_PLANTA_ELECTRICA = "planta_electrica";
+
 class Edificios{
     private:
         Edificio** edificios;

@@ -5,7 +5,6 @@ int main() {
 
     juego.cargar_juego();
 
-    
     juego.jugar();
 
     return 0;
