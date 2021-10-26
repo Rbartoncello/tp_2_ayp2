@@ -9,7 +9,8 @@ CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: \
  ../casillero.h \
  ../casillero_construible.cpp \
  ../casillero_construible.h \
- ../colors.h
+ ../colors.h \
+ ../edificio.h
 CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o: \
  ../casillero.h \
  ../casillero_inaccesible.cpp \
@@ -20,52 +21,57 @@ CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: \
  ../casillero_transitable.cpp \
  ../casillero_transitable.h \
  ../colors.h
+CMakeFiles/tp_2_ayp2.dir/edificio.cpp.o: \
+ ../edificio.cpp \
+ ../edificio.h
 CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: \
  ../colors.h \
+ ../edificio.h \
  ../edificios.cpp \
  ../edificios.h \
- ../mensajes_pantalla.h
+ ../emojis.h
+CMakeFiles/tp_2_ayp2.dir/juego.cpp.o: \
+ ../casillero.h \
+ ../casillero_construible.h \
+ ../casillero_inaccesible.h \
+ ../casillero_transitable.h \
+ ../colors.h \
+ ../edificio.h \
+ ../edificios.h \
+ ../emojis.h \
+ ../juego.cpp \
+ ../juego.h \
+ ../mapa.h \
+ ../material.h \
+ ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/main.cpp.o: \
  ../casillero.h \
  ../casillero_construible.h \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../edificio.h \
  ../edificios.h \
+ ../juego.h \
  ../main.cpp \
  ../mapa.h \
- ../materiales.h \
- ../mensajes_pantalla.h \
- ../menu.h
+ ../material.h \
+ ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
  ../casillero.h \
  ../casillero_construible.h \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../edificio.h \
  ../mapa.cpp \
- ../mapa.h \
- ../mensajes_pantalla.h
+ ../mapa.h
+CMakeFiles/tp_2_ayp2.dir/material.cpp.o: \
+ ../colors.h \
+ ../material.cpp \
+ ../material.h
 CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: \
  ../colors.h \
+ ../material.h \
  ../materiales.cpp \
- ../materiales.h \
- ../mensajes_pantalla.h
-CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o: \
- ../colors.h \
- ../emojis.h \
- ../mensajes_pantalla.cpp \
- ../mensajes_pantalla.h
-CMakeFiles/tp_2_ayp2.dir/menu.cpp.o: \
- ../casillero.h \
- ../casillero_construible.h \
- ../casillero_inaccesible.h \
- ../casillero_transitable.h \
- ../colors.h \
- ../edificios.h \
- ../emojis.h \
- ../mapa.h \
- ../materiales.h \
- ../mensajes_pantalla.h \
- ../menu.cpp \
- ../menu.h
+ ../materiales.h

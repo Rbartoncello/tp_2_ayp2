@@ -1,6 +1,5 @@
 #include "edificios.h"
 #include "colors.h"
-#include "mensajes_pantalla.h"
 #include "emojis.h"
 #include <fstream>
 #include <iostream>
@@ -47,6 +46,34 @@ void Edificios::agregar_edificio(Edificio* edificio){
     this->total_edificios++;
 }
 
+void Edificios::mostar(){
+    system("clear");
+
+    cout << TXT_BOLD;
+    cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
+    cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
+    cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
+    cout << "\t║                      ║ Piedra ("<< EMOJI_PIEDRA << " ) ║ Madera ("<< EMOJI_MADERA << " ) ║  Metal ("<< EMOJI_METAL << ")  ║                          ║" << endl;
+    cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
+    cout << END_COLOR;
+
+    for (int i = 0; i < this->total_edificios; i++){
+        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre_edificio() << "( " << this->edificios[i]->devolver_emoji() << " )" << setfill(' ') << setw(3);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_piedra() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_madera() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_metal() << setfill(' ') << setw(8);
+        cout << "│" << setfill(' ') << setw(14) << this->edificios[i]->devolver_maxima_cantidad_permitidos() << setfill(' ') << setw(15) << "║" << endl;
+        if(i < this->total_edificios - 1)
+            cout << "\t╠──────────────────────┼─────────────┼─────────────┼─────────────┼──────────────────────────╣" << endl;
+        else
+            cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩══════════════════════════╝" << endl;
+    }    
+    cout << "Presione [ENTER] para continuar"<< endl;
+    cin.get();
+    cin.get();
+    system("clear");
+}
+
 void Edificios::procesar_archivo(){
 
     ifstream archivo(PATH_EDIFICIO);
@@ -66,7 +93,6 @@ void Edificios::procesar_archivo(){
 
             agregar_edificio(edificio);
         }
-
         archivo.close();
     }
 }
@@ -91,59 +117,12 @@ string Edificios::buscar_tipo_emoji(string nombre_edificio){
     return emoji;  
 }
 
-void Edificios::mostar(){
-    system("clear");
-
-    cout << TXT_BOLD;
-    cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
-    cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
-    cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
-    cout << "\t║                      ║ Piedra ("<< EMOJI_PIEDRA << " ) ║ Madera ("<< EMOJI_MADERA << " ) ║  Metal ("<< EMOJI_METAL << ")  ║                          ║" << endl;
-    cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
-    cout << END_COLOR;
-
-    for (int i = 0; i < this->total_edificios; i++){
-
-        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre_edificio() << "( " << this->edificios[i]->devolver_emoji() << " )" << setfill(' ') << setw(3);
-        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_piedra() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_madera() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_metal() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(14) << this->edificios[i]->devolver_maxima_cantidad_permitidos() << setfill(' ') << setw(15) << "║" << endl;
-        if(i < this->total_edificios - 1)
-            cout << "\t╠──────────────────────┼─────────────┼─────────────┼─────────────┼──────────────────────────╣" << endl;
-        else
-            cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩══════════════════════════╝" << endl;
-    }  
-    cout << "Presione [ENTER] para continuar"<< endl;
-    cin.get();
-    cin.get();
-    system("clear");
+/*
+Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
+    for(int i = 0; i < this->total_edificios; i++ ) {
+        if (nombre == this->edificios[i]->devolver_nombre_edificio()) {
+            return this->edificios[i];
+        }
+    }
 }
-
-void Edificio::mostar(){
-    cout << devolver_nombre_edificio() << " " << devolver_piedra() << " " << devolver_madera() << " " << devolver_metal() << " " << devolver_maxima_cantidad_permitidos() << endl;
-}
-
-string Edificio::devolver_nombre_edificio(){
-    return this->nombre_edificio;
-}
-
-string Edificio::devolver_emoji(){
-    return this->emoji;
-}
-
-int Edificio::devolver_piedra(){
-    return this->piedra;
-}
-
-int Edificio::devolver_madera(){
-    return this->madera;
-}
-
-int Edificio::devolver_metal(){
-    return this->metal;
-}
-
-int Edificio::devolver_maxima_cantidad_permitidos(){
-    return this->maxima_cantidad_permitidos;
-}
+*/

@@ -1,6 +1,5 @@
 #include "materiales.h"
 #include "colors.h"
-#include "mensajes_pantalla.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -11,11 +10,6 @@ const string PATH_MATERIALES = "materiales.txt";
 
 Materiales::Materiales(){
     this->total_materiales = 0;
-}
-
-Material::Material(string nombre, int cantidad){
-    this->nombre_material = nombre;
-    this->cantidad_material = cantidad;
 }
 
 Materiales::~Materiales(){
@@ -53,16 +47,16 @@ void Materiales::procesar_archivo(){
         while ( archivo >> nombre ){
             archivo >> cantidad;
 
-            Material* material  = new Material(nombre, stoi(cantidad));
+            //Material* material  = new Material(nombre, stoi(cantidad));
 
-            agregar_material(material);
+            agregar_material(new Material(nombre, stoi(cantidad)));
         }
 
         archivo.close();
     }
 }
 
-void Materiales::mostar(){
+void Materiales::mostrar(){
     system("clear");
 
     cout << TXT_BOLD;
@@ -84,16 +78,4 @@ void Materiales::mostar(){
     cin.get();
     cin.get();
     system("clear");
-}
-
-void Material::mostar(){
-    cout << devolver_nombre_material() << " " << devolver_cantidad_material() <<  endl;
-}
-
-string Material::devolver_nombre_material(){
-    return this->nombre_material;
-}
-
-int Material::devolver_cantidad_material(){
-    return this->cantidad_material;
 }

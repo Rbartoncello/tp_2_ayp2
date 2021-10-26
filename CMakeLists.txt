@@ -3,7 +3,7 @@ project(tp_2_ayp2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tp_2_ayp2 main.cpp casillero.cpp casillero.h casillero_construible.h casillero_construible.cpp
-        casillero_inaccesible.h casillero_inaccesible.cpp casillero_transitable.cpp casillero_transitable.h
-        mapa.h mapa.cpp edificios.h edificios.cpp mensajes_pantalla.cpp mensajes_pantalla.h menu.cpp menu.h
-        colors.h emojis.h materiales.cpp)
+add_executable(tp_2_ayp2 main.cpp casillero.h casillero.cpp casillero_construible.h casillero_construible.cpp
+        casillero_inaccesible.cpp casillero_inaccesible.h casillero_transitable.h casillero_transitable.cpp
+        colors.h emojis.h edificios.cpp edificios.h edificio.h edificio.cpp juego.cpp juego.h mapa.cpp mapa.h
+        materiales.cpp materiales.h  material.cpp material.h)
