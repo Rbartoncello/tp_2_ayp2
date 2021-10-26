@@ -15,7 +15,13 @@ Casillero_construible::~Casillero_construible(){
 
 }
 
+bool Casillero_construible::esta_ocupado(){
+    return this->ocupado;
+}
+
 
 void Casillero_construible::mostrar(){
-    cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
+    if (!this->esta_ocupado()){
+        cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
+    }
 }
