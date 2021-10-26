@@ -4,9 +4,16 @@
 
 using namespace std;
 
+const string EDIFICIO_MINA = "mina";
+const string EDIFICIO_ASERRADERO = "aserradero";
+const string EDIFICIO_FABRICA = "fabrica";
+const string EDIFICIO_ESCUELA = "escuela";
+const string EDIFICIO_OBELISCO = "obelisco";
+const string EDIFICIO_PLANTA_ELECTRICA = "planta_electrica";
 class Edificio{
     private:
         string nombre_edificio;
+        string emoji;
         int piedra;
         int madera;
         int metal;
@@ -17,7 +24,7 @@ class Edificio{
          * PRE: -.
          * POST: Me va a crear el objeto edificio.
          */
-        Edificio(string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
+        Edificio(string nombre_edificio, string emoji, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
 
         //~Edificio();
 
@@ -32,6 +39,12 @@ class Edificio{
          * POST: Me devuelve el nombre_edificio.
          */
         string devolver_nombre_edificio();
+
+        /*
+         * PRE: -
+         * POST: Me devuelve el emoji.
+         */
+        string devolver_emoji();
 
         /*
          * PRE: -
@@ -96,7 +109,9 @@ class Edificios{
          * PRE: Recibe un objeto Edificio.
          * POST: Ingresa el objeto en un vector dinámico.
          */
-        void agregar_edificio(Edificio* edificio);     
+        void agregar_edificio(Edificio* edificio);
+
+        string buscar_tipo_emoji(string nombre_edificio);
 };
 
 #endif

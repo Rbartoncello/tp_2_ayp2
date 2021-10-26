@@ -20,10 +20,10 @@ const string EMOJI_PIEDRA = "\U0001faa8";
 const string EMOJI_MADERA = "\U0001fab5";
 const string EMOJI_METAL = "\u2699";
 
-const string EMOJI_MINA ="\u26CF";
+const string EMOJI_MINA ="\u26CF ";
 const string EMOJI_ASERRADERO ="\U0001fa93";
 const string EMOJI_FABRICA ="\U0001f3ed";
-const string EMOJI_ESCUELA ="\u26CF";
+const string EMOJI_ESCUELA ="\U0001f3eb";
 const string EMOJI_OBELISCO ="\U0001f5fc";
 const string EMOJI_PLANTA_ENERGIA ="\u26A1";
 

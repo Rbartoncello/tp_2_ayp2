@@ -1,6 +1,7 @@
 #include "edificios.h"
 #include "colors.h"
 #include "mensajes_pantalla.h"
+#include "emojis.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -13,8 +14,9 @@ Edificios::Edificios(){
     this->total_edificios = 0;
 }
 
-Edificio::Edificio(string nombre, int piedra, int madera, int metal, int max_cant_permitidos){
+Edificio::Edificio(string nombre, string emoji, int piedra, int madera, int metal, int max_cant_permitidos){
     this->nombre_edificio = nombre;
+    this->emoji = emoji;
     this->piedra = piedra;
     this->madera = madera;
     this->metal = metal;
@@ -54,18 +56,39 @@ void Edificios::procesar_archivo(){
         cout << "No se pudo abrir el archivo: " << PATH_EDIFICIO << endl;
     } else {
         while ( archivo >> nombre ){
+            string emoji = buscar_tipo_emoji(nombre);
             archivo >> piedra;
             archivo >> madera;
             archivo >> metal;
             archivo >> max_cant_permitidos;
 
-            Edificio* edificio  = new Edificio (nombre, stoi(piedra), stoi(madera), stoi(metal), stoi   (max_cant_permitidos));
+            Edificio* edificio  = new Edificio (nombre, emoji, stoi(piedra), stoi(madera), stoi(metal), stoi   (max_cant_permitidos));
 
             agregar_edificio(edificio);
         }
 
         archivo.close();
     }
+}
+
+string Edificios::buscar_tipo_emoji(string nombre_edificio){
+    string emoji;
+
+    if (nombre_edificio == EDIFICIO_MINA){
+        emoji = EMOJI_MINA;
+    } else if (nombre_edificio == EDIFICIO_ASERRADERO){
+        emoji = EMOJI_ASERRADERO;
+    } else if (nombre_edificio == EDIFICIO_FABRICA){
+        emoji = EMOJI_FABRICA;
+    } else if (nombre_edificio == EDIFICIO_ESCUELA){
+        emoji = EMOJI_ESCUELA;
+    } else if (nombre_edificio == EDIFICIO_OBELISCO){
+        emoji = EMOJI_OBELISCO;
+    } else if (nombre_edificio == EDIFICIO_PLANTA_ELECTRICA){
+        emoji = EMOJI_PLANTA_ENERGIA;
+    }
+    
+    return emoji;  
 }
 
 void Edificios::mostar(){
@@ -75,12 +98,13 @@ void Edificios::mostar(){
     cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
     cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
     cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
-    cout << "\t║                      ║   Piedra    ║   Madera    ║    Metal    ║                          ║" << endl;
+    cout << "\t║                      ║ Piedra ("<< EMOJI_PIEDRA << " ) ║ Madera ("<< EMOJI_MADERA << " ) ║  Metal ("<< EMOJI_METAL << ")  ║                          ║" << endl;
     cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
     cout << END_COLOR;
 
     for (int i = 0; i < this->total_edificios; i++){
-        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre_edificio() << setfill(' ') << setw(9);
+
+        cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre_edificio() << "( " << this->edificios[i]->devolver_emoji() << " )" << setfill(' ') << setw(3);
         cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_piedra() << setfill(' ') << setw(8);
         cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_madera() << setfill(' ') << setw(8);
         cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_metal() << setfill(' ') << setw(8);
@@ -102,6 +126,10 @@ void Edificio::mostar(){
 
 string Edificio::devolver_nombre_edificio(){
     return this->nombre_edificio;
+}
+
+string Edificio::devolver_emoji(){
+    return this->emoji;
 }
 
 int Edificio::devolver_piedra(){
