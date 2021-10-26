@@ -41,7 +41,7 @@ class Mapa{
          * PRE: -
          * POST: Guarda todos los datos del archivo en un objeto Mapa
          */
-        void procesar_archivo_mapa();
+        void procesar_archivo();
 
 
     /*

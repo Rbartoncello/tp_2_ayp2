@@ -393,54 +393,6 @@ materiales.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/materiales.cpp.s
 .PHONY : materiales.cpp.s
 
-mensajes_pantalla.o: mensajes_pantalla.cpp.o
-.PHONY : mensajes_pantalla.o
-
-# target to build an object file
-mensajes_pantalla.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o
-.PHONY : mensajes_pantalla.cpp.o
-
-mensajes_pantalla.i: mensajes_pantalla.cpp.i
-.PHONY : mensajes_pantalla.i
-
-# target to preprocess a source file
-mensajes_pantalla.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.i
-.PHONY : mensajes_pantalla.cpp.i
-
-mensajes_pantalla.s: mensajes_pantalla.cpp.s
-.PHONY : mensajes_pantalla.s
-
-# target to generate assembly for a file
-mensajes_pantalla.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.s
-.PHONY : mensajes_pantalla.cpp.s
-
-menu.o: menu.cpp.o
-.PHONY : menu.o
-
-# target to build an object file
-menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/menu.cpp.o
-.PHONY : menu.cpp.o
-
-menu.i: menu.cpp.i
-.PHONY : menu.i
-
-# target to preprocess a source file
-menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/menu.cpp.i
-.PHONY : menu.cpp.i
-
-menu.s: menu.cpp.s
-.PHONY : menu.s
-
-# target to generate assembly for a file
-menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/menu.cpp.s
-.PHONY : menu.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -483,12 +435,6 @@ help:
 	@echo "... materiales.o"
 	@echo "... materiales.i"
 	@echo "... materiales.s"
-	@echo "... mensajes_pantalla.o"
-	@echo "... mensajes_pantalla.i"
-	@echo "... mensajes_pantalla.s"
-	@echo "... menu.o"
-	@echo "... menu.i"
-	@echo "... menu.s"
 .PHONY : help
 
 

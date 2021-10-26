@@ -1,5 +1,4 @@
 #include "mapa.h"
-#include "mensajes_pantalla.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -56,7 +55,7 @@ void Mapa::agregar_casillero(ifstream &archivo){
         }
     }
 }
-void Mapa::procesar_archivo_mapa(){
+void Mapa::procesar_archivo(){
     ifstream archivo(PATH_MAPA);
     
     if (!(archivo.is_open())){

@@ -2,8 +2,6 @@
 #include "juego.h"
 #include "colors.h"
 #include "emojis.h"
-#include "menu.h"
-#include "mensajes_pantalla.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -12,6 +10,24 @@
 
 
 const string PATH_UBICACIONES = "ubicaciones.txt";
+
+const int MIN_OPCION = 1;
+const int MAX_OPCION = 10;
+
+const int ERROR = -1;
+
+const int CONSTRUIR_EDIFICIO_NOMBRE = 1;
+const int LISTAR_EDIFICIOS_CONSTRUIDOS = 2;
+const int LISTAR_TODOS_EDIFICIOS = 3;
+const int DEMOLER_EDIFICIO_COORDENADA = 4;
+const int MOSTAR_MAPA = 5;
+const int CONSULTAR_COORDENADA = 6;
+const int MOSTRAR_INVENTARIO = 7;
+const int RECOLECTAR_RECURSOS = 8;
+const int LLUVIA_RECURSOS = 9;
+const int GUARDA_SALIR = 10;
+
+const string VERSION_PGM = "2.0";
 
 
 Juego::Juego(){
@@ -39,7 +55,7 @@ Juego::~Juego(){
 
 void Juego::cargar_juego() {
     this->materiales->procesar_archivo();
-    this->mapa->procesar_archivo_mapa();
+    this->mapa->procesar_archivo();
     this->edificios->procesar_archivo();
     this->procesar_archivo_ubicaciones();
 }
@@ -200,7 +216,7 @@ void Juego::imprimir_mensaje_error_ingreso(){
 void Juego::validar_opcion_ingresada(int &opcion_elegida){
     bool es_valida = es_opcion_valida(opcion_elegida);
     while(!es_valida){
-        imprimir_mensaje_error_ingreso();
+        this->imprimir_mensaje_error_ingreso();
 
         cin >> opcion_elegida;
         es_valida = es_opcion_valida(opcion_elegida);

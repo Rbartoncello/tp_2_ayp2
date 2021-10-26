@@ -151,18 +151,6 @@
 		<Unit filename="/home/juan/Desktop/tp_2_ayp2/materiales.h">
 			<Option target="tp_2_ayp2"/>
 		</Unit>
-		<Unit filename="/home/juan/Desktop/tp_2_ayp2/mensajes_pantalla.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/juan/Desktop/tp_2_ayp2/mensajes_pantalla.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/juan/Desktop/tp_2_ayp2/menu.cpp">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
-		<Unit filename="/home/juan/Desktop/tp_2_ayp2/menu.h">
-			<Option target="tp_2_ayp2"/>
-		</Unit>
 		<Unit filename="/home/juan/Desktop/tp_2_ayp2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

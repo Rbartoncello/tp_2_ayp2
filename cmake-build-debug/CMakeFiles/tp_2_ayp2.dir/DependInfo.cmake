@@ -19,8 +19,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/juan/Desktop/tp_2_ayp2/mapa.cpp" "/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o"
   "/home/juan/Desktop/tp_2_ayp2/material.cpp" "/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/material.cpp.o"
   "/home/juan/Desktop/tp_2_ayp2/materiales.cpp" "/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o"
-  "/home/juan/Desktop/tp_2_ayp2/mensajes_pantalla.cpp" "/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o"
-  "/home/juan/Desktop/tp_2_ayp2/menu.cpp" "/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/menu.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

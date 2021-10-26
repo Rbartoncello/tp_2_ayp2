@@ -10,8 +10,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o"
   "CMakeFiles/tp_2_ayp2.dir/material.cpp.o"
   "CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o"
-  "CMakeFiles/tp_2_ayp2.dir/mensajes_pantalla.cpp.o"
-  "CMakeFiles/tp_2_ayp2.dir/menu.cpp.o"
   "tp_2_ayp2"
   "tp_2_ayp2.pdb"
 )
