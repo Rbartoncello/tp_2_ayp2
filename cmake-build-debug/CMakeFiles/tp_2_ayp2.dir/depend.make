@@ -4,75 +4,22 @@
 CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o: \
  ../Edificio.cpp \
  ../Edificio.h
-CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o: \
- ../Edificio.h \
- ../casillero.cpp \
- ../casillero.h \
- ../colors.h \
- ../material.h
-CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: \
- ../Edificio.h \
- ../casillero.h \
- ../casillero_construible.cpp \
- ../casillero_construible.h \
- ../colors.h \
- ../material.h
-CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o: \
- ../Edificio.h \
- ../casillero.h \
- ../casillero_inaccesible.cpp \
- ../casillero_inaccesible.h \
- ../colors.h \
- ../material.h
-CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: \
- ../Edificio.h \
- ../casillero.h \
- ../casillero_transitable.cpp \
- ../casillero_transitable.h \
- ../colors.h \
- ../material.h
-CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: \
- ../Edificio.h \
- ../colors.h \
- ../edificios.cpp \
- ../edificios.h
 CMakeFiles/tp_2_ayp2.dir/juego.cpp.o: \
  ../Edificio.h \
- ../casillero.h \
- ../casillero_construible.h \
- ../casillero_inaccesible.h \
- ../casillero_transitable.h \
  ../colors.h \
  ../edificios.h \
  ../emojis.h \
  ../juego.cpp \
  ../juego.h \
- ../mapa.h \
  ../material.h \
  ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/main.cpp.o: \
  ../Edificio.h \
- ../casillero.h \
- ../casillero_construible.h \
- ../casillero_inaccesible.h \
- ../casillero_transitable.h \
- ../colors.h \
  ../edificios.h \
  ../juego.h \
  ../main.cpp \
- ../mapa.h \
  ../material.h \
  ../materiales.h
-CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
- ../Edificio.h \
- ../casillero.h \
- ../casillero_construible.h \
- ../casillero_inaccesible.h \
- ../casillero_transitable.h \
- ../colors.h \
- ../mapa.cpp \
- ../mapa.h \
- ../material.h
 CMakeFiles/tp_2_ayp2.dir/material.cpp.o: \
  ../colors.h \
  ../material.cpp \

@@ -10,36 +10,6 @@
 string
 -
 
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
-iostream
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/iostream
-string
--
-colors.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
-Edificio.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.h
-material.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.h
-
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.h
-casillero.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
-Edificio.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/Edificio.h
-
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.h
-casillero.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
-
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h
-iostream
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/iostream
-string
--
-casillero.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
-
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
 
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
@@ -73,8 +43,6 @@ iomanip
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.h
 fstream
 -
-mapa.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
 edificios.h
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
 materiales.h
@@ -83,18 +51,6 @@ materiales.h
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp
 juego.h
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.h
-
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
-fstream
--
-casillero.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
-casillero_inaccesible.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_inaccesible.h
-casillero_transitable.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_transitable.h
-casillero_construible.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero_construible.h
 
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.h
 string

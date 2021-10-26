@@ -153,126 +153,6 @@ Edificio.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.s
 .PHONY : Edificio.cpp.s
 
-casillero.o: casillero.cpp.o
-.PHONY : casillero.o
-
-# target to build an object file
-casillero.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o
-.PHONY : casillero.cpp.o
-
-casillero.i: casillero.cpp.i
-.PHONY : casillero.i
-
-# target to preprocess a source file
-casillero.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero.cpp.i
-.PHONY : casillero.cpp.i
-
-casillero.s: casillero.cpp.s
-.PHONY : casillero.s
-
-# target to generate assembly for a file
-casillero.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero.cpp.s
-.PHONY : casillero.cpp.s
-
-casillero_construible.o: casillero_construible.cpp.o
-.PHONY : casillero_construible.o
-
-# target to build an object file
-casillero_construible.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o
-.PHONY : casillero_construible.cpp.o
-
-casillero_construible.i: casillero_construible.cpp.i
-.PHONY : casillero_construible.i
-
-# target to preprocess a source file
-casillero_construible.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.i
-.PHONY : casillero_construible.cpp.i
-
-casillero_construible.s: casillero_construible.cpp.s
-.PHONY : casillero_construible.s
-
-# target to generate assembly for a file
-casillero_construible.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.s
-.PHONY : casillero_construible.cpp.s
-
-casillero_inaccesible.o: casillero_inaccesible.cpp.o
-.PHONY : casillero_inaccesible.o
-
-# target to build an object file
-casillero_inaccesible.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o
-.PHONY : casillero_inaccesible.cpp.o
-
-casillero_inaccesible.i: casillero_inaccesible.cpp.i
-.PHONY : casillero_inaccesible.i
-
-# target to preprocess a source file
-casillero_inaccesible.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.i
-.PHONY : casillero_inaccesible.cpp.i
-
-casillero_inaccesible.s: casillero_inaccesible.cpp.s
-.PHONY : casillero_inaccesible.s
-
-# target to generate assembly for a file
-casillero_inaccesible.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.s
-.PHONY : casillero_inaccesible.cpp.s
-
-casillero_transitable.o: casillero_transitable.cpp.o
-.PHONY : casillero_transitable.o
-
-# target to build an object file
-casillero_transitable.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o
-.PHONY : casillero_transitable.cpp.o
-
-casillero_transitable.i: casillero_transitable.cpp.i
-.PHONY : casillero_transitable.i
-
-# target to preprocess a source file
-casillero_transitable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.i
-.PHONY : casillero_transitable.cpp.i
-
-casillero_transitable.s: casillero_transitable.cpp.s
-.PHONY : casillero_transitable.s
-
-# target to generate assembly for a file
-casillero_transitable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.s
-.PHONY : casillero_transitable.cpp.s
-
-edificios.o: edificios.cpp.o
-.PHONY : edificios.o
-
-# target to build an object file
-edificios.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o
-.PHONY : edificios.cpp.o
-
-edificios.i: edificios.cpp.i
-.PHONY : edificios.i
-
-# target to preprocess a source file
-edificios.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.i
-.PHONY : edificios.cpp.i
-
-edificios.s: edificios.cpp.s
-.PHONY : edificios.s
-
-# target to generate assembly for a file
-edificios.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s
-.PHONY : edificios.cpp.s
-
 juego.o: juego.cpp.o
 .PHONY : juego.o
 
@@ -320,30 +200,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-mapa.o: mapa.cpp.o
-.PHONY : mapa.o
-
-# target to build an object file
-mapa.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o
-.PHONY : mapa.cpp.o
-
-mapa.i: mapa.cpp.i
-.PHONY : mapa.i
-
-# target to preprocess a source file
-mapa.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mapa.cpp.i
-.PHONY : mapa.cpp.i
-
-mapa.s: mapa.cpp.s
-.PHONY : mapa.s
-
-# target to generate assembly for a file
-mapa.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s
-.PHONY : mapa.cpp.s
 
 material.o: material.cpp.o
 .PHONY : material.o
@@ -405,30 +261,12 @@ help:
 	@echo "... Edificio.o"
 	@echo "... Edificio.i"
 	@echo "... Edificio.s"
-	@echo "... casillero.o"
-	@echo "... casillero.i"
-	@echo "... casillero.s"
-	@echo "... casillero_construible.o"
-	@echo "... casillero_construible.i"
-	@echo "... casillero_construible.s"
-	@echo "... casillero_inaccesible.o"
-	@echo "... casillero_inaccesible.i"
-	@echo "... casillero_inaccesible.s"
-	@echo "... casillero_transitable.o"
-	@echo "... casillero_transitable.i"
-	@echo "... casillero_transitable.s"
-	@echo "... edificios.o"
-	@echo "... edificios.i"
-	@echo "... edificios.s"
 	@echo "... juego.o"
 	@echo "... juego.i"
 	@echo "... juego.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mapa.o"
-	@echo "... mapa.i"
-	@echo "... mapa.s"
 	@echo "... material.o"
 	@echo "... material.i"
 	@echo "... material.s"

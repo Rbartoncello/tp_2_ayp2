@@ -47,9 +47,9 @@ void Materiales::procesar_archivo(){
         while ( archivo >> nombre ){
             archivo >> cantidad;
 
-            Material* material  = new Material(nombre, stoi(cantidad));
+            //Material* material  = new Material(nombre, stoi(cantidad));
 
-            agregar_material(material);
+            agregar_material(new Material(nombre, stoi(cantidad)));
         }
 
         archivo.close();

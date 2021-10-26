@@ -4,16 +4,8 @@
 #include "iostream"
 #include <string>
 #include "colors.h"
-#include "Edificio.h"
-#include "material.h"
-
-using namespace std;
 
 class Casillero{
-    protected:
-        Edificio* edificio;
-        Material* material;
-        bool ocupado;
     private:
         char tipo_terreno;
         int pos_x;
@@ -82,12 +74,6 @@ class Casillero{
          * POST: Me va modificar pos_y.
          */
         void modificar_pos_y(int y);
-
-        virtual void agregar_edificio(Edificio* edificio);
-
-        virtual void mostrar_edificio();
-
-        virtual bool esta_ocupado();
 };
 
 

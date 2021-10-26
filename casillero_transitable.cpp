@@ -13,13 +13,11 @@ Casillero_transitable::Casillero_transitable() : Casillero(){
     this->ocupado = false;
 }
 
-/* Casillero_transitable::~Casillero_transitable(){
-} */
-
 bool Casillero_transitable::esta_ocupado(){
     return this->ocupado;;
 }
 
 void Casillero_transitable::mostrar(){
-    cout << BGND_GRAY_243 << "  " << END_COLOR;
+    if(!this->esta_ocupado())
+        cout << BGND_GRAY_243 << "  " << END_COLOR;
 }

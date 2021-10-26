@@ -43,27 +43,24 @@ class Mapa{
          */
         void procesar_archivo();
 
-
-    /*
+        /*
          * PRE: -
          * POST: Me muestra por pantalla el mapa.
          */
         void mostrar();
 
-
-    /*
-     * PRE: edificio bien hecho, fila y columna en indice de la matriz
-     * POST: Agrega al casillero marcado el edificio pasado por parametro
-     */
+        /*
+         * PRE: edificio bien hecho, fila y columna en indice de la matriz
+         * POST: Agrega al casillero marcado el edificio pasado por parametro
+         */
         void agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna);
 
 
-    /*
-     * PRE: -
-     * POST: Me muestra por pantalla el mapa.
-     */
+        /*
+         * PRE: -
+         * POST: Me muestra por pantalla el mapa.
+         */
         void mostrar_edificios_construidos();
-
 
     private:
         /*
@@ -77,11 +74,6 @@ class Mapa{
          * POST: Me crea una matriz del tipo casillero de forma dinamica.
          */
         void crear_matriz_casilleros();
-
-
-
 };
-
-
 
 #endif

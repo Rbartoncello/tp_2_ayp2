@@ -1,15 +1,12 @@
-//
-// Created by juan on 25/10/21.
-//
-
-#include "Edificio.h"
+#include "edificio.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-Edificio::Edificio(string nombre, int piedra, int madera, int metal, int max_cant_permitidos){
+Edificio::Edificio(string nombre, string emoji, int piedra, int madera, int metal, int max_cant_permitidos){
     this->nombre_edificio = nombre;
+    this->emoji = emoji;
     this->piedra = piedra;
     this->madera = madera;
     this->metal = metal;
@@ -18,6 +15,10 @@ Edificio::Edificio(string nombre, int piedra, int madera, int metal, int max_can
 
 string Edificio::devolver_nombre_edificio(){
     return this->nombre_edificio;
+}
+
+string Edificio::devolver_emoji(){
+    return this->emoji;
 }
 
 int Edificio::devolver_piedra(){

@@ -1,9 +1,12 @@
 #ifndef CASALLERO_CONSTRUIBLE_H
 #define CASALLERO_CONSTRUIBLE_H
 #include "casillero.h"
-#include "Edificio.h"
+#include "edificio.h"
 
 class Casillero_construible : public Casillero{
+    private:
+        Edificio* edificios;
+        bool ocupado;
     public:
         /*
          * Constructor:
@@ -19,8 +22,6 @@ class Casillero_construible : public Casillero{
          */
         Casillero_construible();
 
-        ~Casillero_construible();
-
         /*
          * PRE: -
          * POST: De devuleve TRUE si esta ocupado y FALSE en caso contrario.
@@ -32,10 +33,6 @@ class Casillero_construible : public Casillero{
          * POST: Me muestra por pantalla.
          */
         void mostrar();
-
-        void agregar_edificio(Edificio* edificio);
-
-        void mostrar_edificio();
 };
 
 #endif

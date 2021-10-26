@@ -11,10 +11,6 @@ Casillero_inaccesible::Casillero_inaccesible(): Casillero(){
 
 }
 
-/* Casillero_inaccesible::~Casillero_inaccesible(){
-
-} */
-
 void Casillero_inaccesible::mostrar(){
     cout << BGND_LIGHT_BLUE_68 << "  " << END_COLOR;
 }

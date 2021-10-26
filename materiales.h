@@ -5,13 +5,11 @@
 
 using namespace std;
 
-
 class Materiales{
     private:
         Material** materiales;
         int total_materiales;
     public:
-
         /*
          * Constructor:
          * PRE: -.
@@ -39,7 +37,6 @@ class Materiales{
         void mostrar();
 
     private:
-
         /*
          * PRE: Recibe un objeto Material.
          * POST: Ingresa el objeto en un vector dinámico.

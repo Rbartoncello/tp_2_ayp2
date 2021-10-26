@@ -1,4 +1,3 @@
-
 #include "juego.h"
 #include "colors.h"
 #include "emojis.h"
@@ -8,18 +7,16 @@
 #include <unistd.h>
 #include <iomanip>
 
-
-
-
 Juego::Juego(){
+    this->materiales = new Materiales;
+    this->edificios = new Edificios;
+    this->mapa = new Mapa;
+}
 
-    Edificios* edificios = new Edificios;
-    Materiales* materiales = new Materiales;
-    Mapa* mapa = new Mapa;
-
-    this->edificios = edificios;
-    this->mapa = mapa;
-    this->materiales = materiales;
+Juego::~Juego(){
+    delete this->materiales;
+    delete this->edificios;
+    delete this->mapa;
 }
 
 //Juego::Juego(Mapa* mapa, Edificios* edificios, Materiales* materiales){
@@ -31,14 +28,13 @@ Juego::Juego(){
 
 void Juego::cargar_juego() {
     this->materiales->procesar_archivo();
-    this->mapa->procesar_archivo();
     this->edificios->procesar_archivo();
-    //this->procesar_archivo_ubicaciones();
+    this->mapa->procesar_archivo();
 }
 
-/*void Juego::jugar(){
+void Juego::jugar(){
 
-    //int opcion_elegida = 0;
+    int opcion_elegida = 0;
 
     this->mostrar_opciones();
 
@@ -61,8 +57,7 @@ void Juego::procesar_archivo_ubicaciones() {
     ifstream archivo(PATH_UBICACIONES);
     string nombre, fila, columna, basura;
 
-
-     if (!archivo.is_open()) {
+    if (!archivo.is_open()) {
         cout << "No se pudo abrir el archivo: " << PATH_UBICACIONES << endl;
     } else {
         while (getline(archivo, nombre, '(')) {
@@ -70,12 +65,8 @@ void Juego::procesar_archivo_ubicaciones() {
             getline(archivo, columna, ')');
             getline(archivo, basura);
 
-            Edificio *edificio_auxiliar;
-
-            edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
-
-            this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna));
-
+            /* Edificio *edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
+            this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna)); */
         }
 
         archivo.close();
@@ -83,18 +74,17 @@ void Juego::procesar_archivo_ubicaciones() {
 }
 
 
-
-void Juego::mensaje_bienvenida() {
+void Juego::mensaje_bienvenida(){
     system("clear");
-       cout << TXT_B
-  __      .__   __.  _______  ____    ____ .______     ______    __       __       _______.             \n\
+    cout << TXT_BOLD << TXT_DARK_YELLOW_3 << "\
+\t\t     ___      .__   __.  _______  ____    ____ .______     ______    __       __       _______.             \n\
 \t\t    /   \\     |  \\ |  | |       \\ \\   \\  /   / |   _  \\   /  __  \\  |  |     |  |     /       | _    \n\
 \t\t   /  ^  \\    |   \\|  | |  .--.  | \\   \\/   /  |  |_)  | |  |  |  | |  |     |  |    |   (----`(_)      \n\
 \t\t  /  /_\\  \\   |  . `  | |  |  |  |  \\_    _/   |   ___/  |  |  |  | |  |     |  |     \\   \\            \n\
 \t\t /  _____  \\  |  |\\   | |  '--'  |    |  |     |  |      |  `--'  | |  `----.|  | .----)   |    _         \n\
 \t\t/__/     \\__\\ |__| \\__| |_______/     |__|     |__|       \\______/  |_______||__| |_______/    (_)      \n\
                                                                                                               \n"
-             << END_COLOR << endl;
+    << END_COLOR << endl;
     cout << TXT_BOLD << TXT_ORANGE_130 << "\
   ,,                                                                                                        ,,       ,,                   \n\
 `7MM                                                        mm                                              db      ,,                   \n\
@@ -103,9 +93,9 @@ void Juego::mensaje_bienvenida() {
   MM   8    MM     6M'  OO  6W'   `Wb   MM    MM  8I   `    MM      MM' '    MM    MM  6M'  OO  6M'   OO    MM  6W'   `Wb   MM    MM  \n\
   MM    ,pm9MM     8M       8M     M8   MM    MM  `YMMMa.   MM      MM       MM    MM  8M       8M          MM  8M     M8   MM    MM  \n\
   MM   8M   MM     YM.    , YA.   ,A9   MM    MM  L.   I8   MM      MM       MM    MM  YM.    , YM.    ,    MM  YA.   ,A9   MM    MM  \n\
-.JMML.`Moo9^Yo.     YMbmd'   `Ybmd9'  .JMML  JMML.M9mmmP'   `Mbmo .JMML.     `MbodYML.  YMbmd'   YMbmd'   .JMML. `Ybmd9'  .JMML  JMML. \n"
-             << END_COLOR << endl;
-        cout << "\
+.JMML.`Moo9^Yo.     YMbmd'   `Ybmd9'  .JMML  JMML.M9mmmP'   `Mbmo .JMML.     `MbodYML.  YMbmd'   YMbmd'   .JMML. `Ybmd9'  .JMML  JMML. \n" 
+    << END_COLOR << endl;
+    cout << "\
     \t\t\tLuego de muchos años de espera Andy finalmente encontró el lugar perfecto para\n\
     \t\tasentarse y comenzar a armar su pequeño paraíso. Como primera medida decidió nombrar\n\
     \t\tsu nuevo hogar como Andypolis, la maravillosa ciudad de los programadores.\n\
@@ -118,10 +108,12 @@ void Juego::mensaje_bienvenida() {
     \t\t\tPasaron unas semanas y los habitantes de Andypolis nos pidieron ayuda para generar una\n\
     \t\tnueva versión de nuestro programa. Como la dificultad del programa aumentó nos pidieron\n\
     \t\tque dos programadores se unan y desarrollen su programa en conjunto." << endl << endl;
-        cout << "\t\t\t\t\t\tPresione [ENTER] para continuar" << endl;
-        cin.get();
-        system("clear");
+    cout << "\t\t\t\t\t\tPresione [ENTER] para continuar"<< endl;
+    cin.get();
+    system("clear");
 }
+
+
 void Juego::imprimir_mensaje_error() {
         cout << TXT_BOLD << "\t" << EMOJI_WARNRING << TXT_DARK_RED_1 << TXT_UNDERLINE << " ERROR!! " << END_COLOR
              << EMOJI_WARNRING << endl;
@@ -139,8 +131,8 @@ void Juego::imprimir_mensaje_esperar(int tiempo) {
 }
 
 void Juego::imprimir_mensaje_opcion_afirmativa_negativa() {
-        cout << TXT_BOLD << TXT_GREEN_118  <<  AFIRMATIVO  << END_COLOR << " , en caso afirmativo, o ";
-        cout << TXT_BOLD << TXT_LIGHT_RED_9  <<  NEGATIVO  << END_COLOR << " , en caso negativo." << endl;
+        cout << TXT_BOLD << TXT_GREEN_118  <<  /*AFIRMATIVO  <<*/ END_COLOR << " , en caso afirmativo, o ";
+        cout << TXT_BOLD << TXT_LIGHT_RED_9  <<  /*NEGATIVO  <<*/ END_COLOR << " , en caso negativo." << endl;
 }
 
 void Juego::mostrar_opciones(){
@@ -178,10 +170,6 @@ int Juego::pedir_opcion(){
     return opcion_elegida;
 }
 
-
- * Pre: -
- * Post: Devuelve TRUE si MIN_OPCION <= opcion <= MAX_OPCION y FALSE en caso contrario.
-
 bool Juego::es_opcion_valida(int opcion){
     return( ( opcion >= MIN_OPCION ) && ( opcion <= MAX_OPCION ) );
 }
@@ -207,7 +195,7 @@ void Juego::procesar_opcion(int opcion){
         case CONSTRUIR_EDIFICIO_NOMBRE:
             break;
         case LISTAR_EDIFICIOS_CONSTRUIDOS:
-            this->mapa->mostrar_edificios_construidos();
+            //this->mapa->mostrar_edificios_construidos();
             break;
         case LISTAR_TODOS_EDIFICIOS:
             this->edificios->mostar();
@@ -241,5 +229,3 @@ void Juego::imprimir_mensaje_guardado() {
 
 
 }
-
-*/

@@ -11,20 +11,13 @@ Casillero_construible::Casillero_construible(): Casillero() {
     this->ocupado = false;
 }
 
-Casillero_construible::~Casillero_construible(){
-
+bool Casillero_construible::esta_ocupado(){
+    return this->ocupado;
 }
 
 
 void Casillero_construible::mostrar(){
-    cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
-}
-
-void Casillero_construible::agregar_edificio(Edificio* edificio) {
-    this->edificio = edificio;
-    this->ocupado = true;
-}
-
-void Casillero_construible::mostrar_edificio() {
-    edificio->mostrar();
+    if (!this->esta_ocupado()){
+        cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
+    }
 }
