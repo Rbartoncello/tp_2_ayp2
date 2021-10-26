@@ -1,4 +1,4 @@
-/home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2
+/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/juan/Desktop/tp_2_ayp2
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug
+-- Build files have been written to: /home/juan/Desktop/tp_2_ayp2/cmake-build-debug

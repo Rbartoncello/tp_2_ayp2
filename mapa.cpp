@@ -56,7 +56,7 @@ void Mapa::agregar_casillero(ifstream &archivo){
         }
     }
 }
-void Mapa::procesar_archivo(){
+void Mapa::procesar_archivo_mapa(){
     ifstream archivo(PATH_MAPA);
     
     if (!(archivo.is_open())){
@@ -93,3 +93,19 @@ void Mapa::mostrar(){
     cin.get();
     system("clear");
 }
+
+void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna){
+
+    this->casilleros[fila][columna]->agregar_edificio(edificio);
+}
+
+void Mapa::mostrar_edificios_construidos() {
+    for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            if ( this->casilleros[i][j]->devolver_tipo_terreno() == TERRENO && this->casilleros[i][j]->esta_ocupado()){
+                this->casilleros[i][j]->mostrar_edificio();
+            }
+        }
+    }
+}
+

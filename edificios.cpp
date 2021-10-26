@@ -9,16 +9,9 @@
 
 const string PATH_EDIFICIO = "edificios.txt";
 
+
 Edificios::Edificios(){
     this->total_edificios = 0;
-}
-
-Edificio::Edificio(string nombre, int piedra, int madera, int metal, int max_cant_permitidos){
-    this->nombre_edificio = nombre;
-    this->piedra = piedra;
-    this->madera = madera;
-    this->metal = metal;
-    this->maxima_cantidad_permitidos = max_cant_permitidos;   
 }
 
 Edificios::~Edificios(){
@@ -43,29 +36,6 @@ void Edificios::agregar_edificio(Edificio* edificio){
 
     this->edificios = nuevos_edificios;
     this->total_edificios++;
-}
-
-void Edificios::procesar_archivo(){
-
-    ifstream archivo(PATH_EDIFICIO);
-    string nombre, piedra, madera, metal, max_cant_permitidos;
-
-    if (!archivo.is_open()){
-        cout << "No se pudo abrir el archivo: " << PATH_EDIFICIO << endl;
-    } else {
-        while ( archivo >> nombre ){
-            archivo >> piedra;
-            archivo >> madera;
-            archivo >> metal;
-            archivo >> max_cant_permitidos;
-
-            Edificio* edificio  = new Edificio (nombre, stoi(piedra), stoi(madera), stoi(metal), stoi   (max_cant_permitidos));
-
-            agregar_edificio(edificio);
-        }
-
-        archivo.close();
-    }
 }
 
 void Edificios::mostar(){
@@ -96,26 +66,34 @@ void Edificios::mostar(){
     system("clear");
 }
 
-void Edificio::mostar(){
-    cout << devolver_nombre_edificio() << " " << devolver_piedra() << " " << devolver_madera() << " " << devolver_metal() << " " << devolver_maxima_cantidad_permitidos() << endl;
+void Edificios::procesar_archivo(){
+
+    ifstream archivo(PATH_EDIFICIO);
+    string nombre, piedra, madera, metal, max_cant_permitidos;
+
+    if (!archivo.is_open()){
+        cout << "No se pudo abrir el archivo: " << PATH_EDIFICIO << endl;
+    } else {
+        while ( archivo >> nombre ){
+            archivo >> piedra;
+            archivo >> madera;
+            archivo >> metal;
+            archivo >> max_cant_permitidos;
+
+            Edificio* edificio  = new Edificio (nombre, stoi(piedra), stoi(madera), stoi(metal), stoi   (max_cant_permitidos));
+
+            agregar_edificio(edificio);
+        }
+
+        archivo.close();
+    }
 }
 
-string Edificio::devolver_nombre_edificio(){
-    return this->nombre_edificio;
-}
 
-int Edificio::devolver_piedra(){
-    return this->piedra;
-}
-
-int Edificio::devolver_madera(){
-    return this->madera;
-}
-
-int Edificio::devolver_metal(){
-    return this->metal;
-}
-
-int Edificio::devolver_maxima_cantidad_permitidos(){
-    return this->maxima_cantidad_permitidos;
-}
+Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
+    for(int i = 0; i < this->total_edificios; i++ ) {
+        if (nombre == this->edificios[i]->devolver_nombre_edificio()) {
+            return this->edificios[i];
+        }
+    }
+};

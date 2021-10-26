@@ -13,11 +13,6 @@ Materiales::Materiales(){
     this->total_materiales = 0;
 }
 
-Material::Material(string nombre, int cantidad){
-    this->nombre_material = nombre;
-    this->cantidad_material = cantidad;
-}
-
 Materiales::~Materiales(){
     for (int i = 0; i < this->total_materiales; i++){
         delete this->materiales[i];
@@ -62,7 +57,7 @@ void Materiales::procesar_archivo(){
     }
 }
 
-void Materiales::mostar(){
+void Materiales::mostrar(){
     system("clear");
 
     cout << TXT_BOLD;
@@ -84,16 +79,4 @@ void Materiales::mostar(){
     cin.get();
     cin.get();
     system("clear");
-}
-
-void Material::mostar(){
-    cout << devolver_nombre_material() << " " << devolver_cantidad_material() <<  endl;
-}
-
-string Material::devolver_nombre_material(){
-    return this->nombre_material;
-}
-
-int Material::devolver_cantidad_material(){
-    return this->cantidad_material;
 }

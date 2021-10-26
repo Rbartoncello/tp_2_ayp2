@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2
+CMAKE_SOURCE_DIR = /home/juan/Desktop/tp_2_ayp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/juan/Desktop/tp_2_ayp2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-bu
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/169/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/rbartoncello/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/169/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles /home/juan/Desktop/tp_2_ayp2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/juan/Desktop/tp_2_ayp2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ tp_2_ayp2: cmake_check_build_system
 tp_2_ayp2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/build
 .PHONY : tp_2_ayp2/fast
+
+Edificio.o: Edificio.cpp.o
+.PHONY : Edificio.o
+
+# target to build an object file
+Edificio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.o
+.PHONY : Edificio.cpp.o
+
+Edificio.i: Edificio.cpp.i
+.PHONY : Edificio.i
+
+# target to preprocess a source file
+Edificio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.i
+.PHONY : Edificio.cpp.i
+
+Edificio.s: Edificio.cpp.s
+.PHONY : Edificio.s
+
+# target to generate assembly for a file
+Edificio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/Edificio.cpp.s
+.PHONY : Edificio.cpp.s
 
 casillero.o: casillero.cpp.o
 .PHONY : casillero.o
@@ -249,6 +273,30 @@ edificios.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/edificios.cpp.s
 .PHONY : edificios.cpp.s
 
+juego.o: juego.cpp.o
+.PHONY : juego.o
+
+# target to build an object file
+juego.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/juego.cpp.o
+.PHONY : juego.cpp.o
+
+juego.i: juego.cpp.i
+.PHONY : juego.i
+
+# target to preprocess a source file
+juego.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/juego.cpp.i
+.PHONY : juego.cpp.i
+
+juego.s: juego.cpp.s
+.PHONY : juego.s
+
+# target to generate assembly for a file
+juego.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/juego.cpp.s
+.PHONY : juego.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -296,6 +344,30 @@ mapa.s: mapa.cpp.s
 mapa.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/mapa.cpp.s
 .PHONY : mapa.cpp.s
+
+material.o: material.cpp.o
+.PHONY : material.o
+
+# target to build an object file
+material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/material.cpp.o
+.PHONY : material.cpp.o
+
+material.i: material.cpp.i
+.PHONY : material.i
+
+# target to preprocess a source file
+material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/material.cpp.i
+.PHONY : material.cpp.i
+
+material.s: material.cpp.s
+.PHONY : material.s
+
+# target to generate assembly for a file
+material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp_2_ayp2.dir/build.make CMakeFiles/tp_2_ayp2.dir/material.cpp.s
+.PHONY : material.cpp.s
 
 materiales.o: materiales.cpp.o
 .PHONY : materiales.o
@@ -378,6 +450,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tp_2_ayp2"
+	@echo "... Edificio.o"
+	@echo "... Edificio.i"
+	@echo "... Edificio.s"
 	@echo "... casillero.o"
 	@echo "... casillero.i"
 	@echo "... casillero.s"
@@ -393,12 +468,18 @@ help:
 	@echo "... edificios.o"
 	@echo "... edificios.i"
 	@echo "... edificios.s"
+	@echo "... juego.o"
+	@echo "... juego.i"
+	@echo "... juego.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mapa.o"
 	@echo "... mapa.i"
 	@echo "... mapa.s"
+	@echo "... material.o"
+	@echo "... material.i"
+	@echo "... material.s"
 	@echo "... materiales.o"
 	@echo "... materiales.i"
 	@echo "... materiales.s"

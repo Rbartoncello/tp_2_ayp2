@@ -8,7 +8,6 @@
 
 class Casillero_transitable : public Casillero{
     private:
-        bool ocupado;
 
     public:
         /*
@@ -38,6 +37,7 @@ class Casillero_transitable : public Casillero{
          * POST: Me muestra por pantalla.
          */
         void mostrar();
+
 };
 
 #endif //CASILLERO_TRANSITABLE_H
