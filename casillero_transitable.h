@@ -25,8 +25,6 @@ class Casillero_transitable : public Casillero{
          */
         Casillero_transitable();
 
-        //~Casillero_transitable();
-
         /*
          * PRE: -
          * POST: De devuleve TRUE si esta ocupado y FALSE en caso contrario.

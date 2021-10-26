@@ -13,9 +13,6 @@ Casillero_transitable::Casillero_transitable() : Casillero(){
     this->ocupado = false;
 }
 
-/* Casillero_transitable::~Casillero_transitable(){
-} */
-
 bool Casillero_transitable::esta_ocupado(){
     return this->ocupado;;
 }

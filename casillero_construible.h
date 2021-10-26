@@ -21,8 +21,6 @@ class Casillero_construible : public Casillero{
          */
         Casillero_construible();
 
-        ~Casillero_construible();
-
         /*
          * PRE: -
          * POST: De devuleve TRUE si esta ocupado y FALSE en caso contrario.

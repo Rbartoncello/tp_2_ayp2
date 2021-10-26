@@ -11,10 +11,6 @@ Casillero_construible::Casillero_construible(): Casillero() {
     this->ocupado = false;
 }
 
-Casillero_construible::~Casillero_construible(){
-
-}
-
 bool Casillero_construible::esta_ocupado(){
     return this->ocupado;
 }

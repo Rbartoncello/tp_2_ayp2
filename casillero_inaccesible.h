@@ -18,8 +18,6 @@ class Casillero_inaccesible : public Casillero {
          */
         Casillero_inaccesible();
 
-        //~Casillero_inaccesible();
-
         /*
         * PRE: -
         * POST: De devuleve TRUE si esta ocupado y FALSEen caso contrario.
