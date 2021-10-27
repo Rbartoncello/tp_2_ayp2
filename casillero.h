@@ -4,6 +4,7 @@
 #include "iostream"
 #include <string>
 #include "colors.h"
+#include "edificio.h"
 
 class Casillero{
     private:
@@ -74,6 +75,8 @@ class Casillero{
          * POST: Me va modificar pos_y.
          */
         void modificar_pos_y(int y);
+
+        virtual void agregar_edificio(Edificio* edificio){};
 };
 
 

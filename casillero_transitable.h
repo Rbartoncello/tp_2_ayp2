@@ -36,6 +36,8 @@ class Casillero_transitable : public Casillero{
          * POST: Me muestra por pantalla.
          */
         void mostrar();
+
+        void agregar_edificio(Edificio* edificio){};
 };
 
 #endif //CASILLERO_TRANSITABLE_H

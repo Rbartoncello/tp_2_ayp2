@@ -30,6 +30,8 @@ class Casillero_inaccesible : public Casillero {
         */
         void mostrar();
 
+        void agregar_edificio(Edificio* edificio){};
+
 };
 
 
