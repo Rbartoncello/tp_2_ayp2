@@ -21,3 +21,6 @@ void Casillero_transitable::mostrar(){
     if(!this->esta_ocupado())
         cout << BGND_GRAY_243 << "  " << END_COLOR;
 }
+
+void Casillero_transitable::mostrar_casillero(){
+}

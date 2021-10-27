@@ -30,6 +30,7 @@ void Juego::cargar_juego() {
     this->materiales->procesar_archivo();
     this->edificios->procesar_archivo();
     this->mapa->procesar_archivo();
+    this->procesar_archivo_ubicaciones();
 }
 
 void Juego::jugar(){
@@ -60,13 +61,14 @@ void Juego::procesar_archivo_ubicaciones() {
     if (!archivo.is_open()) {
         cout << "No se pudo abrir el archivo: " << PATH_UBICACIONES << endl;
     } else {
-        while (getline(archivo, nombre, '(')) {
+        while (getline(archivo, nombre, ' ')) {
+            getline(archivo, basura, '(');
             getline(archivo, fila, ',');
             getline(archivo, columna, ')');
             getline(archivo, basura);
 
-            /* Edificio *edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
-            this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna)); */
+            Edificio *edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
+            this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna));
         }
 
         archivo.close();
@@ -195,7 +197,7 @@ void Juego::procesar_opcion(int opcion){
         case CONSTRUIR_EDIFICIO_NOMBRE:
             break;
         case LISTAR_EDIFICIOS_CONSTRUIDOS:
-            //this->mapa->mostrar_edificios_construidos();
+            this->mapa->mostrar_edificios_construidos();
             break;
         case LISTAR_TODOS_EDIFICIOS:
             this->edificios->mostar();

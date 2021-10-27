@@ -1,0 +1,4 @@
+fabrica (2, 0)
+escuela (2, 4)
+obelisco (4, 5)
+planta_electrica (6, 5)

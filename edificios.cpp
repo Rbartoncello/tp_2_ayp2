@@ -108,12 +108,12 @@ string Edificios::buscar_tipo_emoji(string nombre_edificio){
     return emoji;  
 }
 
-/*
 Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
-    for(int i = 0; i < this->total_edificios; i++ ) {
-        if (nombre == this->edificios[i]->devolver_nombre_edificio()) {
-            return this->edificios[i];
-        }
+    int i = 0;
+
+    while (nombre != this->edificios[i]->devolver_nombre_edificio()){
+        i++;
     }
+
+    return this->edificios[i];
 }
-*/

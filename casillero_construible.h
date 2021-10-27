@@ -5,7 +5,7 @@
 
 class Casillero_construible : public Casillero{
     private:
-        Edificio* edificios;
+        Edificio* edificio;
         bool ocupado;
     public:
         /*
@@ -33,6 +33,10 @@ class Casillero_construible : public Casillero{
          * POST: Me muestra por pantalla.
          */
         void mostrar();
+
+        void ocupar_casillero(Edificio* edificio);
+
+        void mostrar_casillero();
 };
 
 #endif

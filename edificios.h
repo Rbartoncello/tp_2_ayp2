@@ -43,7 +43,7 @@ class Edificios{
          */
         void mostar();
 
-        //Edificio* buscar_edificio_por_nombre(string nombre);
+        Edificio* buscar_edificio_por_nombre(string nombre);
 
         private:
 

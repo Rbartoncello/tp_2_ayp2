@@ -15,9 +15,18 @@ bool Casillero_construible::esta_ocupado(){
     return this->ocupado;
 }
 
+void Casillero_construible::ocupar_casillero(Edificio* edificio) {
+    this->edificio = edificio;
+    this->ocupado = true;
+}
 
 void Casillero_construible::mostrar(){
-    if (!this->esta_ocupado()){
+    if (!this->esta_ocupado())
         cout << BGND_DARK_GREEN_28 << "  " << END_COLOR;
-    }
+    else 
+        cout << BGND_DARK_GREEN_28 << this->edificio->devolver_emoji() << END_COLOR;
+}
+
+void Casillero_construible::mostrar_casillero(){
+    cout << this->edificio->devolver_nombre_edificio() << "(" << this->devolver_pos_x() << ", " << this->devolver_pos_y() << ")" << endl;
 }

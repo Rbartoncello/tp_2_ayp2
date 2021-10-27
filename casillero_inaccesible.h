@@ -3,6 +3,8 @@
 #include "casillero.h"
 
 class Casillero_inaccesible : public Casillero {
+    private:
+        bool ocupado;
     public:
         /*
          * Constructor:
@@ -30,8 +32,9 @@ class Casillero_inaccesible : public Casillero {
         */
         void mostrar();
 
-        void agregar_edificio(Edificio* edificio){};
+        void agregar_edificio(Edificio* edificio);
 
+        void mostrar_casillero();
 };
 
 
