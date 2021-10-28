@@ -357,3 +357,10 @@ bool Juego::calcular_costos(Edificio* edificio){
     return metal_suficiente && madera_suficiente && piedra_suficiente && maximo_permitido;
 
 }
+
+void Juego::demoler_edificio_por_coordenada(){
+    int fila, columna;
+
+    
+
+}

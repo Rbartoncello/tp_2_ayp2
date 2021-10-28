@@ -159,6 +159,8 @@ class Juego {
         void validar_columna(int &columna);
 
         void construir_por_input();
+
+        void demoler_edificio_por_coordenada();
 };
 
 
