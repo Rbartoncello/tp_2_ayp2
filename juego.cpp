@@ -191,10 +191,89 @@ void Juego::validar_opcion_ingresada(int &opcion_elegida){
     }
 }
 
+void Juego::validar_opcion_construir(int &opcion_elegida){
+    bool es_valida = (opcion_elegida == 1 || opcion_elegida == 2);
+    while(!es_valida){
+        this->imprimir_mensaje_error_ingreso();
+
+        cin >> opcion_elegida;
+        es_valida = (opcion_elegida == 1 || opcion_elegida == 2);
+    }
+}
+
+int Juego::pedir_fila(){
+    int opcion_elegida = 0;
+    cout << " Por favor ingrese la fila: ";
+    cin >> opcion_elegida;
+
+    return opcion_elegida;
+}
+
+int Juego::pedir_columna(){
+    int opcion_elegida = 0;
+    cout << " Por favor ingrese la columna: ";
+    cin >> opcion_elegida;
+
+    return opcion_elegida;
+}
+
+void Juego::validar_fila(int &fila){
+    bool es_valida = (fila >= 0 && fila < this->mapa->devolver_cantidad_filas());
+    while(!es_valida){
+        this->imprimir_mensaje_error_ingreso();
+
+        cin >> fila;
+        es_valida = (fila >= 0 && fila < this->mapa->devolver_cantidad_filas());
+    }
+}
+void Juego::validar_columna(int &columna){
+    bool es_valida = (columna >= 0 && columna < this->mapa->devolver_cantidad_columnas());
+    while(!es_valida){
+        this->imprimir_mensaje_error_ingreso();
+
+        cin >> columna;
+        es_valida = (columna >= 0 && columna < this->mapa->devolver_cantidad_columnas());
+    }
+}
+
 void Juego::procesar_opcion(int opcion){
+
+    string nombre_edificio;
+    Edificio* edificio;
+    int desea_construir;
+    int fila, columna;
 
     switch (opcion){
         case CONSTRUIR_EDIFICIO_NOMBRE:
+            nombre_edificio = this->pedir_nombre();
+            if (!this->edificios->existe_edificio_por_nombre(nombre_edificio)){
+                cout << "No existe edificio con tal nombre " << endl;
+            }else{
+                edificio=this->edificios->buscar_edificio_por_nombre(nombre_edificio);
+                if (this->calcular_costos(edificio)){
+                    cout << endl << "La construccion es posible, desea realizarla? 1) SI 2) NO " << endl;
+                    desea_construir = pedir_opcion();
+                    validar_opcion_construir(desea_construir);
+                    if (desea_construir == 1){
+                        fila = pedir_fila();
+                        validar_fila(fila);
+                        columna = pedir_columna();
+                        validar_columna(columna);
+                        if (!mapa->se_puede_construir(fila,columna)){
+                            cout << "no se puede construir en esa posicion";
+                        }else{
+                            mapa->agregar_edificio_a_casillero(edificio, fila, columna);
+                            cout << "Se construyo el edificio con exito"<< endl;
+                        }
+                    }
+                    if(desea_construir== 2){
+                        cout << endl << "El edificio no se construyo!" << endl;
+                    }
+
+                }
+            }
+            
+
             break;
         case LISTAR_EDIFICIOS_CONSTRUIDOS:
             this->mapa->mostrar_edificios_construidos();
@@ -229,5 +308,53 @@ void Juego::imprimir_mensaje_guardado() {
     cout << "\t»Se ha guardado con exito " << EMOJI_HECHO << endl;
     cout << "\t»Adios«" << endl;
 
+
+}
+
+string Juego::pedir_nombre(){
+    string nombre_dado;
+    cout << "Ingrese el nombre del edificio: ";
+    cin >> nombre_dado;
+    return nombre_dado;
+}
+
+bool Juego::calcular_costos(Edificio* edificio){
+    bool madera_suficiente = false;
+    bool metal_suficiente = false;
+    bool piedra_suficiente = false;
+    bool maximo_permitido = false;
+    int cantidad_edificio = this->mapa->cantidad_edificio_construido(edificio->devolver_nombre_edificio());
+
+
+    
+    if(edificio->devolver_piedra()  <= materiales->devolver_cantidad_material("piedra")){
+        cout << endl << "Cantidad de Piedra: " << TXT_GREEN_34 << "✔" << END_COLOR << endl;
+        piedra_suficiente = true;
+    }else{
+        cout << endl << "Cantidad de Piedra: " << TXT_RED_124 << "❌ (falta :" << (edificio->devolver_piedra() - materiales->devolver_cantidad_material("piedra")) << ")" << END_COLOR << endl;
+    }
+
+    if(edificio->devolver_madera()  <= materiales->devolver_cantidad_material("madera")){
+        cout << "Cantidad de Madera:" << TXT_GREEN_34 << " ✔" << END_COLOR << endl;
+        madera_suficiente = true;
+    }else{
+        cout << "Cantidad de Madera: " << TXT_RED_124 << "❌ (falta :" << (edificio->devolver_madera() - materiales->devolver_cantidad_material("madera")) << ")" << END_COLOR << endl;
+    }
+
+    if(edificio->devolver_metal()  <= materiales->devolver_cantidad_material("metal")){
+        cout << "Cantidad de Metal:" << TXT_GREEN_34 << " ✔" << END_COLOR << endl;
+        metal_suficiente = true;
+    }else{
+        cout << "Cantidad de Metal:" << TXT_RED_124 << " ❌ (falta :" << (edificio->devolver_metal() - materiales->devolver_cantidad_material("metal")) << ")" << END_COLOR << endl;
+    }
+
+    if(cantidad_edificio < edificio->devolver_maxima_cantidad_permitidos()){
+        cout << "Cantidad de edificios Permitida:<" << TXT_GREEN_34 << " ✔️" << END_COLOR << endl;
+        maximo_permitido = true;
+    }else{
+        cout << "Cantidad de edificios Permitida:" << TXT_RED_124 <<" ❌" << END_COLOR << endl;
+    }
+
+    return metal_suficiente && madera_suficiente && piedra_suficiente && maximo_permitido;
 
 }

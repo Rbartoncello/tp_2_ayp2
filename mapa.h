@@ -62,6 +62,16 @@ class Mapa{
          */
         void mostrar_edificios_construidos();
 
+        //pre: recibe un nombre
+        //post: devuelve la cantidad de ese nombre en el mapa
+        int cantidad_edificio_construido(string nombre);
+
+        bool se_puede_construir(int fila, int columna);
+
+        int devolver_cantidad_filas();
+
+        int devolver_cantidad_columnas();
+
     private:
         /*
          * PRE: El archivo tiene que estar abierto y de formato correcto.

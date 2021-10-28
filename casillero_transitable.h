@@ -37,7 +37,9 @@ class Casillero_transitable : public Casillero{
          */
         void mostrar();
 
-        void agregar_edificio(Edificio* edificio);
+        void agregar_edificio(Edificio* edificio){};
+
+        string devolver_nombre_edificio(){return nullptr;};
 
         void mostrar_casillero();
 };

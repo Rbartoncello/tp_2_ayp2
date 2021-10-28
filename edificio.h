@@ -64,6 +64,7 @@ class Edificio {
          * POST: Me devuelve el maxima_cantidad_permitidos.
          */
         int devolver_maxima_cantidad_permitidos();
+
 };
 
 #endif //TP_2_AYP2_EDIFICIO_H

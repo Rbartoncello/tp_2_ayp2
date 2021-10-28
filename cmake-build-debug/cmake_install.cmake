@@ -1,4 +1,4 @@
-# Install script for directory: /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2
+# Install script for directory: /home/juan/Desktop/tp_2_ayp2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/juan/Desktop/tp_2_ayp2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

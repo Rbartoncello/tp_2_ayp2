@@ -79,3 +79,14 @@ void Materiales::mostrar(){
     cin.get();
     system("clear");
 }
+
+
+int Materiales::devolver_cantidad_material(string nombre){
+    int i = 0;
+
+    while (nombre != this->materiales[i]->devolver_nombre_material()){
+        i++;
+    }
+
+    return this->materiales[i]->devolver_cantidad_material();
+}

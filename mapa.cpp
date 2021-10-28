@@ -106,3 +106,29 @@ void Mapa::mostrar_edificios_construidos(){
         }
     }
 }
+
+int Mapa::cantidad_edificio_construido(string nombre){
+    int cantidad = 0;
+    for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            if ( this->casilleros[i][j]->devolver_tipo_terreno() == TERRENO
+            && this->casilleros[i][j]->esta_ocupado()
+            && this->casilleros[i][j]->devolver_nombre_edificio()==nombre){
+                cantidad ++;
+            }
+        }
+    }
+    return cantidad;
+}
+
+int Mapa::devolver_cantidad_columnas(){
+    return this->cantidad_columnas;
+}
+
+int Mapa::devolver_cantidad_filas(){
+    return this->cantidad_filas;
+}
+
+bool Mapa::se_puede_construir(int fila, int columna){
+    return(!this->casilleros[fila][columna]->esta_ocupado()&&this->casilleros[fila][columna]->devolver_tipo_terreno() == TERRENO);
+}

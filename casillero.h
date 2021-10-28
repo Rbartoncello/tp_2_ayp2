@@ -78,6 +78,8 @@ class Casillero{
 
         virtual void ocupar_casillero(Edificio* edificio){};
 
+        virtual string devolver_nombre_edificio(){return nullptr;};
+
         virtual bool esta_ocupado() = 0;
 
         virtual void mostrar_casillero() = 0;

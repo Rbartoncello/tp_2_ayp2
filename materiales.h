@@ -36,6 +36,10 @@ class Materiales{
          */
         void mostrar();
 
+        //Pre: recibe el nombre de un material existente
+        //Post: devuelve la cantidad del material
+        int devolver_cantidad_material(string nombre);
+
     private:
         /*
          * PRE: Recibe un objeto Material.

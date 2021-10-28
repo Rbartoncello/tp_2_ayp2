@@ -45,6 +45,11 @@ class Edificios{
 
         Edificio* buscar_edificio_por_nombre(string nombre);
 
+
+            //pre: recibe un string
+            //post: devuelve true si existe un edificio con ese nombre
+        bool existe_edificio_por_nombre(string nombre);
+        
         private:
 
         /*
@@ -54,6 +59,8 @@ class Edificios{
         void agregar_edificio(Edificio* edificio);
 
         string buscar_tipo_emoji(string nombre_edificio); 
+
+        
 };
 
 #endif
