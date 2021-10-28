@@ -2,8 +2,13 @@
 #define Material_H
 #include <string>
 #include "material.h"
+#include "edificio.h"
 
 using namespace std;
+
+const string PIEDRA = "piedra";
+const string MADERA = "metal";
+const string METAL = "madera";
 
 class Materiales{
     private:
@@ -39,6 +44,8 @@ class Materiales{
         //Pre: recibe el nombre de un material existente
         //Post: devuelve la cantidad del material
         int devolver_cantidad_material(string nombre);
+
+        bool hay_suficiente_material(Edificio* edificio, string material);
 
     private:
         /*

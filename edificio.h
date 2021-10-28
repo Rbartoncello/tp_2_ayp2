@@ -59,6 +59,8 @@ class Edificio {
          */
         int devolver_metal();
 
+        int devolver_cantidad_material(string material);
+
         /*
          * PRE: -
          * POST: Me devuelve el maxima_cantidad_permitidos.

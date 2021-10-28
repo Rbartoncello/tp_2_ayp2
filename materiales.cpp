@@ -1,5 +1,6 @@
 #include "materiales.h"
 #include "colors.h"
+#include "emojis.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -73,11 +74,6 @@ void Materiales::mostrar(){
         else
             cout << "\t\t╚══════════════╩════════════╝" << endl;
     }  
-    
-    cout << "Presione [ENTER] para continuar"<< endl;
-    cin.get();
-    cin.get();
-    system("clear");
 }
 
 
@@ -89,4 +85,17 @@ int Materiales::devolver_cantidad_material(string nombre){
     }
 
     return this->materiales[i]->devolver_cantidad_material();
+}
+
+bool Materiales::hay_suficiente_material(Edificio* edificio, string material){
+    bool material_suficiente = false;
+
+    if(edificio->devolver_cantidad_material(material) <= devolver_cantidad_material(material)){
+        cout << endl << "Cantidad de " << material <<": " << TXT_GREEN_34 << EMOJI_HECHO << END_COLOR << endl;
+        material_suficiente = true;
+    } else{
+        cout << endl << "Cantidad de " << material <<": " << TXT_RED_124 << EMOJI_MAL <<" (falta :" << (edificio->devolver_cantidad_material(material) - devolver_cantidad_material(material)) << ")" << END_COLOR << endl;
+    }
+
+    return material_suficiente;
 }

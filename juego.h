@@ -12,6 +12,9 @@ const string PATH_UBICACIONES = "ubicaciones.txt";
 const int MIN_OPCION = 1;
 const int MAX_OPCION = 10;
 
+const int AFIRMATIVO = 1;
+const int NEGATIVO = 2;
+
 const int ERROR = -1;
 
 const int CONSTRUIR_EDIFICIO_NOMBRE = 1;
@@ -158,9 +161,11 @@ class Juego {
 
         void validar_columna(int &columna);
 
-        void construir_por_input();
+        void construir_edificio_nombre();
 
         void demoler_edificio_por_coordenada();
+
+        void mensaje_enter_continuar();
 };
 
 

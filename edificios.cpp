@@ -59,10 +59,6 @@ void Edificios::mostar(){
         else
             cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩══════════════════════════╝" << endl;
     }    
-    cout << "Presione [ENTER] para continuar"<< endl;
-    cin.get();
-    cin.get();
-    system("clear");
 }
 
 void Edificios::procesar_archivo(){
@@ -110,14 +106,15 @@ string Edificios::buscar_tipo_emoji(string nombre_edificio){
 
 bool Edificios::existe_edificio_por_nombre(string nombre){
     int i = 0;
+    bool encontrado = false;
 
-    while (i < this->total_edificios){
-        if(nombre == this->edificios[i]->devolver_nombre_edificio()){
-            return true;
-        }
-        i++;
+    while ( ( i < this->total_edificios ) && !(encontrado)){
+        if(nombre == this->edificios[i]->devolver_nombre_edificio())
+            encontrado = true;
+        else
+            i++;
     }
-    return false;
+    return encontrado;
 }
 
 Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
