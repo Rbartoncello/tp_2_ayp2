@@ -24,3 +24,7 @@ void Casillero_transitable::mostrar(){
 
 void Casillero_transitable::mostrar_casillero(){
 }
+
+string Casillero_transitable::devolver_nombre(){
+    return this->material->devolver_nombre_material();
+}

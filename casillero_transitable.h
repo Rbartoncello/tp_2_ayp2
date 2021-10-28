@@ -4,10 +4,12 @@
 #include "iostream"
 #include <string>
 #include "casillero.h"
+#include "material.h"
 
 
 class Casillero_transitable : public Casillero{
     private:
+        Material* material;
         bool ocupado;
 
     public:
@@ -40,6 +42,8 @@ class Casillero_transitable : public Casillero{
         void agregar_edificio(Edificio* edificio);
 
         void mostrar_casillero();
+
+        string devolver_nombre();
 };
 
 #endif //CASILLERO_TRANSITABLE_H

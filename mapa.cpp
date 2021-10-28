@@ -106,3 +106,15 @@ void Mapa::mostrar_edificios_construidos(){
         }
     }
 }
+
+int Mapa::devolver_cantidad_filas(){
+    return this->cantidad_filas;
+}
+
+int Mapa::devolver_cantidad_columas(){
+    return this->cantidad_columnas;
+}
+
+Casillero *Mapa::devolver_casillero(int fila, int columna){
+    return this->casilleros[fila][columna];
+}

@@ -1,5 +1,7 @@
 #include "materiales.h"
 #include "colors.h"
+#include "edificios.h"
+#include "emojis.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -46,12 +48,8 @@ void Materiales::procesar_archivo(){
     } else {
         while ( archivo >> nombre ){
             archivo >> cantidad;
-
-            //Material* material  = new Material(nombre, stoi(cantidad));
-
             agregar_material(new Material(nombre, stoi(cantidad)));
         }
-
         archivo.close();
     }
 }
@@ -77,5 +75,53 @@ void Materiales::mostrar(){
     cout << "Presione [ENTER] para continuar"<< endl;
     cin.get();
     cin.get();
+    system("clear");
+}
+
+int Materiales::buscar_material(string material_buscar){
+    bool encontrado = false;
+    int i = 0;
+
+    while ((i < this->total_materiales) && !(encontrado)){
+        if(this->materiales[i]->devolver_nombre_material() == material_buscar)
+            encontrado = true;
+        else
+            i++;
+    }
+    return i;
+}
+
+void Materiales::recolectar_recursos_producidos(Mapa* mapa){
+    system("clear");
+    for (int i = 0; i < mapa->devolver_cantidad_filas(); i++){
+        for (int j = 0; j < mapa->devolver_cantidad_columas(); j++){
+            if( (mapa->devolver_casillero(i, j)->esta_ocupado()) ){
+                if(mapa->devolver_casillero(i, j)->devolver_nombre() == EDIFICIO_MINA){
+                    int posicion = this->buscar_material(PIEDRA);
+                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_PIEDRA);
+                } else if(mapa->devolver_casillero(i, j)->devolver_nombre() == EDIFICIO_ASERRADERO){
+                    int posicion = this->buscar_material(MADERA);
+                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_MADERA);
+                } else if(mapa->devolver_casillero(i, j)->devolver_nombre() == EDIFICIO_FABRICA){
+                    int posicion = this->buscar_material(METAL);
+                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_METAL);
+                }
+            }
+        }
+    }
+    imprimir_mensaje_recolectando_recursos_producidos();
+}
+
+void Materiales::imprimir_mensaje_recolectando_recursos_producidos() {
+    cout << "Recolectando recursos producidos... " << EMOJI_BUSQUEDA << endl;
+
+    sleep(2);
+    system("clear");
+
+    cout << TXT_BOLD;
+    cout << "\t»Se han recolectado los recursos producidos con exito" << EMOJI_HECHO <<endl;
+    cout << END_COLOR;
+    
+    sleep(2);
     system("clear");
 }

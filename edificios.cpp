@@ -117,3 +117,11 @@ Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
 
     return this->edificios[i];
 }
+
+int Edificios::devolver_total_edificios(){
+    return this->total_edificios;
+}
+
+string Edificios::devolver_nombre_edificio(int indice){
+    return this->edificios[indice]->devolver_nombre_edificio();
+}

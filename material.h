@@ -35,6 +35,8 @@ class Material{
         * POST: Me devuelve el cantidad_material.
         */
         int devolver_cantidad_material();
+
+        void aumentar_cantidad_material(int aumentar);
 };
 
 

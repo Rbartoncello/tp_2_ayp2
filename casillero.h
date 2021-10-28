@@ -81,6 +81,8 @@ class Casillero{
         virtual bool esta_ocupado() = 0;
 
         virtual void mostrar_casillero() = 0;
+
+        virtual string devolver_nombre() = 0;
 };
 
 

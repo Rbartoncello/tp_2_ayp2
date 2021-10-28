@@ -26,3 +26,7 @@ string Material::devolver_nombre_material(){
 int Material::devolver_cantidad_material(){
     return this->cantidad_material;
 }
+
+void Material::aumentar_cantidad_material(int aumentar){
+    this->cantidad_material += aumentar;
+}

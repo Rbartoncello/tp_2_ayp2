@@ -55,12 +55,17 @@ class Mapa{
          */
         void agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna);
 
-
         /*
          * PRE: -
          * POST: Me muestra por pantalla el mapa.
          */
         void mostrar_edificios_construidos();
+
+        int devolver_cantidad_filas();
+
+        int devolver_cantidad_columas();
+
+        Casillero* devolver_casillero(int fila, int columna);
 
     private:
         /*

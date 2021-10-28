@@ -45,6 +45,10 @@ class Edificios{
 
         Edificio* buscar_edificio_por_nombre(string nombre);
 
+        int devolver_total_edificios();
+
+        string devolver_nombre_edificio(int indice);
+
         private:
 
         /*
