@@ -157,6 +157,8 @@ class Juego {
         void validar_fila(int &fila);
 
         void validar_columna(int &columna);
+
+        void construir_por_input();
 };
 
 

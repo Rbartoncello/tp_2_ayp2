@@ -164,6 +164,38 @@ void Juego::mostrar_opciones(){
     cout << END_COLOR;
 }
 
+void Juego::construir_por_input(){
+    string nombre_edificio;
+    Edificio* edificio;
+    int desea_construir;
+    int fila, columna;
+    nombre_edificio = this->pedir_nombre();
+    if (!this->edificios->existe_edificio_por_nombre(nombre_edificio)){
+        cout << "No existe edificio con tal nombre " << endl;
+    }else{
+        edificio=this->edificios->buscar_edificio_por_nombre(nombre_edificio);
+        if (this->calcular_costos(edificio)){
+            cout << endl << "La construccion es posible, desea realizarla? 1) SI 2) NO " << endl;
+            desea_construir = pedir_opcion();
+            validar_opcion_construir(desea_construir);
+            if (desea_construir == 1){
+                fila = pedir_fila();
+                validar_fila(fila);
+                columna = pedir_columna();
+                validar_columna(columna);
+                if (!mapa->se_puede_construir(fila-1,columna-1)){
+                    cout << "no se puede construir en esa posicion"<< endl;
+                }else{
+                    mapa->agregar_edificio_a_casillero(edificio, fila-1, columna-1);
+                    cout << "Se construyo el edificio con exito"<< endl;                        }
+                }
+            if(desea_construir== 2){
+                cout << endl << "El edificio no se construyo!" << endl;
+            }
+        }
+    }
+}
+
 int Juego::pedir_opcion(){
     int opcion_elegida = ERROR;
     cout << " Por favor ingrese una de las siguientes opciones: ";
@@ -218,62 +250,29 @@ int Juego::pedir_columna(){
 }
 
 void Juego::validar_fila(int &fila){
-    bool es_valida = (fila >= 0 && fila < this->mapa->devolver_cantidad_filas());
+    bool es_valida = (fila >= 1 && fila < (this->mapa->devolver_cantidad_filas()+1));
     while(!es_valida){
         this->imprimir_mensaje_error_ingreso();
 
         cin >> fila;
-        es_valida = (fila >= 0 && fila < this->mapa->devolver_cantidad_filas());
+        es_valida = (fila >= 1 && fila < this->mapa->devolver_cantidad_filas()+1);
     }
 }
 void Juego::validar_columna(int &columna){
-    bool es_valida = (columna >= 0 && columna < this->mapa->devolver_cantidad_columnas());
+    bool es_valida = (columna >= 1 && columna < this->mapa->devolver_cantidad_columnas()+1);
     while(!es_valida){
         this->imprimir_mensaje_error_ingreso();
 
         cin >> columna;
-        es_valida = (columna >= 0 && columna < this->mapa->devolver_cantidad_columnas());
+        es_valida = (columna >= 1 && columna < this->mapa->devolver_cantidad_columnas()+1);
     }
 }
 
 void Juego::procesar_opcion(int opcion){
 
-    string nombre_edificio;
-    Edificio* edificio;
-    int desea_construir;
-    int fila, columna;
-
     switch (opcion){
         case CONSTRUIR_EDIFICIO_NOMBRE:
-            nombre_edificio = this->pedir_nombre();
-            if (!this->edificios->existe_edificio_por_nombre(nombre_edificio)){
-                cout << "No existe edificio con tal nombre " << endl;
-            }else{
-                edificio=this->edificios->buscar_edificio_por_nombre(nombre_edificio);
-                if (this->calcular_costos(edificio)){
-                    cout << endl << "La construccion es posible, desea realizarla? 1) SI 2) NO " << endl;
-                    desea_construir = pedir_opcion();
-                    validar_opcion_construir(desea_construir);
-                    if (desea_construir == 1){
-                        fila = pedir_fila();
-                        validar_fila(fila);
-                        columna = pedir_columna();
-                        validar_columna(columna);
-                        if (!mapa->se_puede_construir(fila,columna)){
-                            cout << "no se puede construir en esa posicion";
-                        }else{
-                            mapa->agregar_edificio_a_casillero(edificio, fila, columna);
-                            cout << "Se construyo el edificio con exito"<< endl;
-                        }
-                    }
-                    if(desea_construir== 2){
-                        cout << endl << "El edificio no se construyo!" << endl;
-                    }
-
-                }
-            }
-            
-
+            this->construir_por_input();
             break;
         case LISTAR_EDIFICIOS_CONSTRUIDOS:
             this->mapa->mostrar_edificios_construidos();
