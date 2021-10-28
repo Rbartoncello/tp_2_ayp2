@@ -132,3 +132,19 @@ int Mapa::devolver_cantidad_filas(){
 bool Mapa::se_puede_construir(int fila, int columna){
     return( !( this->casilleros[fila][columna]->esta_ocupado() ) && ( this->casilleros[fila][columna]->devolver_tipo_terreno() == TERRENO ) );
 }
+
+char Mapa::devolver_tipo_casillero(int fila, int columna){
+    return this->casilleros[fila][columna]->devolver_tipo_terreno();
+}
+
+bool Mapa::casillero_ocupado(int fila, int columna){
+    return this->casilleros[fila][columna]->esta_ocupado();
+}
+
+Edificio* Mapa::devolver_edificio(int fila, int columna){
+    return this->casilleros[fila][columna]->devolver_edificio();
+}
+
+void Mapa::quitar_edificio_de_casillero(int fila, int columna){
+    this->casilleros[fila][columna]->quitar_edificio();
+}

@@ -47,6 +47,8 @@ class Materiales{
 
         bool hay_suficiente_material(Edificio* edificio, string material);
 
+        void sumar_cantidad_material(int cantidad, string nombre);
+
     private:
         /*
          * PRE: Recibe un objeto Material.

@@ -26,3 +26,7 @@ string Material::devolver_nombre_material(){
 int Material::devolver_cantidad_material(){
     return this->cantidad_material;
 }
+
+void Material::sumar_restar(int cantidad){
+    this->cantidad_material = (this->cantidad_material + cantidad);
+}

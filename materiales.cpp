@@ -99,3 +99,13 @@ bool Materiales::hay_suficiente_material(Edificio* edificio, string material){
 
     return material_suficiente;
 }
+
+void Materiales::sumar_cantidad_material(int cantidad, string nombre){
+    int i = 0;
+
+    while (nombre != this->materiales[i]->devolver_nombre_material()){
+        i++;
+    }
+
+    this->materiales[i]->sumar_restar(cantidad);
+}

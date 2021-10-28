@@ -54,7 +54,9 @@ class Mapa{
          * POST: Agrega al casillero marcado el edificio pasado por parametro
          */
         void agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna);
-
+        
+        //Pre: Hay un edificio en el indice de la matriz
+        void quitar_edificio_de_casillero(int fila, int columna);
 
         /*
          * PRE: -
@@ -71,6 +73,13 @@ class Mapa{
         int devolver_cantidad_filas();
 
         int devolver_cantidad_columnas();
+
+        char devolver_tipo_casillero(int fila, int columna);
+
+        bool casillero_ocupado(int fila, int columna);
+
+        //pre: hay un edificio en la posicion
+        Edificio* devolver_edificio(int fila, int columna);
 
     private:
         /*

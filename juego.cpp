@@ -191,7 +191,7 @@ void Juego::construir_edificio_nombre(){
                 } else{
                     mapa->agregar_edificio_a_casillero(edificio, fila, columna);
                     system("clear");
-                    cout << "\tConstruyendo " << nombre_edificio << "... " << EMOJI_EDIFICIO_CONSTRUCION << endl;
+                    cout << "\tConstruyendo " << nombre_edificio << "( " << edificio->devolver_emoji() << " ) ... " << EMOJI_EDIFICIO_CONSTRUCION << endl;
 
                     sleep(2);
                     system("clear");
@@ -272,6 +272,7 @@ void Juego::validar_fila(int &fila){
         es_valida = (fila >= 0 && fila < this->mapa->devolver_cantidad_filas());
     }
 }
+
 void Juego::validar_columna(int &columna){
     bool es_valida = (columna >= 0 && columna < this->mapa->devolver_cantidad_columnas());
     while(!es_valida){
@@ -297,6 +298,7 @@ void Juego::procesar_opcion(int opcion){
             this->mensaje_enter_continuar();
             break;
         case DEMOLER_EDIFICIO_COORDENADA:
+            this->demoler_edificio_por_coordenada();
             break;
         case MOSTAR_MAPA:
             this->mapa->mostrar();
@@ -357,7 +359,37 @@ bool Juego::calcular_costos(Edificio* edificio){
 }
 
 void Juego::demoler_edificio_por_coordenada(){
-    
+    system("clear");
+    mapa->mostrar();
+    int fila = pedir_fila(); 
+    validar_fila(fila);
+
+    int columna = pedir_columna();
+    validar_columna(columna);
+
+    if ( ( this->mapa->devolver_tipo_casillero(fila, columna) == TERRENO ) && ( this->mapa->casillero_ocupado(fila, columna) ) ){
+        Edificio* edificio = this->mapa->devolver_edificio(fila, columna);
+        this->mapa->quitar_edificio_de_casillero(fila,columna);
+        
+        materiales->sumar_cantidad_material((edificio->devolver_piedra())/2,PIEDRA);
+        materiales->sumar_cantidad_material((edificio->devolver_madera())/2,MADERA);
+        materiales->sumar_cantidad_material((edificio->devolver_metal())/2,METAL);
+        
+        system("clear");
+        cout << "\tDemoliendo " << edificio->devolver_nombre_edificio() << "( " << edificio->devolver_emoji() << " ) ... " << EMOJI_PARED << EMOJI_MARTILLO << endl;
+        sleep(2);
+        
+        system("clear");
+        cout << TXT_BOLD;
+        cout << "\tSe ha demolido con exito " << EMOJI_HECHO << endl << endl;
+        cout << END_COLOR;
+        
+        sleep(2);
+        system("clear");
+    } else{
+        cout << endl << "No se puede demoler este casillero"<< endl;
+        imprimir_mensaje_esperar(2);
+    }
 }
 
 void Juego::mensaje_enter_continuar(){
