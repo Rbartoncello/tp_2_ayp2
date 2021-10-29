@@ -100,6 +100,14 @@ void Mapa::mostrar(){
         cout << BGND_BROWN_94 << i << " " << END_COLOR;
     }
     cout << endl;
+    cout << TXT_UNDERLINE << TXT_BOLD <<"\tEdificio:\t\t\tMateriales" << END_COLOR << endl;
+    cout << "\t-Mina ( " << EMOJI_MINA << " )\t\t\t-Piedra ( " << EMOJI_PIEDRA << "  )" << endl;
+    cout << "\t-Aserradero ( " << EMOJI_ASERRADERO << " )\t\t-Madera ( " << EMOJI_MADERA << "  )" << endl;
+    cout << "\t-Fabrica ( " << EMOJI_FABRICA << " )\t\t\t-Metal ( " << EMOJI_METAL << " )" << endl;
+    cout << "\t-Escuela ( " << EMOJI_ESCUELA << " )" << endl;
+    cout << "\t-Obelisco ( " << EMOJI_OBELISCO << " )" << endl;
+    cout << "\t-Planta eléctrica ( " << EMOJI_PLANTA_ENERGIA << " )" << endl;
+    cout << endl;
 }
 
 void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna){
@@ -201,7 +209,7 @@ void Mapa::lluvia_recursos(){
     cout << "\t[Por favor espere]" << endl;
 
     agregar_materiales(PIEDRA, MIN_GENERAR_PIEDRA, MAX_GENERAR_PIEDRA);
-    agregar_materiales(MADERA, MIN_GENERAR_MADERA, MAX_GENERAR_MADERA);
+    agregar_materiales(MADERA, 1, 3);
     agregar_materiales(METAL, MIN_GENERAR_METAL, MAX_GENERAR_METAL);
 
     system("clear");
