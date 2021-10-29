@@ -209,7 +209,7 @@ void Mapa::lluvia_recursos(){
     cout << "\t[Por favor espere]" << endl;
 
     agregar_materiales(PIEDRA, MIN_GENERAR_PIEDRA, MAX_GENERAR_PIEDRA);
-    agregar_materiales(MADERA, 1, 3);
+    agregar_materiales(MADERA, MIN_GENERAR_MADERA, MAX_GENERAR_MADERA);
     agregar_materiales(METAL, MIN_GENERAR_METAL, MAX_GENERAR_METAL);
 
     system("clear");
