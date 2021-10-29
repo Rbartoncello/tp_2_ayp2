@@ -11,7 +11,7 @@ const int MIN_GENERAR_PIEDRA = 1;
 const int MAX_GENERAR_PIEDRA = 2;
 
 const int MIN_GENERAR_MADERA = 0;
-const int MAX_GENERAR_MADERA = 1;
+const int MAX_GENERAR_MADERA = 2;
 
 const int MIN_GENERAR_METAL = 2;
 const int MAX_GENERAR_METAL = 4;
