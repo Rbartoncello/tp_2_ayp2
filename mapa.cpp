@@ -191,7 +191,7 @@ bool Mapa::se_puede_generar_material(int fila, int columna){
 void Mapa::agregar_materiales(std::string material, int minimo, int maximo){
     int maximos_materiales = numero_aleatorio(minimo, maximo);
 
-    for (int i = 0; i < maximos_materiales; i++){
+    for (int i = 0; i <= maximos_materiales; i++){
         int fila_aleatoria = numero_aleatorio(0 , this->cantidad_filas);
         int columna_aleatoria = numero_aleatorio(0 , this->cantidad_columnas);
 
