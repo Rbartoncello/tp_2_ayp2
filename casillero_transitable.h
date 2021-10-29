@@ -14,42 +14,70 @@ class Casillero_transitable : public Casillero{
     public:
         /*
          * Constructor:
-         * PRE: -.
-         * POST: Me va a crear el objeto Casillero.
+         * Pre: -.
+         * Post: Me va a crear el objeto Casillero.
          */
         Casillero_transitable(char tipo_terreno, int pos_x, int pos_y);
 
         /*
          * Constructor sin parametros:
-         * PRE: -.
-         * POST: Me va a crear el objeto Casillero con tipo_terreno = ' ',  pos_x = 0, pos_y = 0 y this->ocupado = false.
+         * Pre: -.
+         * Post: Me va a crear el objeto Casillero con tipo_terreno = ' ',  pos_x = 0, pos_y = 0 y this->ocupado = false.
          */
         Casillero_transitable();
 
         /*
-         * PRE: -
-         * POST: De devuleve TRUE si esta ocupado y FALSE en caso contrario.
+         * Pre: -
+         * Post: De devuleve TRUE si esta ocupado y FALSE en caso contrario.
          */
         bool esta_ocupado();
 
         /*
-         * PRE: -
-         * POST: Me muestra por pantalla.
+         * Pre: -
+         * Post: Me muestra por pantalla.
          */
         void mostrar();
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo vacio para la clase casillero_construible
+        */
         void agregar_edificio(Edificio* edificio){};
 
+        /*
+         * Pre: -
+         * Post: -          Metodo vacio para la clase casillero_construible
+        */
         void quitar_edificio(){};
 
+        /*
+         * Pre: -
+         * Post: -          Metodo vacio para la clase casillero_construible
+        */
         string devolver_nombre_edificio(){return nullptr;};
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo vacio para la clase casillero_construible
+        */
         Edificio* devolver_edificio(){return nullptr;};
-
+        
+        /*
+         * Pre: -
+         * Post: Muestra graficamente el casillero
+        */
         void mostrar_casillero();
 
+        /*
+         * Pre: -
+         * Post: Imprime un resumen escrito del casillero
+        */
         void imprimir_resumen();
 
+        /*
+         * Pre: Recibe un nombre para el nuevo material
+         * Post: Crea un material con ese nombre y lo guarda en el atributo material
+        */
         void agregar_material(string nombre_material);
 };
 

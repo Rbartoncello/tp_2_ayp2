@@ -130,15 +130,15 @@ void Materiales::recolectar_recursos_producidos(Mapa* mapa){
             if( (mapa->devolver_casillero(i, j)->esta_ocupado()) ){
                 if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_MINA){
                     int posicion = this->buscar_material(PIEDRA);
-                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_PIEDRA);
+                    materiales[posicion]->sumar_restar(AUMENTAR_CANTIDAD_PIEDRA);
 
                 } else if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_ASERRADERO){
                     int posicion = this->buscar_material(MADERA);
-                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_MADERA);
+                    materiales[posicion]->sumar_restar(AUMENTAR_CANTIDAD_MADERA);
 
                 } else if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_FABRICA){
                     int posicion = this->buscar_material(METAL);
-                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_METAL);
+                    materiales[posicion]->sumar_restar(AUMENTAR_CANTIDAD_METAL);
                 }
             }
         }

@@ -19,45 +19,54 @@ class Edificios{
     public:
         /*
          * Constructor:
-         * PRE: -.
-         * POST: Me va a crear el objeto edificios con total_edificios = 0.
+         * Pre: -.
+         * Post: Me va a crear el objeto edificios con total_edificios = 0.
          */
         Edificios();
 
         /*
          * Destructor:
-         * PRE: -.
-         * POST: Me va a descruir el objeto edificios.
+         * Pre: -.
+         * Post: Me va a descruir el objeto edificios.
          */
         ~Edificios();
 
         /*
-         * PRE: -
-         * POST: Guarda cada linea en un objeto Edificio
+         * Pre: -
+         * Post: Guarda cada linea en un objeto Edificio
          */
         void procesar_archivo();
 
         /*
-         * PRE: -
-         * POST: Me muestra lista por pantalla toso los objetos del tipo Edificio.
+         * Pre: -
+         * Post: Me muestra lista por pantalla toso los objetos del tipo Edificio.
          */
         void mostar();
 
+        /*
+         * Pre: Recibe un string (tiene que haber un edificio con el mismo nombre)
+         * Post: Busca un edificio con tal nombre y lo devuelve
+        */
         Edificio* buscar_edificio_por_nombre(string nombre);
 
-
-            //pre: recibe un string
-            //post: devuelve true si existe un edificio con ese nombre
+        /*
+         * Pre: recibe un string
+         * Post: devuelve true si existe un edificio con ese nombre
+        */
         bool existe_edificio_por_nombre(string nombre);
         
         private:
 
         /*
-         * PRE: Recibe un objeto Edificio.
-         * POST: Ingresa el objeto en un vector dinámico.
+         * Pre: Recibe un objeto Edificio.
+         * Post: Ingresa el objeto en un vector dinámico.
          */
         void agregar_edificio(Edificio* edificio);
 
+        /*
+         * Pre: Recibe un nombre existente
+         * Post: devuelve el emoji de ese edificio
+        */
         string buscar_tipo_emoji(string nombre_edificio); 
 
         

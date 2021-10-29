@@ -22,70 +22,70 @@ class Materiales{
     public:
         /*
          * Constructor:
-         * PRE: -.
-         * POST: Me va a crear el objeto Materiales con total_materiales = 0.
+         * Pre: -.
+         * Post: Me va a crear el objeto Materiales con total_materiales = 0.
          */
         Materiales();
 
         /*
          * Destructor:
-         * PRE: -.
-         * POST: Me va a descruir el objeto Materiales.
+         * Pre: -.
+         * Post: Me va a descruir el objeto Materiales.
          */
         ~Materiales();
 
         /*
-         * PRE: -
-         * POST: Guarda cada linea en un objeto Material
+         * Pre: -
+         * Post: Guarda cada linea en un objeto Material
          */
         void procesar_archivo();
 
         /*
-         * PRE: -
-         * POST: Me muestra lista por pantalla toso los objetos del tipo Material.
+         * Pre: -
+         * Post: Me muestra lista por pantalla toso los objetos del tipo Material.
          */
         void mostrar();
 
         /*
-         * PRE: recibe el nombre de un material existente
-         * POST: devuelve la cantidad del material
+         * Pre: recibe el nombre de un material existente
+         * Post: devuelve la cantidad del material
          */      
         int devolver_cantidad_material(string nombre);
 
         /*
-         * PRE:
-         * POST:
+         * Pre:
+         * Post:
          */
         bool hay_suficiente_material(Edificio* edificio, string material);
 
         /*
-         * PRE:
-         * POST:
+         * Pre:
+         * Post:
          */
         void sumar_cantidad_material(int cantidad, string nombre);
 
         /*
-         * PRE:
-         * POST:
+         * Pre:
+         * Post:
          */
         void recolectar_recursos_producidos(Mapa *mapa);
 
         /*
-         * PRE:
-         * POST:
+         * Pre:
+         * Post:
          */
         int buscar_material(string material_buscar);
 
     private:
         /*
-         * PRE: Recibe un objeto Material.
-         * POST: Ingresa el objeto en un vector dinámico.
+         * Pre: Recibe un objeto Material.
+         * Post: Ingresa el objeto en un vector dinámico.
          */
         void agregar_material(Material* material);
 
         /*
-         * PRE:
-         * POST:
+         * Pre:
+         * Post:
          */
         void imprimir_mensaje_recolectando_recursos_producidos();
 };

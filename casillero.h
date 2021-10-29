@@ -17,81 +17,113 @@ class Casillero{
     public:
         /*
          * Constructor:
-         * PRE: -.
-         * POST: Me va a crear el objeto Casillero.
+         * Pre: -.
+         * Post: Me va a crear el objeto Casillero.
          */
         Casillero(char tipo_terreno, int pos_x, int pos_y);
         
         /*
          * Constructor sin parametros:
-         * PRE: -.
-         * POST: Me va a crear el objeto Casillero con tipo_terreno = ' ',  pos_x = 0 y pos_y = 0.
+         * Pre: -.
+         * Post: Me va a crear el objeto Casillero con tipo_terreno = ' ',  pos_x = 0 y pos_y = 0.
          */
         Casillero();
         
         /*
          * Destructor:
-         * PRE: -.
-         * POST: Me va a destruir el objeto Casillero.
+         * Pre: -.
+         * Post: Me va a destruir el objeto Casillero.
          */
         virtual ~Casillero(){};
 
         /*
-         * PRE: -
-         * POST: Me muestra por pantalla.
+         * Pre: -
+         * Post: Me muestra por pantalla.
          */
         virtual void mostrar() = 0;
 
         /*
-         * PRE: -
-         * POST: Me va devolver tipo_terreno.
+         * Pre: -
+         * Post: Me va devolver tipo_terreno.
          */
         char devolver_tipo_terreno();
 
         /*
-         * PRE: -
-         * POST: Me va devolver pos_x.
+         * Pre: -
+         * Post: Me va devolver pos_x.
          */
         int devolver_pos_x();
 
         /*
-         * PRE: -
-         * POST: Me va devolver pos_y.
+         * Pre: -
+         * Post: Me va devolver pos_y.
          */
         int devolver_pos_y();
 
         /*
-         * PRE: -
-         * POST: Me va modificar tipo_terreno.
+         * Pre: -
+         * Post: Me va modificar tipo_terreno.
          */
         void modificar_tipo_terreno(char tipo_terreno);
 
         /*
-         * PRE: -
-         * POST: Me va modificar pos_x.
+         * Pre: -
+         * Post: Me va modificar pos_x.
          */
         void modificar_pos_x(int x);
 
         /*
-         * PRE: -
-         * POST: Me va modificar pos_y.
+         * Pre: -
+         * Post: Me va modificar pos_y.
          */
         void modificar_pos_y(int y);
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para la clase casillero_construible
+        */
         virtual void agregar_edificio(Edificio* edificio){};
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para la clase casillero_construible
+        */
         virtual void quitar_edificio(){};
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para la clase casillero_construible
+        */
         virtual string devolver_nombre_edificio(){return nullptr;};
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para la clase casillero_construible
+        */
         virtual Edificio* devolver_edificio(){return nullptr;};
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para las clases hijas
+        */
         virtual bool esta_ocupado() = 0;
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para las clases hijas
+        */
         virtual void mostrar_casillero() = 0;
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para las clases hijas
+        */
         virtual void imprimir_resumen(){};
-
+        
+        /*
+         * Pre: -
+         * Post: -          Metodo virtual vacio para la clase casillero_transitable
+        */
         virtual void agregar_material(string nombre_material){};
 };
 

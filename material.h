@@ -12,50 +12,60 @@ class Material{
     public:
         /*
         * Constructor:
-        * PRE: -.
-        * POST: Me va a crear el objeto Material.
+        * Pre: -.
+        * Post: Me va a crear el objeto Material.
         */
         Material(string nombre_material, int cantidad_material);
 
         /*
         * Constructor:
-        * PRE: -.
-        * POST: Me va a crear el objeto Material con nombre_material "NULL", emoji = "NULL" y cantidad = 0.
+        * Pre: -.
+        * Post: Me va a crear el objeto Material con nombre_material "NULL", emoji = "NULL" y cantidad = 0.
         */
         Material();
 
         string agregar_emoji(string nombre_matertial);
 
         /*
-        * PRE: -
-        * POST: Me muestra por pantalla el objeto tipo Material.
+        * Pre: -
+        * Post: Me muestra por pantalla el objeto tipo Material.
         */
         void mostrar();
 
         /*
-        * PRE: -
-        * POST: Me devuelve el nombre_material.
+        * Pre: -
+        * Post: Me devuelve el nombre_material.
         */
         string devolver_nombre_material();
 
         /*
-        * PRE: -
-        * POST: Me devuelve el emoji.
+        * Pre: -
+        * Post: Me devuelve el emoji.
         */
         string devolver_emoji();
 
         /*
-        * PRE: -
-        * POST: Me devuelve el cantidad_material.
+        * Pre: -
+        * Post: Me devuelve el cantidad_material.
         */
         int devolver_cantidad_material();
-
+        
+        /*
+         * Pre: Recibe un numero positivo o negativo()
+         * Post: "Suma" ese numero a la cantidad del material 
+        */
         void sumar_restar(int cantidad);
 
+        /*
+         * Pre: -
+         * Post: Imprime un resumen escrito del material
+        */
         void imprimir_resumen();
-
-        void aumentar_cantidad_material(int aumentar);
-
+        
+        /*
+         * Pre: Recibe un emoji
+         * Post: Cambia el emoji del material
+        */
         void modificar_emoji(string emoji);
 };
 

@@ -23,7 +23,6 @@ void Casillero_construible::agregar_edificio(Edificio* edificio) {
 
 void Casillero_construible::quitar_edificio(){
     this->edificio = nullptr;
-    this->tipo_terreno = TERRENO;
     this->ocupado = false;
 }
 

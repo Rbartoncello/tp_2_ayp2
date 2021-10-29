@@ -38,66 +38,66 @@ class Juego {
     public:
         /*
          * Constructor sin parametros:
-         * PRE: -.
-         * POST: Me va a crear el Juego vacio
+         * Pre: -.
+         * Post: Me va a crear el Juego vacio
          */
         Juego();
 
     /*
          * Constructor:
-         * PRE: -.
-         * POST: Me va a crear el objeto Juego.
+         * Pre: -.
+         * Post: Me va a crear el objeto Juego.
         
     Juego(Mapa* mapa, Edificios* edificios, Materiales* materiales);
 
     */
         /*
          * Destructor:
-         * PRE: -.
-         * POST: Me va a destruir el objeto Mapa.
+         * Pre: -.
+         * Post: Me va a destruir el objeto Mapa.
          */
         ~Juego();
 
         /*
-        * PRE: -
-        * POST: Guarda todos edificios en los casilleros del mapa
+        * Pre: -
+        * Post: Guarda todos edificios en los casilleros del mapa
         */
         void procesar_archivo_ubicaciones();
 
 
         /*
-        * PRE: -
-        * POST: carga todos los archivos al juego
+        * Pre: -
+        * Post: carga todos los archivos al juego
         */
         void cargar_juego();
 
         /*
-        * PRE: -
-        * POST: Comienza el loop pidiendo opciones como se hacia ante en main
+        * Pre: -
+        * Post: Comienza el loop pidiendo opciones como se hacia ante en main
         */
         void jugar();
         
         /*  
-        * PRE: -
-        * POST: Imprimira por pantalla el nombre del programa.
+        * Pre: -
+        * Post: Imprimira por pantalla el nombre del programa.
         */
         void mensaje_bienvenida();
 
         /*
-        * PRE: -
-        * POST: Imprimira por pantalla solamente "Error!!!".
+        * Pre: -
+        * Post: Imprimira por pantalla solamente "Error!!!".
         */
         void imprimir_mensaje_error();
 
         /*
-        * PRE: -
-        * POST: Imprimira por pantalla un mensaje con el tiempo en segundos que el usuario tiene que esperar.
+        * Pre: -
+        * Post: Imprimira por pantalla un mensaje con el tiempo en segundos que el usuario tiene que esperar.
         */
         void imprimir_mensaje_esperar(int tiempo);
 
         /*
-        * PRE: -
-        * POST: Imprimira por pantalla AFIRMATIVA y NEGATIVA.
+        * Pre: -
+        * Post: Imprimira por pantalla AFIRMATIVA y NEGATIVA.
         */
         void imprimir_mensaje_opcion_afirmativa_negativa();
 
@@ -115,21 +115,25 @@ class Juego {
 
         /*
          * Pre: -
-         * Post: Devuelve true si la opcion recibida esta entre MAX_OPCION y MIN_OPCION y sino devuelve false.
+         * Post: repite el input hasta que se cumpla la condicion pedida (MAX_OPCION y MIN_OPCION).
         */
         void validar_opcion_ingresada(int &opcion_elegida);
 
+        /*
+         * Pre: -
+         * Post: repite el input hasta que se cumpla la condicion pedida (AFIRMATIVO y NEGATIVO).
+        */
         void validar_opcion_construir(int &opcion_elegida);
 
         /*
-         * PRE: -
-         * POST: Realiza la opcion pedida
+         * Pre: -
+         * Post: Realiza la opcion pedida
         */
         void procesar_opcion(int opcion);
 
         /*
-         * PRE: -
-         * POST: Imprime por pantalla que se guardo correctamente.
+         * Pre: -
+         * Post: Imprime por pantalla que se guardo correctamente.
         */ 
         void imprimir_mensaje_guardado();
 
@@ -145,28 +149,64 @@ class Juego {
         */
         bool es_opcion_valida(int opcion);
 
-        //Precondiciones: -
-        //Postcondiciones: Solicita al usuario el nombre del edificio
+        /*
+         * Pre: -
+         * Post: Solicita al usuario el nombre del edificio.
+        */ 
         string pedir_nombre();
 
-        //Pre: Recibe un edificio bien armado
-        //Post: Devuelve true si no hay ningun problema
+        /*
+         * Pre: Recibe un edificio bien armado.
+         * Post: Devuelve true si no hay ningun problema.
+        */
         bool calcular_costos(Edificio* edificio);
 
+        /*
+         * Pre: -
+         * Post: Devuelve el entero ingresado por pantalla..
+        */
         int pedir_fila();
 
+        /*
+         * Pre: -
+         * Post: Devuelve el entero ingresado por pantalla..
+        */
         int pedir_columna();
 
+        /*
+         * Pre: -
+         * Post: repite el input hasta que se cumpla la condicion pedida (0 y n_fila).
+        */
         void validar_fila(int &fila);
 
+        /*
+         * Pre: -
+         * Post: repite el input hasta que se cumpla la condicion pedida (0 y n_columna).
+        */
         void validar_columna(int &columna);
 
+        /*
+         * Pre: -
+         * Post: Pide al usaurio un nombre y ubicacion via input y, de ser confirmado y posible, lo construye.
+        */
         void construir_edificio_nombre();
 
+        /*
+         * Pre: -
+         * Post: Pide al usuario una ubicacion via input y si hay un edificio construido lo elimina.
+        */
         void demoler_edificio_por_coordenada();
 
+        /*
+         * Pre: -
+         * Post: Pausa la pantalla con un cin.
+        */
         void mensaje_enter_continuar();
 
+        /*
+         * Pre: -
+         * Post: Pide al usuario una ubicacion via input y le infroma sobre el contenido del mismo.
+        */
         void mostrar_coordenada();
 };
 

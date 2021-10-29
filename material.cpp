@@ -59,10 +59,6 @@ void Material::imprimir_resumen(){
     cout <<"Soy un material de nombre " << nombre_material << " y me encuentro en el casillero consultado."<< endl;
 }
 
-void Material::aumentar_cantidad_material(int aumentar){
-    this->cantidad_material += aumentar;
-}
-
 void Material::modificar_emoji(string emoji){
     this->emoji = emoji;
 }
