@@ -7,9 +7,8 @@
 #include "edificio.h"
 
 class Casillero{
-    protected:
-        char tipo_terreno;
     private:
+        char tipo_terreno;
         int pos_x;
         int pos_y;
 
@@ -79,15 +78,11 @@ class Casillero{
 
         virtual void ocupar_casillero(Edificio* edificio){};
 
-        virtual void quitar_edificio(){};
-
-        virtual string devolver_nombre_edificio(){return nullptr;};
-
-        virtual Edificio* devolver_edificio(){return nullptr;};
-
         virtual bool esta_ocupado() = 0;
 
         virtual void mostrar_casillero() = 0;
+
+        virtual string devolver_nombre() = 0;
 };
 
 

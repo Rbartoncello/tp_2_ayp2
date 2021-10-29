@@ -22,3 +22,7 @@ void Casillero_inaccesible::mostrar(){
 
 void Casillero_inaccesible::mostrar_casillero(){
 }
+
+string Casillero_inaccesible::devolver_nombre(){
+    return "nada";
+}

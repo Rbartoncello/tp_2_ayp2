@@ -27,6 +27,6 @@ int Material::devolver_cantidad_material(){
     return this->cantidad_material;
 }
 
-void Material::sumar_restar(int cantidad){
-    this->cantidad_material = (this->cantidad_material + cantidad);
+void Material::aumentar_cantidad_material(int aumentar){
+    this->cantidad_material += aumentar;
 }

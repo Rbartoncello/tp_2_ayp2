@@ -1,5 +1,4 @@
 #include "edificio.h"
-#include "materiales.h"
 #include <iostream>
 #include <string>
 
@@ -32,19 +31,6 @@ int Edificio::devolver_madera(){
 
 int Edificio::devolver_metal(){
     return this->metal;
-}
-
-int Edificio::devolver_cantidad_material(string material){
-    int cantidad_material = 0;
-
-    if (material == PIEDRA)
-        cantidad_material = devolver_piedra();
-    else if (material == MADERA)
-        cantidad_material = devolver_piedra();
-    else if (material == METAL)
-        cantidad_material = devolver_piedra();
-    
-    return cantidad_material;
 }
 
 int Edificio::devolver_maxima_cantidad_permitidos(){

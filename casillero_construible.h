@@ -36,13 +36,9 @@ class Casillero_construible : public Casillero{
 
         void ocupar_casillero(Edificio* edificio);
 
-        void quitar_edificio();
-
-        string devolver_nombre_edificio();
-
-        Edificio* devolver_edificio();
-
         void mostrar_casillero();
+
+        string devolver_nombre();
 };
 
 #endif
