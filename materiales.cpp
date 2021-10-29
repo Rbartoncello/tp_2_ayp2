@@ -1,6 +1,7 @@
 #include "materiales.h"
 #include "colors.h"
 #include "emojis.h"
+#include "edificios.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -108,4 +109,55 @@ void Materiales::sumar_cantidad_material(int cantidad, string nombre){
     }
 
     this->materiales[i]->sumar_restar(cantidad);
+}
+
+int Materiales::buscar_material(string material_buscar){
+    bool encontrado = false;
+    int i = 0;
+
+    while ((i < this->total_materiales) && !(encontrado)){
+        if(this->materiales[i]->devolver_nombre_material() == material_buscar)
+            encontrado = true;
+        else
+            i++;
+    }
+    return i;
+}
+
+void Materiales::recolectar_recursos_producidos(Mapa* mapa){
+    system("clear");
+    
+    for (int i = 0; i < mapa->devolver_cantidad_filas(); i++){
+        for (int j = 0; j < mapa->devolver_cantidad_columnas(); j++){
+            if( (mapa->devolver_casillero(i, j)->esta_ocupado()) ){
+                if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_MINA){
+                    int posicion = this->buscar_material(PIEDRA);
+                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_PIEDRA);
+
+                } else if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_ASERRADERO){
+                    int posicion = this->buscar_material(MADERA);
+                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_MADERA);
+
+                } else if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_FABRICA){
+                    int posicion = this->buscar_material(METAL);
+                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_METAL);
+                }
+            }
+        }
+    }
+    imprimir_mensaje_recolectando_recursos_producidos();
+}
+
+void Materiales::imprimir_mensaje_recolectando_recursos_producidos() {
+    cout << "\tRecolectando recursos producidos... " << EMOJI_BUSQUEDA << endl;
+
+    sleep(2);
+    system("clear");
+
+    cout << TXT_BOLD;
+    cout << "\t»Se han recolectado los recursos producidos con exito" << EMOJI_HECHO <<endl;
+    cout << END_COLOR;
+    
+    sleep(2);
+    system("clear");
 }

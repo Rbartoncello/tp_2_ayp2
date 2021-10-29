@@ -74,6 +74,8 @@ class Mapa{
 
         int devolver_cantidad_columnas();
 
+        Casillero* devolver_casillero(int fila, int columna);
+
         char devolver_tipo_casillero(int fila, int columna);
 
         bool casillero_ocupado(int fila, int columna);

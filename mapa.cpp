@@ -129,6 +129,10 @@ int Mapa::devolver_cantidad_filas(){
     return this->cantidad_filas;
 }
 
+Casillero *Mapa::devolver_casillero(int fila, int columna){
+    return this->casilleros[fila][columna];
+}
+
 bool Mapa::se_puede_construir(int fila, int columna){
     return( !( this->casilleros[fila][columna]->esta_ocupado() ) && ( this->casilleros[fila][columna]->devolver_tipo_terreno() == TERRENO ) );
 }

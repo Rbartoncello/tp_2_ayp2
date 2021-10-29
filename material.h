@@ -39,6 +39,8 @@ class Material{
         void sumar_restar(int cantidad);
 
         void imprimir_resumen();
+
+        void aumentar_cantidad_material(int aumentar);
 };
 
 

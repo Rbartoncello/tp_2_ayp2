@@ -312,6 +312,7 @@ void Juego::procesar_opcion(int opcion){
             this->mensaje_enter_continuar();
             break;
         case RECOLECTAR_RECURSOS:
+            this->materiales->recolectar_recursos_producidos(mapa);
             break;
         case LLUVIA_RECURSOS:
             break;
@@ -327,8 +328,6 @@ void Juego::imprimir_mensaje_guardado() {
 
     cout << "\t»Se ha guardado con exito " << EMOJI_HECHO << endl;
     cout << "\t»Adios«" << endl;
-
-
 }
 
 string Juego::pedir_nombre(){
@@ -402,7 +401,6 @@ void Juego::mensaje_enter_continuar(){
 
 void Juego::mostrar_coordenada(){
     int fila, columna;
-
 
     fila = this->pedir_fila();
     this->validar_fila(fila);
