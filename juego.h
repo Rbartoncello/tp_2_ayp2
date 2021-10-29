@@ -166,6 +166,8 @@ class Juego {
         void demoler_edificio_por_coordenada();
 
         void mensaje_enter_continuar();
+
+        void mostrar_coordenada();
 };
 
 

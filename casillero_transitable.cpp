@@ -24,3 +24,12 @@ void Casillero_transitable::mostrar(){
 
 void Casillero_transitable::mostrar_casillero(){
 }
+
+void Casillero_transitable::imprimir_resumen(){
+    if(this->esta_ocupado()){
+        cout << endl <<"Soy un casillero transitable y no me encuentro vacío" << endl;
+        this->material->imprimir_resumen();
+    }else{
+        cout << endl <<"Soy un casillero transitable y me encuentro vacío" << endl;
+    }
+}

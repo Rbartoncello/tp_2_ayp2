@@ -22,3 +22,7 @@ void Casillero_inaccesible::mostrar(){
 
 void Casillero_inaccesible::mostrar_casillero(){
 }
+
+void Casillero_inaccesible::imprimir_resumen(){
+    cout << endl <<"Soy un casillero inaccesible y me encuentro vacío" << endl;
+}

@@ -81,6 +81,8 @@ class Mapa{
         //pre: hay un edificio en la posicion
         Edificio* devolver_edificio(int fila, int columna);
 
+        void imprimir_resumen_casillero(int fila, int columna);
+
     private:
         /*
          * PRE: El archivo tiene que estar abierto y de formato correcto.

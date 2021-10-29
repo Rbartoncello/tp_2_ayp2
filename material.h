@@ -37,6 +37,8 @@ class Material{
         int devolver_cantidad_material();
 
         void sumar_restar(int cantidad);
+
+        void imprimir_resumen();
 };
 
 

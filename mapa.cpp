@@ -96,7 +96,7 @@ void Mapa::mostrar(){
 }
 
 void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna){
-    this->casilleros[fila][columna]->ocupar_casillero(edificio);
+    this->casilleros[fila][columna]->agregar_edificio(edificio);
 }
 
 void Mapa::mostrar_edificios_construidos(){
@@ -147,4 +147,8 @@ Edificio* Mapa::devolver_edificio(int fila, int columna){
 
 void Mapa::quitar_edificio_de_casillero(int fila, int columna){
     this->casilleros[fila][columna]->quitar_edificio();
+}
+
+void Mapa::imprimir_resumen_casillero(int fila, int columna){
+    this->casilleros[fila][columna]->imprimir_resumen();
 }

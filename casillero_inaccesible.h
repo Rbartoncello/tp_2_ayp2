@@ -41,6 +41,8 @@ class Casillero_inaccesible : public Casillero {
         Edificio* devolver_edificio(){return nullptr;};
 
         void mostrar_casillero();
+
+        void imprimir_resumen();
 };
 
 

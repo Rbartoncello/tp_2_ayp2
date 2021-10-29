@@ -6,10 +6,11 @@
 #include "casillero.h"
 
 
+
 class Casillero_transitable : public Casillero{
     private:
         bool ocupado;
-
+        Material* material;
     public:
         /*
          * Constructor:
@@ -46,6 +47,8 @@ class Casillero_transitable : public Casillero{
         Edificio* devolver_edificio(){return nullptr;};
 
         void mostrar_casillero();
+
+        void imprimir_resumen();
 };
 
 #endif //CASILLERO_TRANSITABLE_H

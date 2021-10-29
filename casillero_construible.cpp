@@ -16,7 +16,7 @@ bool Casillero_construible::esta_ocupado(){
     return this->ocupado;
 }
 
-void Casillero_construible::ocupar_casillero(Edificio* edificio) {
+void Casillero_construible::agregar_edificio(Edificio* edificio) {
     this->edificio = edificio;
     this->ocupado = true;
 }
@@ -44,4 +44,13 @@ string Casillero_construible::devolver_nombre_edificio(){
 
 Edificio* Casillero_construible::devolver_edificio(){
     return this->edificio;
+}
+
+void Casillero_construible::imprimir_resumen(){
+    if(this->esta_ocupado()){
+        cout << endl <<"Soy un casillero construible y no me encuentro vacío" << endl;
+        this->edificio->imprimir_resumen();
+    }else{
+        cout << endl <<"Soy un casillero construible y me encuentro vacío" << endl;
+    }
 }

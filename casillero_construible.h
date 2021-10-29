@@ -34,7 +34,7 @@ class Casillero_construible : public Casillero{
          */
         void mostrar();
 
-        void ocupar_casillero(Edificio* edificio);
+        void agregar_edificio(Edificio* edificio);
 
         void quitar_edificio();
 
@@ -43,6 +43,8 @@ class Casillero_construible : public Casillero{
         Edificio* devolver_edificio();
 
         void mostrar_casillero();
+
+        void imprimir_resumen();
 };
 
 #endif

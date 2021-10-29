@@ -5,6 +5,7 @@
 #include <string>
 #include "colors.h"
 #include "edificio.h"
+#include "material.h"
 
 class Casillero{
     protected:
@@ -77,7 +78,7 @@ class Casillero{
          */
         void modificar_pos_y(int y);
 
-        virtual void ocupar_casillero(Edificio* edificio){};
+        virtual void agregar_edificio(Edificio* edificio){};
 
         virtual void quitar_edificio(){};
 
@@ -88,6 +89,8 @@ class Casillero{
         virtual bool esta_ocupado() = 0;
 
         virtual void mostrar_casillero() = 0;
+
+        virtual void imprimir_resumen(){};
 };
 
 

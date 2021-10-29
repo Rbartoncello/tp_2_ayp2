@@ -30,3 +30,7 @@ int Material::devolver_cantidad_material(){
 void Material::sumar_restar(int cantidad){
     this->cantidad_material = (this->cantidad_material + cantidad);
 }
+
+void Material::imprimir_resumen(){
+    cout <<"Soy un material de nombre " <<nombre_material << " y me encuentro en el casillero consultado."<< endl;
+}

@@ -54,3 +54,7 @@ int Edificio::devolver_maxima_cantidad_permitidos(){
 void Edificio::mostrar(){
     cout << devolver_nombre_edificio() << " " << devolver_piedra() << " " << devolver_madera() << " " << devolver_metal() << " " << devolver_maxima_cantidad_permitidos() << endl;
 }
+
+void Edificio::imprimir_resumen(){
+    cout <<"Soy un edificio de nombre " << nombre_edificio << " y me encuentro en el casillero consultado."<< endl;
+}

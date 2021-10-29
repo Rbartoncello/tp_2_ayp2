@@ -305,6 +305,7 @@ void Juego::procesar_opcion(int opcion){
             this->mensaje_enter_continuar();
             break;
         case CONSULTAR_COORDENADA:
+            this->mostrar_coordenada();
             break;
         case MOSTRAR_INVENTARIO:
             this->materiales->mostrar();
@@ -397,4 +398,16 @@ void Juego::mensaje_enter_continuar(){
     cin.get();
     cin.get();
     system("clear");
+}
+
+void Juego::mostrar_coordenada(){
+    int fila, columna;
+
+
+    fila = this->pedir_fila();
+    this->validar_fila(fila);
+    columna = this->pedir_columna();
+    this->validar_columna(columna);
+    
+    this->mapa->imprimir_resumen_casillero(fila, columna);    
 }
