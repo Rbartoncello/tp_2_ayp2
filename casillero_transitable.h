@@ -10,7 +10,7 @@
 class Casillero_transitable : public Casillero{
     private:
         bool ocupado;
-        Material* material;
+        Material material;
     public:
         /*
          * Constructor:
@@ -49,6 +49,8 @@ class Casillero_transitable : public Casillero{
         void mostrar_casillero();
 
         void imprimir_resumen();
+
+        void agregar_material(string nombre_material);
 };
 
 #endif //CASILLERO_TRANSITABLE_H

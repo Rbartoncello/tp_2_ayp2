@@ -5,28 +5,43 @@ CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o: \
  ../casillero.cpp \
  ../casillero.h \
  ../colors.h \
- ../edificio.h
+ ../edificio.h \
+ ../material.h
 CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: \
  ../casillero.h \
  ../casillero_construible.cpp \
  ../casillero_construible.h \
+ ../casillero_inaccesible.h \
+ ../casillero_transitable.h \
  ../colors.h \
- ../edificio.h
+ ../edificio.h \
+ ../mapa.h \
+ ../material.h
 CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o: \
  ../casillero.h \
  ../casillero_inaccesible.cpp \
  ../casillero_inaccesible.h \
  ../colors.h \
- ../edificio.h
+ ../edificio.h \
+ ../material.h
 CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: \
  ../casillero.h \
  ../casillero_transitable.cpp \
  ../casillero_transitable.h \
  ../colors.h \
- ../edificio.h
+ ../edificio.h \
+ ../material.h
 CMakeFiles/tp_2_ayp2.dir/edificio.cpp.o: \
+ ../casillero.h \
+ ../casillero_construible.h \
+ ../casillero_inaccesible.h \
+ ../casillero_transitable.h \
+ ../colors.h \
  ../edificio.cpp \
- ../edificio.h
+ ../edificio.h \
+ ../mapa.h \
+ ../material.h \
+ ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: \
  ../colors.h \
  ../edificio.h \
@@ -67,14 +82,33 @@ CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
  ../casillero_transitable.h \
  ../colors.h \
  ../edificio.h \
+ ../emojis.h \
  ../mapa.cpp \
- ../mapa.h
+ ../mapa.h \
+ ../material.h \
+ ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/material.cpp.o: \
+ ../casillero.h \
+ ../casillero_construible.h \
+ ../casillero_inaccesible.h \
+ ../casillero_transitable.h \
  ../colors.h \
+ ../edificio.h \
+ ../emojis.h \
+ ../mapa.h \
  ../material.cpp \
- ../material.h
+ ../material.h \
+ ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: \
+ ../casillero.h \
+ ../casillero_construible.h \
+ ../casillero_inaccesible.h \
+ ../casillero_transitable.h \
  ../colors.h \
+ ../edificio.h \
+ ../edificios.h \
+ ../emojis.h \
+ ../mapa.h \
  ../material.h \
  ../materiales.cpp \
  ../materiales.h

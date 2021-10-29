@@ -40,9 +40,9 @@ int Edificio::devolver_cantidad_material(string material){
     if (material == PIEDRA)
         cantidad_material = devolver_piedra();
     else if (material == MADERA)
-        cantidad_material = devolver_piedra();
+        cantidad_material = devolver_madera();
     else if (material == METAL)
-        cantidad_material = devolver_piedra();
+        cantidad_material = devolver_metal();
     
     return cantidad_material;
 }

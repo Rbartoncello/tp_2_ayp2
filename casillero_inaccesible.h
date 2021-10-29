@@ -43,6 +43,8 @@ class Casillero_inaccesible : public Casillero {
         void mostrar_casillero();
 
         void imprimir_resumen();
+
+        virtual void agregar_material(string nombre_material){};
 };
 
 

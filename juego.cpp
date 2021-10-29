@@ -315,6 +315,7 @@ void Juego::procesar_opcion(int opcion){
             this->materiales->recolectar_recursos_producidos(mapa);
             break;
         case LLUVIA_RECURSOS:
+            this->mapa->lluvia_recursos();
             break;
     }
 }

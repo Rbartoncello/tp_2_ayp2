@@ -8,8 +8,8 @@
 using namespace std;
 
 const string PIEDRA = "piedra";
-const string MADERA = "metal";
-const string METAL = "madera";
+const string MADERA = "madera";
+const string METAL = "metal";
 
 const int AUMENTAR_CANTIDAD_PIEDRA = 15;
 const int AUMENTAR_CANTIDAD_MADERA = 25;
@@ -87,7 +87,7 @@ class Materiales{
          * PRE:
          * POST:
          */
-        void imprimir_mensaje_recolectando_recursos_producidos();   
+        void imprimir_mensaje_recolectando_recursos_producidos();
 };
 
 #endif

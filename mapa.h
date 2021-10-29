@@ -7,6 +7,15 @@
 #include "casillero_construible.h"
 using namespace std;
 
+const int MIN_GENERAR_PIEDRA = 1;
+const int MAX_GENERAR_PIEDRA = 2;
+
+const int MIN_GENERAR_MADERA = 0;
+const int MAX_GENERAR_MADERA = 1;
+
+const int MIN_GENERAR_METAL = 2;
+const int MAX_GENERAR_METAL = 4;
+
 const char CAMINO = 'C', TERRENO = 'T', LAGO = 'L';
 
 class Mapa{
@@ -85,6 +94,8 @@ class Mapa{
 
         void imprimir_resumen_casillero(int fila, int columna);
 
+        void lluvia_recursos();
+
     private:
         /*
          * PRE: El archivo tiene que estar abierto y de formato correcto.
@@ -97,6 +108,12 @@ class Mapa{
          * POST: Me crea una matriz del tipo casillero de forma dinamica.
          */
         void crear_matriz_casilleros();
+
+        int numero_aleatorio(int desde, int hasta);
+
+        bool se_puede_generar_material(int fila, int columna);
+
+        void agregar_materiales(string material, int minimo, int maximo);
 };
 
 #endif

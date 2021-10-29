@@ -7,6 +7,7 @@ using namespace std;
 class Material{
     private:
         string nombre_material;
+        string emoji;
         int cantidad_material;
     public:
         /*
@@ -16,7 +17,14 @@ class Material{
         */
         Material(string nombre_material, int cantidad_material);
 
-        //~Material();
+        /*
+        * Constructor:
+        * PRE: -.
+        * POST: Me va a crear el objeto Material con nombre_material "NULL", emoji = "NULL" y cantidad = 0.
+        */
+        Material();
+
+        string agregar_emoji(string nombre_matertial);
 
         /*
         * PRE: -
@@ -32,6 +40,12 @@ class Material{
 
         /*
         * PRE: -
+        * POST: Me devuelve el emoji.
+        */
+        string devolver_emoji();
+
+        /*
+        * PRE: -
         * POST: Me devuelve el cantidad_material.
         */
         int devolver_cantidad_material();
@@ -41,6 +55,8 @@ class Material{
         void imprimir_resumen();
 
         void aumentar_cantidad_material(int aumentar);
+
+        void modificar_emoji(string emoji);
 };
 
 
