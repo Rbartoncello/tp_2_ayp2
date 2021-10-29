@@ -91,6 +91,8 @@ class Casillero{
         virtual void mostrar_casillero() = 0;
 
         virtual void imprimir_resumen(){};
+
+        virtual void agregar_material(string nombre_material){};
 };
 
 

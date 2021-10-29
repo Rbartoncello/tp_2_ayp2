@@ -1,7 +1,13 @@
 #include "mapa.h"
+#include "materiales.h"
+#include "emojis.h"
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <stdlib.h>
+#include <time.h>  
+#include <unistd.h>
+
 
 using namespace std;
 
@@ -55,6 +61,7 @@ void Mapa::agregar_casillero(ifstream &archivo){
         }
     }
 }
+
 void Mapa::procesar_archivo(){
     ifstream archivo(PATH_MAPA);
     
@@ -155,4 +162,52 @@ void Mapa::quitar_edificio_de_casillero(int fila, int columna){
 
 void Mapa::imprimir_resumen_casillero(int fila, int columna){
     this->casilleros[fila][columna]->imprimir_resumen();
+}
+
+int Mapa::numero_aleatorio(int desde, int hasta){
+    srand (( unsigned)time(NULL));
+    int numero = ( desde + rand() % hasta );
+    
+    while (numero > hasta)
+        numero = ( desde + rand() % hasta );
+    
+    
+
+    return numero;
+}
+
+bool Mapa::se_puede_generar_material(int fila, int columna){
+    return ( !( casillero_ocupado(fila, columna) ) && ( this->casilleros[fila][columna]->devolver_tipo_terreno() == CAMINO) );
+}
+
+void Mapa::agregar_materiales(std::string material, int minimo, int maximo){
+    int maximos_materiales = numero_aleatorio(minimo, maximo);
+
+    for (int i = 0; i < maximos_materiales; i++){
+        int fila_aleatoria = numero_aleatorio(0 , this->cantidad_filas);
+        int columna_aleatoria = numero_aleatorio(0 , this->cantidad_columnas);
+
+        while ( !( se_puede_generar_material(fila_aleatoria, columna_aleatoria) ) ){
+            fila_aleatoria = numero_aleatorio(0 , this->cantidad_filas);
+            columna_aleatoria = numero_aleatorio(0 , this->cantidad_columnas);
+        }
+        this->casilleros[fila_aleatoria][columna_aleatoria]->agregar_material(material);
+    }
+}
+
+void Mapa::lluvia_recursos(){
+    system("clear");
+    cout << "\tLluvia de recusos ... " << EMOJI_LLUVIA << " " << EMOJI_LLUVIA_CON_TRUENOS << " " << EMOJI_LLUVIA << endl;
+    cout << "\t[Por favor espere]" << endl;
+
+    agregar_materiales(PIEDRA, MIN_GENERAR_PIEDRA, MAX_GENERAR_PIEDRA);
+    agregar_materiales(MADERA, MIN_GENERAR_MADERA, MAX_GENERAR_MADERA);
+    agregar_materiales(METAL, MIN_GENERAR_METAL, MAX_GENERAR_METAL);
+
+    system("clear");
+    cout << TXT_BOLD;
+    cout << "\tSe ha agregado recusos al mapa con exito " << EMOJI_HECHO << endl << endl;
+    cout << END_COLOR;
+    sleep(1);
+    system("clear");
 }

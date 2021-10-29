@@ -35,7 +35,7 @@ void Casillero_construible::mostrar(){
 }
 
 void Casillero_construible::mostrar_casillero(){
-    cout << this->edificio->devolver_nombre_edificio() << "(" << this->devolver_pos_x() << ", " << this->devolver_pos_y() << ")" << endl;
+    cout << this->edificio->devolver_nombre_edificio() << "(" << this->devolver_pos_y() << ", " << this->devolver_pos_x() << ")" << endl;
 }
 
 string Casillero_construible::devolver_nombre_edificio(){

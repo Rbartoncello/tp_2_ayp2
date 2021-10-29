@@ -1,18 +1,38 @@
-//
-// Created by juan on 25/10/21.
-//
 #include "colors.h"
+#include "emojis.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
 #include <iomanip>
 #include "material.h"
+#include "materiales.h"
 
 
 Material::Material(string nombre, int cantidad){
     this->nombre_material = nombre;
+    this->emoji = agregar_emoji(nombre_material);
     this->cantidad_material = cantidad;
+}
+
+Material::Material(){
+    this->nombre_material = "NULL";
+    this->emoji = "NULL";
+    this->cantidad_material = 0;
+}
+
+string Material::agregar_emoji(string nombre_material){
+    string emoji;
+
+    if (nombre_material == PIEDRA){
+        emoji = EMOJI_PIEDRA;
+    } else if (nombre_material == MADERA){
+        emoji = EMOJI_MADERA;
+    } else if (nombre_material == METAL){
+        emoji = EMOJI_METAL;
+    } 
+
+    return emoji;
 }
 
 void Material::mostrar(){
@@ -21,6 +41,10 @@ void Material::mostrar(){
 
 string Material::devolver_nombre_material(){
     return this->nombre_material;
+}
+
+string Material::devolver_emoji(){
+    return this->emoji;
 }
 
 int Material::devolver_cantidad_material(){
@@ -37,4 +61,8 @@ void Material::imprimir_resumen(){
 
 void Material::aumentar_cantidad_material(int aumentar){
     this->cantidad_material += aumentar;
+}
+
+void Material::modificar_emoji(string emoji){
+    this->emoji = emoji;
 }

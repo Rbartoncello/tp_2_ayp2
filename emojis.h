@@ -17,6 +17,9 @@ const string EMOJI_PARED = "\U0001f9f1";
 const string EMOJI_RELOJ = "\u23F1";
 const string EMOJI_BUSQUEDA = "\U0001f50d";
 
+const string EMOJI_LLUVIA = "\U0001f327";
+const string EMOJI_LLUVIA_CON_TRUENOS = "\u26C8";
+
 const string EMOJI_PIEDRA = "\U0001faa8";
 const string EMOJI_MADERA = "\U0001fab5";
 const string EMOJI_METAL = "\u2699";
