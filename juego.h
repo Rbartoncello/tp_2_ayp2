@@ -12,6 +12,9 @@ const string PATH_UBICACIONES = "ubicaciones.txt";
 const int MIN_OPCION = 1;
 const int MAX_OPCION = 10;
 
+const int AFIRMATIVO = 1;
+const int NEGATIVO = 2;
+
 const int ERROR = -1;
 
 const int CONSTRUIR_EDIFICIO_NOMBRE = 1;
@@ -116,6 +119,8 @@ class Juego {
         */
         void validar_opcion_ingresada(int &opcion_elegida);
 
+        void validar_opcion_construir(int &opcion_elegida);
+
         /*
          * PRE: -
          * POST: Realiza la opcion pedida
@@ -139,6 +144,28 @@ class Juego {
          * Post: Devuelve TRUE si MIN_OPCION <= opcion <= MAX_OPCION y FALSE en caso contrario.
         */
         bool es_opcion_valida(int opcion);
+
+        //Precondiciones: -
+        //Postcondiciones: Solicita al usuario el nombre del edificio
+        string pedir_nombre();
+
+        //Pre: Recibe un edificio bien armado
+        //Post: Devuelve true si no hay ningun problema
+        bool calcular_costos(Edificio* edificio);
+
+        int pedir_fila();
+
+        int pedir_columna();
+
+        void validar_fila(int &fila);
+
+        void validar_columna(int &columna);
+
+        void construir_edificio_nombre();
+
+        void demoler_edificio_por_coordenada();
+
+        void mensaje_enter_continuar();
 };
 
 

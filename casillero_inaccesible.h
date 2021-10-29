@@ -32,11 +32,15 @@ class Casillero_inaccesible : public Casillero {
         */
         void mostrar();
 
-        void agregar_edificio(Edificio* edificio);
+        void agregar_edificio(Edificio* edificio){};
+
+        void quitar_edificio(){};
+
+        string devolver_nombre_edificio(){return nullptr;};
+
+        Edificio* devolver_edificio(){return nullptr;};
 
         void mostrar_casillero();
-
-        string devolver_nombre();
 };
 
 

@@ -59,11 +59,14 @@ class Edificio {
          */
         int devolver_metal();
 
+        int devolver_cantidad_material(string material);
+
         /*
          * PRE: -
          * POST: Me devuelve el maxima_cantidad_permitidos.
          */
         int devolver_maxima_cantidad_permitidos();
+
 };
 
 #endif //TP_2_AYP2_EDIFICIO_H

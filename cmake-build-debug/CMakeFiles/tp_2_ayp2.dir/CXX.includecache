@@ -33,8 +33,6 @@ string
 -
 casillero.h
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/casillero.h
-material.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.h
 
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
 
@@ -80,10 +78,6 @@ materiales.h
 mapa.h
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
 
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/main.cpp
-juego.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.h
-
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
 fstream
 -
@@ -100,29 +94,9 @@ casillero_construible.h
 string
 -
 
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp
-materiales.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
-colors.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
-edificios.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
-fstream
--
-iostream
--
-cstdlib
--
-unistd.h
--
-iomanip
--
-
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
 string
 -
 material.h
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.h
-mapa.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/mapa.h
 

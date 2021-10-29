@@ -1,6 +1,5 @@
 #include "materiales.h"
 #include "colors.h"
-#include "edificios.h"
 #include "emojis.h"
 #include <fstream>
 #include <iostream>
@@ -48,8 +47,12 @@ void Materiales::procesar_archivo(){
     } else {
         while ( archivo >> nombre ){
             archivo >> cantidad;
+
+            //Material* material  = new Material(nombre, stoi(cantidad));
+
             agregar_material(new Material(nombre, stoi(cantidad)));
         }
+
         archivo.close();
     }
 }
@@ -71,57 +74,38 @@ void Materiales::mostrar(){
         else
             cout << "\t\t╚══════════════╩════════════╝" << endl;
     }  
-    
-    cout << "Presione [ENTER] para continuar"<< endl;
-    cin.get();
-    cin.get();
-    system("clear");
 }
 
-int Materiales::buscar_material(string material_buscar){
-    bool encontrado = false;
+
+int Materiales::devolver_cantidad_material(string nombre){
     int i = 0;
 
-    while ((i < this->total_materiales) && !(encontrado)){
-        if(this->materiales[i]->devolver_nombre_material() == material_buscar)
-            encontrado = true;
-        else
-            i++;
+    while (nombre != this->materiales[i]->devolver_nombre_material()){
+        i++;
     }
-    return i;
+
+    return this->materiales[i]->devolver_cantidad_material();
 }
 
-void Materiales::recolectar_recursos_producidos(Mapa* mapa){
-    system("clear");
-    for (int i = 0; i < mapa->devolver_cantidad_filas(); i++){
-        for (int j = 0; j < mapa->devolver_cantidad_columas(); j++){
-            if( (mapa->devolver_casillero(i, j)->esta_ocupado()) ){
-                if(mapa->devolver_casillero(i, j)->devolver_nombre() == EDIFICIO_MINA){
-                    int posicion = this->buscar_material(PIEDRA);
-                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_PIEDRA);
-                } else if(mapa->devolver_casillero(i, j)->devolver_nombre() == EDIFICIO_ASERRADERO){
-                    int posicion = this->buscar_material(MADERA);
-                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_MADERA);
-                } else if(mapa->devolver_casillero(i, j)->devolver_nombre() == EDIFICIO_FABRICA){
-                    int posicion = this->buscar_material(METAL);
-                    materiales[posicion]->aumentar_cantidad_material(AUMENTAR_CANTIDAD_METAL);
-                }
-            }
-        }
+bool Materiales::hay_suficiente_material(Edificio* edificio, string material){
+    bool material_suficiente = false;
+
+    if(edificio->devolver_cantidad_material(material) <= devolver_cantidad_material(material)){
+        cout << endl << "Cantidad de " << material <<": " << TXT_GREEN_34 << EMOJI_HECHO << END_COLOR << endl;
+        material_suficiente = true;
+    } else{
+        cout << endl << "Cantidad de " << material <<": " << TXT_RED_124 << EMOJI_MAL <<" (falta :" << (edificio->devolver_cantidad_material(material) - devolver_cantidad_material(material)) << ")" << END_COLOR << endl;
     }
-    imprimir_mensaje_recolectando_recursos_producidos();
+
+    return material_suficiente;
 }
 
-void Materiales::imprimir_mensaje_recolectando_recursos_producidos() {
-    cout << "Recolectando recursos producidos... " << EMOJI_BUSQUEDA << endl;
+void Materiales::sumar_cantidad_material(int cantidad, string nombre){
+    int i = 0;
 
-    sleep(2);
-    system("clear");
+    while (nombre != this->materiales[i]->devolver_nombre_material()){
+        i++;
+    }
 
-    cout << TXT_BOLD;
-    cout << "\t»Se han recolectado los recursos producidos con exito" << EMOJI_HECHO <<endl;
-    cout << END_COLOR;
-    
-    sleep(2);
-    system("clear");
+    this->materiales[i]->sumar_restar(cantidad);
 }

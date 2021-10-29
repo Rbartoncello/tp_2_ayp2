@@ -36,7 +36,7 @@ class Material{
         */
         int devolver_cantidad_material();
 
-        void aumentar_cantidad_material(int aumentar);
+        void sumar_restar(int cantidad);
 };
 
 

@@ -42,13 +42,13 @@ void Mapa::agregar_casillero(ifstream &archivo){
             if(archivo >> tipo_terreno){
                 switch (tipo_terreno){
                     case LAGO:
-                        this->casilleros[i][j] = new Casillero_inaccesible(tipo_terreno, i, j);
+                        this->casilleros[i][j] = new Casillero_inaccesible(tipo_terreno, j, i);
                         break;
                     case CAMINO:
-                        this->casilleros[i][j] = new Casillero_transitable(tipo_terreno, i, j);
+                        this->casilleros[i][j] = new Casillero_transitable(tipo_terreno, j, i);
                         break;
                     case TERRENO:
-                        this->casilleros[i][j] = new Casillero_construible(tipo_terreno, i, j);
+                        this->casilleros[i][j] = new Casillero_construible(tipo_terreno, j, i);
                         break;
                 }
             }
@@ -80,17 +80,19 @@ void Mapa::procesar_archivo(){
 void Mapa::mostrar(){
     system("clear");
     for (int i = 0; i < this->cantidad_filas; i++){
-        cout << "\t" << BGND_BROWN_94 << " " << END_COLOR;
+        cout << "\t" << BGND_BROWN_94 << i << " " << END_COLOR;
         for (int j = 0; j < this->cantidad_columnas; j++){
             this->casilleros[i][j]->mostrar();
         }
         cout << BGND_BROWN_94 << " " << END_COLOR;
         cout << endl;
     }
-    cout << "Presione [ENTER] para continuar"<< endl;
-    cin.get();
-    cin.get();
-    system("clear");
+    for (int i = 0; i < this->cantidad_columnas; i++){
+        if (i == 0)
+            cout << "\t  ";
+        cout << BGND_BROWN_94 << i << " " << END_COLOR;
+    }
+    cout << endl;
 }
 
 void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna){
@@ -107,14 +109,42 @@ void Mapa::mostrar_edificios_construidos(){
     }
 }
 
+int Mapa::cantidad_edificio_construido(string nombre){
+    int cantidad = 0;
+    for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            if ( this->casilleros[i][j]->devolver_tipo_terreno() == TERRENO && this->casilleros[i][j]->esta_ocupado() && this->casilleros[i][j]->devolver_nombre_edificio()==nombre){
+                cantidad ++;
+            }
+        }
+    }
+    return cantidad;
+}
+
+int Mapa::devolver_cantidad_columnas(){
+    return this->cantidad_columnas;
+}
+
 int Mapa::devolver_cantidad_filas(){
     return this->cantidad_filas;
 }
 
-int Mapa::devolver_cantidad_columas(){
-    return this->cantidad_columnas;
+bool Mapa::se_puede_construir(int fila, int columna){
+    return( !( this->casilleros[fila][columna]->esta_ocupado() ) && ( this->casilleros[fila][columna]->devolver_tipo_terreno() == TERRENO ) );
 }
 
-Casillero *Mapa::devolver_casillero(int fila, int columna){
-    return this->casilleros[fila][columna];
+char Mapa::devolver_tipo_casillero(int fila, int columna){
+    return this->casilleros[fila][columna]->devolver_tipo_terreno();
+}
+
+bool Mapa::casillero_ocupado(int fila, int columna){
+    return this->casilleros[fila][columna]->esta_ocupado();
+}
+
+Edificio* Mapa::devolver_edificio(int fila, int columna){
+    return this->casilleros[fila][columna]->devolver_edificio();
+}
+
+void Mapa::quitar_edificio_de_casillero(int fila, int columna){
+    this->casilleros[fila][columna]->quitar_edificio();
 }
