@@ -2,6 +2,7 @@
 #define EDIFICIOS_H
 #include <string>
 #include "edificio.h"
+#include "mapa.h"
 
 using namespace std;
 
@@ -41,7 +42,7 @@ class Edificios{
          * Pre: -
          * Post: Me muestra lista por pantalla toso los objetos del tipo Edificio.
          */
-        void mostar();
+        void mostar(Mapa* mapa);
 
         /*
          * Pre: Recibe un string (tiene que haber un edificio con el mismo nombre)
@@ -50,12 +51,12 @@ class Edificios{
         Edificio* buscar_edificio_por_nombre(string nombre);
 
         /*
-         * Pre: recibe un string
+         * Pre: -
          * Post: devuelve true si existe un edificio con ese nombre
         */
         bool existe_edificio_por_nombre(string nombre);
         
-        private:
+    private:
 
         /*
          * Pre: Recibe un objeto Edificio.
@@ -67,7 +68,13 @@ class Edificios{
          * Pre: Recibe un nombre existente
          * Post: devuelve el emoji de ese edificio
         */
-        string buscar_tipo_emoji(string nombre_edificio); 
+        string buscar_tipo_emoji(string nombre_edificio);
+
+        /*
+         * Pre: 
+         * Post: devuelve TRUE el nombre_edificio es mina, aserradero o fabrica y FALSE en caso contrario.
+         */
+        bool brinda_material(string nombre_edificio);
 
         
 };

@@ -43,14 +43,6 @@ class Juego {
          */
         Juego();
 
-    /*
-         * Constructor:
-         * Pre: -.
-         * Post: Me va a crear el objeto Juego.
-        
-    Juego(Mapa* mapa, Edificios* edificios, Materiales* materiales);
-
-    */
         /*
          * Destructor:
          * Pre: -.
@@ -163,6 +155,32 @@ class Juego {
 
         /*
          * Pre: -
+         * Post: Pide al usaurio un nombre y ubicacion via input y, de ser confirmado y posible, lo construye.
+        */
+        void construir_edificio_nombre();
+
+        /*
+         * Pre: -
+         * Post: Pide al usuario una ubicacion via input y si hay un edificio construido lo elimina.
+        */
+        void demoler_edificio_por_coordenada();
+
+        /*
+         * Pre: -
+         * Post: Pide al usuario una ubicacion via input y le infroma sobre el contenido del mismo.
+        */
+        void mostrar_coordenada();
+    
+    private:
+
+        /*
+         * Pre: -
+         * Post: Pausa la pantalla con un cin.
+        */
+        void mensaje_enter_continuar();
+
+        /*
+         * Pre: -
          * Post: Devuelve el entero ingresado por pantalla..
         */
         int pedir_fila();
@@ -185,29 +203,6 @@ class Juego {
         */
         void validar_columna(int &columna);
 
-        /*
-         * Pre: -
-         * Post: Pide al usaurio un nombre y ubicacion via input y, de ser confirmado y posible, lo construye.
-        */
-        void construir_edificio_nombre();
-
-        /*
-         * Pre: -
-         * Post: Pide al usuario una ubicacion via input y si hay un edificio construido lo elimina.
-        */
-        void demoler_edificio_por_coordenada();
-
-        /*
-         * Pre: -
-         * Post: Pausa la pantalla con un cin.
-        */
-        void mensaje_enter_continuar();
-
-        /*
-         * Pre: -
-         * Post: Pide al usuario una ubicacion via input y le infroma sobre el contenido del mismo.
-        */
-        void mostrar_coordenada();
 };
 
 

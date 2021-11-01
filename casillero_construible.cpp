@@ -1,6 +1,7 @@
 #include "casillero_construible.h"
 #include "mapa.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -34,7 +35,10 @@ void Casillero_construible::mostrar(){
 }
 
 void Casillero_construible::mostrar_casillero(){
-    cout << this->edificio->devolver_nombre_edificio() << "(" << this->devolver_pos_y() << ", " << this->devolver_pos_x() << ")" << endl;
+    cout << "\t\t║" << setfill(' ') << setw(16) << this->devolver_nombre_edificio() << "( " << this->devolver_edificio()->devolver_emoji() << " )" << setfill(' ') << setw(4);
+    cout << "│" << setfill(' ') << setw(4) << this->devolver_pos_y() << setfill(' ') << setw(5);
+    cout << "│" << setfill(' ') << setw(5) << this->devolver_pos_x() << setfill(' ') << setw(7);
+    cout << "│" << setfill(' ') << setw(11);
 }
 
 string Casillero_construible::devolver_nombre_edificio(){
@@ -47,9 +51,9 @@ Edificio* Casillero_construible::devolver_edificio(){
 
 void Casillero_construible::imprimir_resumen(){
     if(this->esta_ocupado()){
-        cout << endl <<"Soy un casillero construible y no me encuentro vacío" << endl;
+        cout << "\tSoy un casillero construible y no me encuentro vacío" << endl;
         this->edificio->imprimir_resumen();
     }else{
-        cout << endl <<"Soy un casillero construible y me encuentro vacío" << endl;
+        cout << "\tSoy un casillero construible y me encuentro vacío" << endl;
     }
 }

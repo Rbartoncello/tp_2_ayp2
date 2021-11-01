@@ -37,27 +37,38 @@ void Edificios::agregar_edificio(Edificio* edificio){
     this->total_edificios++;
 }
 
-void Edificios::mostar(){
+bool Edificios::brinda_material(string nombre_edificio){
+    return ( ( nombre_edificio == EDIFICIO_MINA ) || ( nombre_edificio == EDIFICIO_ASERRADERO ) || ( nombre_edificio == EDIFICIO_FABRICA ) );
+}
+
+void Edificios::mostar(Mapa* mapa){
     system("clear");
 
     cout << TXT_BOLD;
-    cout << "\t╔══════════════════════╦═════════════════════════════════════════╦══════════════════════════╗" << endl;
-    cout << "\t║                      ║ Materiales necesarios para construirlos ║                          ║" << endl;
-    cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Max. cantidad permitidos ║" << endl;
-    cout << "\t║                      ║ Piedra ("<< EMOJI_PIEDRA << " ) ║ Madera ("<< EMOJI_MADERA << " ) ║  Metal ("<< EMOJI_METAL << ")  ║                          ║" << endl;
-    cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬══════════════════════════╣" << endl;
+    cout << "\t╔══════════════════════╦═════════════════════════════════════════╦═════════════╦═════════════╦═════════════════╗" << endl;
+    cout << "\t║                      ║ Materiales necesarios para construirlos ║             ║             ║                 ║" << endl;
+    cout << "\t║  Nombre de edificio  ╠═════════════╦═════════════╦═════════════╣ Construidos ║ Disponibles ║ Brinda material ║" << endl;
+    cout << "\t║                      ║ Piedra ("<< EMOJI_PIEDRA << " ) ║ Madera ("<< EMOJI_MADERA << " ) ║  Metal ("<< EMOJI_METAL << ")  ║             ║             ║                 ║" << endl;
+    cout << "\t╠══════════════════════╬═════════════╬═════════════╬═════════════╬═════════════╬═════════════╬═════════════════╣" << endl;
     cout << END_COLOR;
 
     for (int i = 0; i < this->total_edificios; i++){
+        string brinda = EMOJI_MAL;
+        if ( brinda_material(this->edificios[i]->devolver_nombre_edificio()) )
+            brinda = EMOJI_HECHO;
+
+
         cout << "\t║" << setfill(' ') << setw(16) << this->edificios[i]->devolver_nombre_edificio() << "( " << this->edificios[i]->devolver_emoji() << " )" << setfill(' ') << setw(3);
         cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_piedra() << setfill(' ') << setw(8);
         cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_madera() << setfill(' ') << setw(8);
         cout << "│" << setfill(' ') << setw(8) << this->edificios[i]->devolver_metal() << setfill(' ') << setw(8);
-        cout << "│" << setfill(' ') << setw(14) << this->edificios[i]->devolver_maxima_cantidad_permitidos() << setfill(' ') << setw(15) << "║" << endl;
+        cout << "│" << setfill(' ') << setw(7) << mapa->cantidad_edificio_construido(this->edificios[i]->devolver_nombre_edificio()) << setfill(' ') << setw(9);
+        cout << "│" << setfill(' ') << setw(7) << this->edificios[i]->devolver_maxima_cantidad_permitidos()- mapa->cantidad_edificio_construido(this->edificios[i]->devolver_nombre_edificio()) << setfill(' ') << setw(9);
+        cout << "│" << setfill(' ') << setw(10) << brinda << setw(11) << "║" << endl;
         if(i < this->total_edificios - 1)
-            cout << "\t╠──────────────────────┼─────────────┼─────────────┼─────────────┼──────────────────────────╣" << endl;
+            cout << "\t╠──────────────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────────╣" << endl;
         else
-            cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩══════════════════════════╝" << endl;
+            cout << "\t╚══════════════════════╩═════════════╩═════════════╩═════════════╩═════════════╩═════════════╩═════════════════╝" << endl;
     }    
 }
 

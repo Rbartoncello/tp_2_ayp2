@@ -62,7 +62,7 @@ class Materiales{
          * Pre:
          * Post:
          */
-        void sumar_cantidad_material(int cantidad, string nombre);
+        void sumar_restar_cantidad_material(int cantidad, string nombre);
 
         /*
          * Pre:

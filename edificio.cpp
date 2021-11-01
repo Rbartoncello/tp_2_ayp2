@@ -56,5 +56,5 @@ void Edificio::mostrar(){
 }
 
 void Edificio::imprimir_resumen(){
-    cout <<"Soy un edificio de nombre " << nombre_edificio << " y me encuentro en el casillero consultado."<< endl;
+    cout <<"\tSoy un edificio de nombre " << nombre_edificio << " y me encuentro en el casillero consultado."<< endl;
 }

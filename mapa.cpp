@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <time.h>  
 #include <unistd.h>
+#include <iomanip>
 
 
 using namespace std;
@@ -115,13 +116,37 @@ void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int column
 }
 
 void Mapa::mostrar_edificios_construidos(){
+    system("clear");
+
+    cout << TXT_BOLD;
+    cout << "\t\t╔═══════════════════════╦══════╦═════════╦══════════════════════╗" << endl;
+    cout << "\t\t║ Edificios construidos ║ Fila ║ Columna ║ Cantidad construidos ║" << endl;
+    cout << "\t\t╠═══════════════════════╬══════╬═════════╬══════════════════════╣" << endl;
+    cout << END_COLOR;
+
+    bool hay_edificios = false;
+
     for (int i = 0; i < this->cantidad_filas; i++){
         for (int j = 0; j < this->cantidad_columnas; j++){
-            if ( this->casilleros[i][j]->devolver_tipo_terreno() == TERRENO && this->casilleros[i][j]->esta_ocupado()){
+            if ( ( this->casilleros[i][j]->devolver_tipo_terreno() == TERRENO ) && ( this->casilleros[i][j]->esta_ocupado() ) ){
+                hay_edificios = true;
+
                 this->casilleros[i][j]->mostrar_casillero();
+                cout << this->cantidad_edificio_construido(this->casilleros[i][j]->devolver_nombre_edificio()) << setfill(' ') << setw(14) << "║" << endl;
+                if( ( i == this->cantidad_filas - 1 ) && ( j == this->cantidad_columnas - 1 ) )
+                    cout << "\t\t╚═══════════════════════╩══════╩═════════╩══════════════════════╝" << endl;
+                else
+                    cout << "\t\t╠───────────────────────┼──────┼─────────┼──────────────────────╣" << endl;
             }
         }
     }
+
+    if (!hay_edificios){
+        cout << TXT_BOLD;
+        cout << "\t\t║ " << TXT_RED_196 << setfill(' ') << setw(49) << "NO HAY NINGUN EDIFICIO CONSTRUIDO" << setfill(' ') << setw(16) << END_COLOR << " ║" << endl;
+        cout << "\t\t╚═══════════════════════════════════════════════════════════════╝" << endl;
+    }
+    
 }
 
 int Mapa::cantidad_edificio_construido(string nombre){
@@ -178,9 +203,6 @@ int Mapa::numero_aleatorio(int desde, int hasta){
     
     while (numero > hasta)
         numero = ( desde + rand() % hasta );
-    
-    
-
     return numero;
 }
 
@@ -205,7 +227,7 @@ void Mapa::agregar_materiales(std::string material, int minimo, int maximo){
 
 void Mapa::lluvia_recursos(){
     system("clear");
-    cout << "\tLluvia de recusos ... " << EMOJI_LLUVIA << " " << EMOJI_LLUVIA_CON_TRUENOS << " " << EMOJI_LLUVIA << endl;
+    cout << "\tLluvia de recursos ... " << EMOJI_LLUVIA << " " << EMOJI_LLUVIA_CON_TRUENOS << " " << EMOJI_LLUVIA << endl;
     cout << "\t[Por favor espere]" << endl;
 
     agregar_materiales(PIEDRA, MIN_GENERAR_PIEDRA, MAX_GENERAR_PIEDRA);
@@ -218,4 +240,23 @@ void Mapa::lluvia_recursos(){
     cout << END_COLOR;
     sleep(1);
     system("clear");
+}
+
+bool Mapa::hay_algun_edificio_construido(){
+    bool hay_edificio = false;
+    int i = 0;
+
+    while ( ( i < this->devolver_cantidad_filas() ) && !(hay_edificio) ){
+        int j = 0;
+        while( ( j < this->devolver_cantidad_filas() ) && !(hay_edificio) ){
+            if( this->devolver_casillero(i,j)->esta_ocupado() )
+                hay_edificio = true;
+            else{
+                j++;
+            }
+        }
+        i++;
+    }
+
+    return hay_edificio;
 }

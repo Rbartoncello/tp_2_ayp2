@@ -136,6 +136,12 @@ class Mapa{
         */
         void lluvia_recursos();
 
+        /*
+         * Pre: -
+         * Post: Me devuelve TRUE si hay como minimo un edificio construido y FALSE en caso contrario.
+        */
+        bool hay_algun_edificio_construido();
+
     private:
         /*
          * Pre: El archivo tiene que estar abierto y de formato correcto.

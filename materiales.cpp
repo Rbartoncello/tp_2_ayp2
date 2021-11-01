@@ -90,16 +90,16 @@ bool Materiales::hay_suficiente_material(Edificio* edificio, string material){
     bool material_suficiente = false;
 
     if(edificio->devolver_cantidad_material(material) <= devolver_cantidad_material(material)){
-        cout << endl << "Cantidad de " << material <<": " << TXT_GREEN_34 << EMOJI_HECHO << END_COLOR << endl;
+        cout << "\t»Cantidad de " << material <<": " << TXT_GREEN_34 << EMOJI_HECHO << END_COLOR << endl;
         material_suficiente = true;
     } else{
-        cout << endl << "Cantidad de " << material <<": " << TXT_RED_124 << EMOJI_MAL <<" (falta :" << (edificio->devolver_cantidad_material(material) - devolver_cantidad_material(material)) << ")" << END_COLOR << endl;
+        cout << "\t»Cantidad de " << material <<": " << TXT_RED_124 << EMOJI_MAL <<" (falta :" << (edificio->devolver_cantidad_material(material) - devolver_cantidad_material(material)) << ")" << END_COLOR << endl;
     }
 
     return material_suficiente;
 }
 
-void Materiales::sumar_cantidad_material(int cantidad, string nombre){
+void Materiales::sumar_restar_cantidad_material(int cantidad, string nombre){
     int i = 0;
 
     while (nombre != this->materiales[i]->devolver_nombre_material()){
