@@ -81,6 +81,8 @@ class Casillero_construible : public Casillero{
          * Post: Metodo vacio para la clase casillero_transitable
         */
         string devolver_nombre_material(){return nullptr;};
+
+        Material* devolver_material(){return nullptr;};
 };
 
 #endif

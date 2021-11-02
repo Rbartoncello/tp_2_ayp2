@@ -85,7 +85,7 @@ int Edificios::procesar_archivo(){
         while ( archivo >> nombre ){
             if (nombre == PLANTA){
                 archivo >> nombre_aux;
-                nombre = nombre + " " + nombre_aux; 
+                nombre += " " + nombre_aux; 
             }
             
             string emoji = buscar_tipo_emoji(nombre);

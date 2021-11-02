@@ -180,6 +180,12 @@ class Mapa{
          * Post: Crea una cantidad n ( siendo min < n <max ) de ese material y los agrega al mapa
         */
         void agregar_materiales(string material, int minimo, int maximo);
+
+        /*
+         * Pre: -
+         * Post: Me muestra por pantalla la lista de objetos que parecen en el mapa.
+         */
+        void mostrar_objetos_mapa();
 };
 
 #endif

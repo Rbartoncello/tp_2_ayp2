@@ -79,4 +79,4 @@ class Edificio {
 
 };
 
-#endif //TP_2_AYP2_EDIFICIO_H
+#endif //EDIFICIO_H

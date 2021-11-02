@@ -2,11 +2,9 @@
 #include "colors.h"
 #include "emojis.h"
 #include "materiales.h"
-#include <fstream>
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
-#include <iomanip>
 
 Juego::Juego(){
     this->materiales = new Materiales;
@@ -46,7 +44,7 @@ int Juego::procesar_archivo_ubicaciones() {
         while (getline(archivo, nombre, ' ')) {
             if (nombre == PLANTA){
                 archivo >> nombre_aux;
-                nombre = nombre + " " + nombre_aux; 
+                nombre +=  " " + nombre_aux;
             }
             getline(archivo, basura, '(');
             getline(archivo, fila, ',');
@@ -141,11 +139,6 @@ void Juego::imprimir_mensaje_esperar(int tiempo) {
         cout << " segundos..." << EMOJI_RELOJ << endl;
         sleep(tiempo);
         system("clear");
-}
-
-void Juego::imprimir_mensaje_opcion_afirmativa_negativa() {
-        cout << TXT_BOLD << TXT_GREEN_118  <<  AFIRMATIVO  << END_COLOR << " , en caso afirmativo, o ";
-        cout << TXT_BOLD << TXT_LIGHT_RED_9  <<  NEGATIVO  << END_COLOR << " , en caso negativo." << endl;
 }
 
 void Juego::mostrar_opciones(){

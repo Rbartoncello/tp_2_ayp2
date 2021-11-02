@@ -54,26 +54,6 @@ mapa.h
 string
 -
 
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.cpp
-juego.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.h
-colors.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
-emojis.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/emojis.h
-materiales.h
-/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
-fstream
--
-iostream
--
-cstdlib
--
-unistd.h
--
-iomanip
--
-
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.h
 fstream
 -
@@ -98,6 +78,28 @@ casillero_construible.h
 
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/material.h
 string
+-
+
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.cpp
+materiales.h
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h
+juego.h
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/juego.h
+colors.h
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/colors.h
+emojis.h
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/emojis.h
+edificios.h
+/home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/edificios.h
+fstream
+-
+iostream
+-
+cstdlib
+-
+unistd.h
+-
+iomanip
 -
 
 /home/rbartoncello/Desktop/university/ayp2/tp_2_ayp2/materiales.h

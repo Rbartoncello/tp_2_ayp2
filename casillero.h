@@ -131,6 +131,8 @@ class Casillero{
          * Post: Metodo virtual vacio para la clase casillero_transferible
         */
         virtual string devolver_nombre_material(){return nullptr;};
+
+        virtual Material* devolver_material(){return nullptr;};
 };
 
 

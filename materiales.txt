@@ -1,6 +1,6 @@
-piedra 1154
-metal 1080
-madera 1330
+piedra 239
+metal 501
+madera 110
 oro 5000
 tierra 4573
 arena 4776

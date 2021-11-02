@@ -131,7 +131,7 @@ void Materiales::recolectar_recursos_producidos(Mapa* mapa){
     
     for (int i = 0; i < mapa->devolver_cantidad_filas(); i++){
         for (int j = 0; j < mapa->devolver_cantidad_columnas(); j++){
-            if( (mapa->devolver_casillero(i, j)->esta_ocupado()) ){
+            if( ( mapa->devolver_casillero(i, j)->esta_ocupado() ) && (mapa->devolver_casillero(i, j)->devolver_tipo_terreno() == TERRENO )  ){
                 if(mapa->devolver_casillero(i, j)->devolver_nombre_edificio() == EDIFICIO_MINA){
                     int posicion = this->buscar_material(PIEDRA);
                     materiales[posicion]->sumar_restar(AUMENTAR_CANTIDAD_PIEDRA);

@@ -37,11 +37,14 @@ void Casillero_transitable::imprimir_resumen(){
 }
 
 void Casillero_transitable::agregar_material(string nombre_material){
-    Material* material= new Material(nombre_material, 1);
-    this->material = material;
+    this->material = new Material(nombre_material, 1);
     this->ocupado = true;
 }
 
 string Casillero_transitable::devolver_nombre_material(){
     return this->material->devolver_nombre_material();
+}
+
+Material *Casillero_transitable::devolver_material(){
+    return this->material;
 }

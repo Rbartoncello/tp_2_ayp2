@@ -89,21 +89,7 @@ int Mapa::procesar_archivo(){
     return 0;
 }
 
-void Mapa::mostrar(){
-    system("clear");
-    for (int i = 0; i < this->cantidad_filas; i++){
-        cout << "\t" << BGND_BROWN_94 << i << " " << END_COLOR;
-        for (int j = 0; j < this->cantidad_columnas; j++){
-            this->casilleros[i][j]->mostrar();
-        }
-        cout << BGND_BROWN_94 << " " << END_COLOR;
-        cout << endl;
-    }
-    for (int i = 0; i < this->cantidad_columnas; i++){
-        if (i == 0)
-            cout << "\t  ";
-        cout << BGND_BROWN_94 << i << " " << END_COLOR;
-    }
+void Mapa::mostrar_objetos_mapa(){
     cout << endl;
     cout << TXT_UNDERLINE << TXT_BOLD <<"\tEdificio:\t\t\tMateriales" << END_COLOR << endl;
     cout << "\t-Mina ( " << EMOJI_MINA << " )\t\t\t-Piedra ( " << EMOJI_PIEDRA << "  )" << endl;
@@ -113,6 +99,42 @@ void Mapa::mostrar(){
     cout << "\t-Obelisco ( " << EMOJI_OBELISCO << " )" << endl;
     cout << "\t-Planta eléctrica ( " << EMOJI_PLANTA_ENERGIA << " )" << endl;
     cout << endl;
+}
+
+void Mapa::mostrar(){
+    system("clear");
+
+    for (int i = 0; i <= this->cantidad_columnas + 1; i++){
+        if (i == 0)
+            cout << "\t";
+        cout << BGND_BROWN_94 << "  " << END_COLOR;
+    }
+    cout << endl;
+
+    for (int i = 0; i < this->cantidad_filas; i++){
+        cout << "\t" << BGND_BROWN_94 << "  " << END_COLOR;
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            this->casilleros[i][j]->mostrar();
+        }
+        if ( i < 10 )
+            cout << BGND_BROWN_94 << i << " " << END_COLOR;
+        else
+            cout << BGND_BROWN_94 << i << END_COLOR;
+        cout << endl;
+    }
+
+    for (int i = 0; i <= this->cantidad_columnas; i++){
+        if (i == 0)
+            cout << "\t" << BGND_BROWN_94 << "  " << END_COLOR;
+        if ( ( i < this->cantidad_columnas ) && ( i < 10 ) )
+            cout << BGND_BROWN_94 << i << " " << END_COLOR;
+        else if ( ( i < this->cantidad_columnas ))
+            cout << BGND_BROWN_94 << i << END_COLOR;
+        else if ( i == this->cantidad_columnas )
+            cout << BGND_BROWN_94 << "  " << END_COLOR;
+    }
+
+    mostrar_objetos_mapa();
 }
 
 void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna){
@@ -280,6 +302,7 @@ void Mapa::cerrar_ubicaciones(string path){
                 }
                 if(casilleros[i][j]->devolver_tipo_terreno() == CAMINO){
                     archivo_ubicaciones << this-> casilleros[i][j]->devolver_nombre_material() << " (" << i << ", " << j << ")" "\n";
+                    delete casilleros[i][j]->devolver_material();
                 }
             }
             
