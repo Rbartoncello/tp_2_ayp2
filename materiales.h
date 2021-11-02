@@ -38,7 +38,7 @@ class Materiales{
          * Pre: -
          * Post: Guarda cada linea en un objeto Material
          */
-        void procesar_archivo();
+        int procesar_archivo();
 
         /*
          * Pre: -

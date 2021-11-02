@@ -11,7 +11,8 @@ const string EDIFICIO_ASERRADERO = "aserradero";
 const string EDIFICIO_FABRICA = "fabrica";
 const string EDIFICIO_ESCUELA = "escuela";
 const string EDIFICIO_OBELISCO = "obelisco";
-const string EDIFICIO_PLANTA_ELECTRICA = "planta_electrica";
+const string EDIFICIO_PLANTA_ELECTRICA = "planta eléctrica";
+const string PLANTA = "planta";
 
 class Edificios{
     private:
@@ -36,7 +37,7 @@ class Edificios{
          * Pre: -
          * Post: Guarda cada linea en un objeto Edificio
          */
-        void procesar_archivo();
+        int procesar_archivo();
 
         /*
          * Pre: -

@@ -1,4 +1,5 @@
 #include "edificios.h"
+#include "juego.h"
 #include "colors.h"
 #include "emojis.h"
 #include <fstream>
@@ -72,15 +73,21 @@ void Edificios::mostar(Mapa* mapa){
     }    
 }
 
-void Edificios::procesar_archivo(){
+int Edificios::procesar_archivo(){
 
     ifstream archivo(PATH_EDIFICIO);
-    string nombre, piedra, madera, metal, max_cant_permitidos;
+    string nombre, piedra, madera, metal, max_cant_permitidos, nombre_aux;
 
     if (!archivo.is_open()){
         cout << "No se pudo abrir el archivo: " << PATH_EDIFICIO << endl;
+        return ERROR;
     } else {
         while ( archivo >> nombre ){
+            if (nombre == PLANTA){
+                archivo >> nombre_aux;
+                nombre = nombre + " " + nombre_aux; 
+            }
+            
             string emoji = buscar_tipo_emoji(nombre);
             archivo >> piedra;
             archivo >> madera;
@@ -93,6 +100,8 @@ void Edificios::procesar_archivo(){
         }
         archivo.close();
     }
+
+    return 0;
 }
 
 string Edificios::buscar_tipo_emoji(string nombre_edificio){

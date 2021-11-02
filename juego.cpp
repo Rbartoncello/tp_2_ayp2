@@ -20,42 +20,34 @@ Juego::~Juego(){
     delete this->mapa;
 }
 
-void Juego::cargar_juego() {
-    this->materiales->procesar_archivo();
-    this->edificios->procesar_archivo();
-    this->mapa->procesar_archivo();
-    this->procesar_archivo_ubicaciones();
+int Juego::cargar_juego() {
+    int ejecucion = 0;
+
+    if( this->materiales->procesar_archivo() == ERROR )
+        ejecucion = ERROR;
+    else if( this->edificios->procesar_archivo() == ERROR )
+        ejecucion = ERROR;
+    else if ( this->mapa->procesar_archivo() == ERROR )
+        ejecucion = ERROR;
+    else if( this->procesar_archivo_ubicaciones() == ERROR )
+        ejecucion = ERROR;
+
+    return ejecucion;
 }
 
-void Juego::jugar(){
-
-    int opcion_elegida = 0;
-
-    this->mostrar_opciones();
-
-    opcion_elegida = pedir_opcion();
-
-    this->validar_opcion_ingresada(opcion_elegida);
-
-    while(opcion_elegida != GUARDA_SALIR){
-        this->procesar_opcion(opcion_elegida);
-        this->mostrar_opciones();
-        opcion_elegida = this->pedir_opcion();
-        this->validar_opcion_ingresada(opcion_elegida);
-
-    }
-
-    this->imprimir_mensaje_guardado();
-}
-
-void Juego::procesar_archivo_ubicaciones() {
+int Juego::procesar_archivo_ubicaciones() {
     ifstream archivo(PATH_UBICACIONES);
-    string nombre, fila, columna, basura;
+    string nombre, fila, columna, basura, nombre_aux;
 
     if (!archivo.is_open()) {
         cout << "No se pudo abrir el archivo: " << PATH_UBICACIONES << endl;
+        return ERROR;
     } else {
         while (getline(archivo, nombre, ' ')) {
+            if (nombre == PLANTA){
+                archivo >> nombre_aux;
+                nombre = nombre + " " + nombre_aux; 
+            }
             getline(archivo, basura, '(');
             getline(archivo, fila, ',');
             getline(archivo, columna, ')');
@@ -67,6 +59,7 @@ void Juego::procesar_archivo_ubicaciones() {
 
         archivo.close();
     }
+    return 0;
 }
 
 void Juego::mensaje_bienvenida(){
@@ -106,6 +99,27 @@ void Juego::mensaje_bienvenida(){
     cout << "\t\t\t\t\t\tPresione [ENTER] para continuar"<< endl;
     cin.get();
     system("clear");
+}
+
+void Juego::jugar(){
+
+    int opcion_elegida = 0;
+
+    this->mostrar_opciones();
+
+    opcion_elegida = pedir_opcion();
+
+    this->validar_opcion_ingresada(opcion_elegida);
+
+    while(opcion_elegida != GUARDA_SALIR){
+        this->procesar_opcion(opcion_elegida);
+        this->mostrar_opciones();
+        opcion_elegida = this->pedir_opcion();
+        this->validar_opcion_ingresada(opcion_elegida);
+
+    }
+
+    this->imprimir_mensaje_guardado();
 }
 
 void Juego::imprimir_mensaje_error() {
@@ -344,7 +358,8 @@ string Juego::pedir_nombre(){
     system("clear");
     string nombre_dado;
     cout << "Ingrese el nombre del edificio: ";
-    cin >> nombre_dado;
+    getline(cin, nombre_dado);
+    getline(cin, nombre_dado);
     return nombre_dado;
 }
 

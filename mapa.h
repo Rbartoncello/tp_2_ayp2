@@ -50,7 +50,7 @@ class Mapa{
          * Pre: -
          * Post: Guarda todos los datos del archivo en un objeto Mapa
          */
-        void procesar_archivo();
+        int procesar_archivo();
 
         /*
          * Pre: -

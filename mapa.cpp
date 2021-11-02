@@ -1,4 +1,5 @@
 #include "mapa.h"
+#include "juego.h"
 #include "materiales.h"
 #include "emojis.h"
 #include <iostream>
@@ -63,11 +64,12 @@ void Mapa::agregar_casillero(ifstream &archivo){
     }
 }
 
-void Mapa::procesar_archivo(){
+int Mapa::procesar_archivo(){
     ifstream archivo(PATH_MAPA);
     
     if (!(archivo.is_open())){
         cout << "No se puedo abrir el archivo: " << PATH_MAPA << endl;
+        return ERROR;
     } else {
         string fila, columna;
 
@@ -83,6 +85,8 @@ void Mapa::procesar_archivo(){
         }
         archivo.close();
     }
+
+    return 0;
 }
 
 void Mapa::mostrar(){
@@ -236,7 +240,7 @@ void Mapa::lluvia_recursos(){
 
     system("clear");
     cout << TXT_BOLD;
-    cout << "\tSe ha agregado recusos al mapa con exito " << EMOJI_HECHO << endl << endl;
+    cout << "\tSe ha agregado recursos al mapa con exito " << EMOJI_HECHO << endl << endl;
     cout << END_COLOR;
     sleep(1);
     system("clear");

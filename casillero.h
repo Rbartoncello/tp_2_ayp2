@@ -80,49 +80,49 @@ class Casillero{
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para la clase casillero_construible
+         * Post: Metodo virtual vacio para la clase casillero_construible
         */
         virtual void agregar_edificio(Edificio* edificio){};
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para la clase casillero_construible
+         * Post: Metodo virtual vacio para la clase casillero_construible
         */
         virtual void quitar_edificio(){};
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para la clase casillero_construible
+         * Post: Metodo virtual vacio para la clase casillero_construible
         */
         virtual string devolver_nombre_edificio(){return nullptr;};
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para la clase casillero_construible
+         * Post: Metodo virtual vacio para la clase casillero_construible
         */
         virtual Edificio* devolver_edificio(){return nullptr;};
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para las clases hijas
+         * Post: Metodo virtual vacio para las clases hijas
         */
         virtual bool esta_ocupado() = 0;
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para las clases hijas
+         * Post: Metodo virtual vacio para las clases hijas
         */
         virtual void mostrar_casillero() = 0;
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para las clases hijas
+         * Post: Metodo virtual vacio para las clases hijas
         */
         virtual void imprimir_resumen(){};
         
         /*
          * Pre: -
-         * Post: -          Metodo virtual vacio para la clase casillero_transitable
+         * Post: Metodo virtual vacio para la clase casillero_transitable
         */
         virtual void agregar_material(string nombre_material){};
 };

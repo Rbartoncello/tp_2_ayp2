@@ -3,9 +3,10 @@
 int main() {
     Juego juego;
 
-    juego.cargar_juego();
-
-    juego.jugar();
+    if (juego.cargar_juego() != ERROR){
+        juego.mensaje_bienvenida();
+        juego.jugar();  
+    }
 
     return 0;
 }

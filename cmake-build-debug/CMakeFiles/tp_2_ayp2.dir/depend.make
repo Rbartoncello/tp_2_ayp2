@@ -52,8 +52,10 @@ CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: \
  ../edificios.cpp \
  ../edificios.h \
  ../emojis.h \
+ ../juego.h \
  ../mapa.h \
- ../material.h
+ ../material.h \
+ ../materiales.h
 CMakeFiles/tp_2_ayp2.dir/juego.cpp.o: \
  ../casillero.h \
  ../casillero_construible.h \
@@ -88,7 +90,9 @@ CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
  ../casillero_transitable.h \
  ../colors.h \
  ../edificio.h \
+ ../edificios.h \
  ../emojis.h \
+ ../juego.h \
  ../mapa.cpp \
  ../mapa.h \
  ../material.h \
@@ -114,6 +118,7 @@ CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: \
  ../edificio.h \
  ../edificios.h \
  ../emojis.h \
+ ../juego.h \
  ../mapa.h \
  ../material.h \
  ../materiales.cpp \

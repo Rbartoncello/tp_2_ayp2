@@ -52,16 +52,9 @@ class Juego {
 
         /*
         * Pre: -
-        * Post: Guarda todos edificios en los casilleros del mapa
-        */
-        void procesar_archivo_ubicaciones();
-
-
-        /*
-        * Pre: -
         * Post: carga todos los archivos al juego
         */
-        void cargar_juego();
+        int cargar_juego();
 
         /*
         * Pre: -
@@ -172,6 +165,11 @@ class Juego {
         void mostrar_coordenada();
     
     private:
+        /*
+        * Pre: -
+        * Post: Guarda todos edificios en los casilleros del mapa
+        */
+        int procesar_archivo_ubicaciones();
 
         /*
          * Pre: -

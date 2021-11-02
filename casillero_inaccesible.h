@@ -34,25 +34,25 @@ class Casillero_inaccesible : public Casillero {
 
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         void agregar_edificio(Edificio* edificio){};
 
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         void quitar_edificio(){};
         
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         string devolver_nombre_edificio(){return nullptr;};
 
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         Edificio* devolver_edificio(){return nullptr;};
 
@@ -70,7 +70,7 @@ class Casillero_inaccesible : public Casillero {
         
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_transitable
+         * Post:          Metodo vacio para la clase casillero_transitable
         */
         virtual void agregar_material(string nombre_material){};
 };

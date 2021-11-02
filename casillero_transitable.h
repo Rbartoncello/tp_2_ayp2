@@ -40,25 +40,25 @@ class Casillero_transitable : public Casillero{
         
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         void agregar_edificio(Edificio* edificio){};
 
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         void quitar_edificio(){};
 
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         string devolver_nombre_edificio(){return nullptr;};
         
         /*
          * Pre: -
-         * Post: -          Metodo vacio para la clase casillero_construible
+         * Post: Metodo vacio para la clase casillero_construible
         */
         Edificio* devolver_edificio(){return nullptr;};
         

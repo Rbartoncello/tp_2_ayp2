@@ -1,4 +1,5 @@
 #include "materiales.h"
+#include "juego.h"
 #include "colors.h"
 #include "emojis.h"
 #include "edificios.h"
@@ -38,13 +39,14 @@ void Materiales::agregar_material(Material* material){
     this->total_materiales++;
 }
 
-void Materiales::procesar_archivo(){
+int Materiales::procesar_archivo(){
 
     ifstream archivo(PATH_MATERIALES);
     string nombre, cantidad;
 
     if (!archivo.is_open()){
         cout << "No se pudo abrir el archivo: " << PATH_MATERIALES << endl;
+        return ERROR;
     } else {
         while ( archivo >> nombre ){
             archivo >> cantidad;
@@ -54,6 +56,8 @@ void Materiales::procesar_archivo(){
 
         archivo.close();
     }
+
+    return 0;
 }
 
 void Materiales::mostrar(){
