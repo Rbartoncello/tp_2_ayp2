@@ -70,9 +70,15 @@ class Casillero_inaccesible : public Casillero {
         
         /*
          * Pre: -
-         * Post:          Metodo vacio para la clase casillero_transitable
+         * Post: Metodo vacio para la clase casillero_transitable
         */
-        virtual void agregar_material(string nombre_material){};
+        void agregar_material(string nombre_material){};
+
+        /*
+         * Pre: -
+         * Post: Metodo vacio para la clase casillero_transitable
+        */
+        string devolver_nombre_material(){return nullptr;};
 };
 
 

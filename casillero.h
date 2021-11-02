@@ -125,6 +125,12 @@ class Casillero{
          * Post: Metodo virtual vacio para la clase casillero_transitable
         */
         virtual void agregar_material(string nombre_material){};
+
+        /*
+         * Pre: -
+         * Post: Metodo virtual vacio para la clase casillero_transferible
+        */
+        virtual string devolver_nombre_material(){return nullptr;};
 };
 
 

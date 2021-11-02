@@ -163,3 +163,28 @@ void Materiales::imprimir_mensaje_recolectando_recursos_producidos() {
     sleep(2);
     system("clear");
 }
+
+bool Materiales::existe_material_por_nombre(string nombre){
+    int i = 0;
+    bool encontrado = false;
+
+    while ( ( i < this->total_materiales ) && !(encontrado)){
+        if(nombre == this->materiales[i]->devolver_nombre_material())
+            encontrado = true;
+        else
+            i++;
+    }
+    return encontrado;
+}
+
+void Materiales::cerrar(){
+    ofstream archivo_materiales(PATH_MATERIALES);
+
+    int cantidad_de_materiales = this->total_materiales;
+
+    for (int i = 0; i < cantidad_de_materiales; i++){
+        archivo_materiales << this -> materiales[i] ->devolver_nombre_material() << " " << this -> materiales[i] ->devolver_cantidad_material() << "\n";
+    }
+
+
+}

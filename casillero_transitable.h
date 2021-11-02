@@ -10,7 +10,7 @@
 class Casillero_transitable : public Casillero{
     private:
         bool ocupado;
-        Material material;
+        Material* material;
     public:
         /*
          * Constructor:
@@ -79,6 +79,12 @@ class Casillero_transitable : public Casillero{
          * Post: Crea un material con ese nombre y lo guarda en el atributo material
         */
         void agregar_material(string nombre_material);
+
+        /*
+         * Pre: Hay un material en esta posicion
+         * Post: Devuelve un material
+        */
+        string devolver_nombre_material();
 };
 
 #endif //CASILLERO_TRANSITABLE_H

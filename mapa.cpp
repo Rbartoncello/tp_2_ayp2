@@ -264,3 +264,27 @@ bool Mapa::hay_algun_edificio_construido(){
 
     return hay_edificio;
 }
+
+void Mapa::agregar_material_a_casillero(string material, int fila, int columna){
+    this->casilleros[fila][columna]->agregar_material(material);
+}
+
+void Mapa::cerrar_ubicaciones(string path){
+    ofstream archivo_ubicaciones(path);
+
+    for (int i = 0; i < this->cantidad_filas; i++){
+        for (int j = 0; j < this->cantidad_columnas; j++){
+            if(casilleros[i][j]->esta_ocupado()){
+                if(casilleros[i][j]->devolver_tipo_terreno() == TERRENO){
+                    archivo_ubicaciones << this-> casilleros[i][j]->devolver_nombre_edificio() << " (" << i << ", " << j << ")" "\n";
+                }
+                if(casilleros[i][j]->devolver_tipo_terreno() == CAMINO){
+                    archivo_ubicaciones << this-> casilleros[i][j]->devolver_nombre_material() << " (" << i << ", " << j << ")" "\n";
+                }
+            }
+            
+        }
+        
+    }
+
+}

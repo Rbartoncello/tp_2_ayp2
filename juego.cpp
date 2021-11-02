@@ -53,8 +53,13 @@ int Juego::procesar_archivo_ubicaciones() {
             getline(archivo, columna, ')');
             getline(archivo, basura);
 
-            Edificio *edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
-            this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna));
+            if(edificios->existe_edificio_por_nombre(nombre)){
+                Edificio *edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
+                this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna));
+            }
+            if(materiales->existe_material_por_nombre(nombre)){
+                this->mapa->agregar_material_a_casillero(nombre, stoi(fila), stoi(columna));
+            }
         }
 
         archivo.close();
@@ -442,4 +447,9 @@ void Juego::mostrar_coordenada(){
 
     system("clear");
     this->mapa->imprimir_resumen_casillero(fila, columna);    
+}
+
+void Juego::cerrar(){
+    this->materiales->cerrar();
+    this->mapa->cerrar_ubicaciones(PATH_UBICACIONES);
 }

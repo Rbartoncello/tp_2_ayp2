@@ -76,6 +76,18 @@ class Materiales{
          */
         int buscar_material(string material_buscar);
 
+        /*
+         * Pre: -
+         * Post: devuelve true si existe un material con ese nombre
+        */
+        bool existe_material_por_nombre(string nombre);
+
+        /*
+         * Pre: -
+         * Post: Guarda en materiales.txt los materiales que quedaron en el juego actual
+        */
+        void cerrar();
+        
     private:
         /*
          * Pre: Recibe un objeto Material.
@@ -88,6 +100,8 @@ class Materiales{
          * Post:
          */
         void imprimir_mensaje_recolectando_recursos_producidos();
+
+        
 };
 
 #endif

@@ -6,6 +6,7 @@
         "algorithm": "cpp",
         "fstream": "cpp",
         "*.tcc": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "iosfwd": "cpp"
     }
 }

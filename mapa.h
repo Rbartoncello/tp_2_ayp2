@@ -65,6 +65,12 @@ class Mapa{
         void agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna);
 
         /*
+         * Pre: nombre de material,fila y columna en indice de la matriz
+         * Post: Agrega al casillero marcado el material pasado por parametro
+         */
+        void agregar_material_a_casillero(string material, int fila, int columna);
+
+        /*
          * Pre: Recibe coordenadas que pertenecen al dominio de la matriz y donde hay un edificio construido
          * Post: Desocupa el casillero
         */
@@ -141,6 +147,8 @@ class Mapa{
          * Post: Me devuelve TRUE si hay como minimo un edificio construido y FALSE en caso contrario.
         */
         bool hay_algun_edificio_construido();
+
+        void cerrar_ubicaciones(string path);
 
     private:
         /*

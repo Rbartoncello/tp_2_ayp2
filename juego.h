@@ -163,6 +163,13 @@ class Juego {
          * Post: Pide al usuario una ubicacion via input y le infroma sobre el contenido del mismo.
         */
         void mostrar_coordenada();
+
+        /*
+         * Pre: -
+         * Post: Guarda en los archivos todos los cambios hechos durante el juego
+         */
+        void cerrar();
+
     
     private:
         /*
@@ -200,6 +207,7 @@ class Juego {
          * Post: repite el input hasta que se cumpla la condicion pedida (0 y n_columna).
         */
         void validar_columna(int &columna);
+
 
 };
 

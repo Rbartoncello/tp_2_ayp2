@@ -7,6 +7,7 @@ int main() {
         juego.mensaje_bienvenida();
         juego.jugar();  
     }
+    juego.cerrar();
 
     return 0;
 }
