@@ -14,41 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee438adb-57a4-40df-9753-aa51c1733eac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casillero.h" beforeDir="false" afterPath="$PROJECT_DIR$/casillero.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casillero_construible.h" beforeDir="false" afterPath="$PROJECT_DIR$/casillero_construible.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casillero_inaccesible.h" beforeDir="false" afterPath="$PROJECT_DIR$/casillero_inaccesible.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casillero_transitable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/casillero_transitable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casillero_transitable.h" beforeDir="false" afterPath="$PROJECT_DIR$/casillero_transitable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/juego.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/juego.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mapa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mapa.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/materiales.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/materiales.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tp_2_ayp2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tp_2_ayp2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ubicaciones.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ubicaciones.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edificio.h" beforeDir="false" afterPath="$PROJECT_DIR$/edificio.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edificios.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/edificios.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/juego.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/juego.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mapa.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapa.h" beforeDir="false" afterPath="$PROJECT_DIR$/mapa.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mapa.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/materiales.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/materiales.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/materiales.txt" beforeDir="false" afterPath="$PROJECT_DIR$/materiales.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ubicaciones.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ubicaciones.txt" afterDir="false" />
-    </list>
+    <list default="true" id="ee438adb-57a4-40df-9753-aa51c1733eac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +94,7 @@
       <workItem from="1635523357877" duration="2499000" />
       <workItem from="1635802534883" duration="5693000" />
       <workItem from="1635814596301" duration="781000" />
-      <workItem from="1635868275253" duration="4807000" />
+      <workItem from="1635868275253" duration="5446000" />
     </task>
     <servers />
   </component>
@@ -202,11 +168,6 @@
           <url>file://$PROJECT_DIR$/juego.cpp</url>
           <line>335</line>
           <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/materiales.cpp</url>
-          <line>134</line>
-          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
