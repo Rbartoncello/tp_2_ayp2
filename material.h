@@ -24,6 +24,11 @@ class Material{
         */
         Material();
 
+        /*
+        * Pre: -.
+        * Post: Me va agregar un emoji en el atributo emoji dependiendo si es piedra, madera o metal.
+        */
+
         string agregar_emoji(string nombre_matertial);
 
         /*
