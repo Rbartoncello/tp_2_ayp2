@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-06T20:05:32.616Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="urC-cUG_SC3SEf5MVReF" version="15.5.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-06T20:10:59.579Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="MfW6CK_P7uJwBAht9m4s" version="15.5.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1385" dy="1796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="950" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -490,6 +490,45 @@
         </mxCell>
         <mxCell id="DX40YdvMPcdN43nip_q0-46" value="- imprimir_mensaje_recolectado_recursos_producidos()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="DX40YdvMPcdN43nip_q0-30">
           <mxGeometry y="450" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-47" value="Edificios" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2807" y="120" width="423" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-48" value="- edificios **Edificios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="30" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-49" value="- total_edificios: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="60" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-50" value="" style="endArrow=none;html=1;rounded=0;entryX=1.002;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.015;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="DX40YdvMPcdN43nip_q0-47" source="DX40YdvMPcdN43nip_q0-51" target="DX40YdvMPcdN43nip_q0-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="179" as="sourcePoint" />
+            <mxPoint x="120" y="179" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-51" value="+ Edificios()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="90" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-52" value="+ ~Edificios()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="120" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-53" value="+ procesar_archivo()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="150" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-54" value="+ mostrar(mapa: *Mapa)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="180" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-55" value="+ existe_edificio_por_nombre(nombre: string)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="210" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-56" value="- agregar_edificio(edificio: *Edificio)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="240" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-57" value="- buscar_tipo_terreno(nombre_edificio string)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="270" width="423" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DX40YdvMPcdN43nip_q0-58" value="- brinda_material(nombre_edificio: string)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="DX40YdvMPcdN43nip_q0-47">
+          <mxGeometry y="300" width="423" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
