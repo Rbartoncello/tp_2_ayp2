@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-06T20:19:16.644Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="ROao91iWKi5dQD5-2M6Y" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-06T20:23:11.997Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="0JZFepYNhL4BaYpdA0Bd" version="15.7.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="543" dy="1434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -572,6 +572,65 @@
           <mxGeometry y="420" width="440" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Kev87G5NXUICbZVva8Oe-89" value="+ devolver_nombre_material() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontStyle=0" vertex="1" parent="Kev87G5NXUICbZVva8Oe-73">
+          <mxGeometry y="450" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.501;entryY=1.028;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=blockThin;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Kev87G5NXUICbZVva8Oe-90" target="Kev87G5NXUICbZVva8Oe-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-90" value="Casillero_inaccesible" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1560" y="-280" width="440" height="480" as="geometry">
+            <mxRectangle x="1560" y="-280" width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-91" value="- ocupado: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="30" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-92" value="- material: *Material" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="60" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-93" value="" style="endArrow=none;html=1;rounded=0;entryX=1.002;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.015;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Kev87G5NXUICbZVva8Oe-90" source="Kev87G5NXUICbZVva8Oe-94" target="Kev87G5NXUICbZVva8Oe-94">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="179" as="sourcePoint" />
+            <mxPoint x="120" y="179" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-94" value="+ Casillero_inaccesible(tipo_terreno : char, pos_x : int, pos_y : int  )" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="90" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-95" value="+ Casillero_inaccesible()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="120" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-96" value="+ esta_ocupado() : bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="150" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-97" value="+ mostrar()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="180" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-98" value="+ agregar_edificio(edificio : Edificio*)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="210" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-99" value="+ quitar_edificio()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="240" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-100" value="+ devolver_edificio_nombre_edificio() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="270" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-101" value="+ devolver_edificio() : Edificio*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="300" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-102" value="+ mostrar_casillero()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="330" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-103" value="+ imprimir_resumen()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="360" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-104" value="+ agregar_material(nombre_material : string)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="390" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-105" value="+ devolver_material() : Material*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
+          <mxGeometry y="420" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Kev87G5NXUICbZVva8Oe-106" value="+ devolver_nombre_material() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontStyle=0" vertex="1" parent="Kev87G5NXUICbZVva8Oe-90">
           <mxGeometry y="450" width="440" height="30" as="geometry" />
         </mxCell>
       </root>
