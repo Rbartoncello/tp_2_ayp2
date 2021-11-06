@@ -68,6 +68,16 @@ class Juego {
         */
         void mensaje_bienvenida();
 
+        
+
+        /*
+         * Pre: -
+         * Post: Guarda en los archivos todos los cambios hechos durante el juego
+         */
+        void cerrar();
+
+    
+    private:
         /*
         * Pre: -
         * Post: Imprimira por pantalla solamente "Error!!!".
@@ -163,15 +173,6 @@ class Juego {
          * Post: Pide al usuario una ubicacion via input y le infroma sobre el contenido del mismo.
         */
         void mostrar_coordenada();
-
-        /*
-         * Pre: -
-         * Post: Guarda en los archivos todos los cambios hechos durante el juego
-         */
-        void cerrar();
-
-    
-    private:
         /*
         * Pre: -
         * Post: Guarda todos edificios en los casilleros del mapa
