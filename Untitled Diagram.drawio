@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-06T19:57:21.895Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="cKJSnwdJPXD2X34vDYa8" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-06T19:57:36.424Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="05NnGNFx1WlA1qI07DDI" version="15.5.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="271" dy="1625" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2770" dy="2422" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -54,7 +54,7 @@
         <mxCell id="xGXZ_tOPPtuFmqoxac-9-241" value="&amp;nbsp;- cantidad_filas: int" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="60" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-3" value="&amp;nbsp;- cantidad_columnas : int" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-3" value="&amp;nbsp;- cantidad_columnas : int" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="90" width="420" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xGXZ_tOPPtuFmqoxac-9-29" value="+ buscar_por_coordenada()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
@@ -69,67 +69,67 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-4" value="+ procesar_archivo()&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-4" value="+ procesar_archivo()&amp;nbsp;" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="150" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-8" value="+ agregar_material_a_casillero(material: *Material, fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-8" value="+ agregar_material_a_casillero(material: *Material, fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="180" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-6" value="+ agregar_edificio_a_casillero(edificio: *Edificio, fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-6" value="+ agregar_edificio_a_casillero(edificio: *Edificio, fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="210" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-9" value="+ quitar_edificio_de_casillero(fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-9" value="+ quitar_edificio_de_casillero(fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="240" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-10" value="+ mostrar_edificios_construidos()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-10" value="+ mostrar_edificios_construidos()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="270" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-5" value="+ mostrar()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-5" value="+ mostrar()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="300" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-11" value="+ cantidad_edificio_construido(nombre: string)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-11" value="+ cantidad_edificio_construido(nombre: string)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="330" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-12" value="+ se_puede_construir(fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-12" value="+ se_puede_construir(fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="360" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-13" value="+ devolver_cantidad_filas()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-13" value="+ devolver_cantidad_filas()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="390" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-14" value="+ devolver_cantidad_columnas()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-14" value="+ devolver_cantidad_columnas()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="420" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-15" value="+ devolver_casillero(fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-15" value="+ devolver_casillero(fila: int, columna: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="450" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-17" value="+ devolver_edificio(fila: int, columhna: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-17" value="+ devolver_edificio(fila: int, columhna: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="480" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-16" value="+ devolver_resumen_casillero(fila: int, columna:int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-16" value="+ devolver_resumen_casillero(fila: int, columna:int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="510" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-18" value="+ lluvia_recursos()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-18" value="+ lluvia_recursos()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="540" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-19" value="+ hay_algun_edificio_construido()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-19" value="+ hay_algun_edificio_construido()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="570" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-20" value="+ cerrar_ubicaciones(path: string)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-20" value="+ cerrar_ubicaciones(path: string)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="600" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-21" value="- agregar_casillero(&amp;amp;archivo: ifstraeam)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-21" value="- agregar_casillero(&amp;amp;archivo: ifstraeam)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="630" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-22" value="- crear_matriz_casilleros()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-22" value="- crear_matriz_casilleros()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="660" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-24" value="- agregar_materiales(material: string, minimo: int, maximo: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-24" value="- agregar_materiales(material: string, minimo: int, maximo: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="690" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-23" value="- numero_aleatorio(desde: int, hasta: int)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-23" value="- numero_aleatorio(desde: int, hasta: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="720" width="420" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ObjNiQtIe-y4PP9NIwSY-25" value="- mostrar_objetos_mapa()" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-15">
+        <mxCell id="ObjNiQtIe-y4PP9NIwSY-25" value="- mostrar_objetos_mapa()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-15" vertex="1">
           <mxGeometry y="750" width="420" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xGXZ_tOPPtuFmqoxac-9-189" value="Casillero_transitable" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -326,7 +326,7 @@
           <mxGeometry y="90" width="176" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xGXZ_tOPPtuFmqoxac-9-253" value="Juego" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1370" y="110" width="300" height="960" as="geometry" />
+          <mxGeometry x="1980" y="105" width="300" height="960" as="geometry" />
         </mxCell>
         <mxCell id="xGXZ_tOPPtuFmqoxac-9-254" value="- edificios: *Edificios " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
           <mxGeometry y="30" width="300" height="30" as="geometry" />
