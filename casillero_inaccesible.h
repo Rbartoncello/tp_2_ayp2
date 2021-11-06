@@ -80,6 +80,10 @@ class Casillero_inaccesible : public Casillero {
         */
         string devolver_nombre_material(){return nullptr;};
 
+        /*
+         * Pre: -
+         * Post: Metodo vacio para la clase casillero_transitable
+        */
         Material* devolver_material(){return nullptr;};
 };
 

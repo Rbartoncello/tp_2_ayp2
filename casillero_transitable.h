@@ -86,6 +86,10 @@ class Casillero_transitable : public Casillero{
         */
         string devolver_nombre_material();
 
+        /*
+         * Pre: -
+         * Post: Me devuelve material
+         */
         Material* devolver_material();
 };
 
