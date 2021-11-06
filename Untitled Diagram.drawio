@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-06T19:33:11.074Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="tytNSE-NLgXZxZgFyizx" version="15.5.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-06T19:39:32.807Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="F1r2nkcj3r2E072DFiwm" version="15.5.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2031" dy="1074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2374" dy="1074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -189,11 +189,6 @@
               <mxPoint x="676" y="280" />
               <mxPoint x="815" y="280" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Kev87G5NXUICbZVva8Oe-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xGXZ_tOPPtuFmqoxac-9-204">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="598" y="460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xGXZ_tOPPtuFmqoxac-9-204" value="Casillero_no_accesible" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
