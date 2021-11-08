@@ -39,40 +39,28 @@ class Materiales{
         void mostrar();
 
         /*
-         * Pre: recibe el nombre de un material existente
-         * Post: devuelve la cantidad del material
-         */      
-        int devolver_cantidad_material(string nombre);
-
-        /*
-         * Pre:
-         * Post:
+         * Pre: Tiene que a ver un material con nombre_material si o si dentro de materiales.
+         * Post: Me vevolvera TRUE si hay la cantidad suficiente de nombre_material para construir edificio y FALSE en caso contrario
          */
-        bool hay_suficiente_material(Edificio* edificio, string material);
+        bool hay_suficiente_material(Edificio* edificio, string nombre_material);
 
         /*
-         * Pre:
-         * Post:
+         * Pre: Tiene que a ver un material con nombre_material si o si dentro de materiales.
+         * Post: Me sumara si cantidad es > 0  o me restara si cantidad < 0 el material de nombre_material del inventario
          */
-        void sumar_restar_cantidad_material(int cantidad, string nombre);
+        void sumar_restar_cantidad_material(int cantidad, string nombre_material);
 
         /*
-         * Pre:
-         * Post:
+         * Pre: El mapa tiene que tener cantidad_filas y cantidad_columnas majores que 0.
+         * Post: Me incrementara el inventario de PIEDRA, MADERA o METAL dependiendo si encontro en el mapa MINA, ASERRADERO o FABRICA
          */
         void recolectar_recursos_producidos(Mapa *mapa);
 
         /*
-         * Pre:
-         * Post:
-         */
-        int buscar_material(string material_buscar);
-
-        /*
          * Pre: -
-         * Post: devuelve true si existe un material con ese nombre
+         * Post: Devuelve true si existe un material con ese nombre
         */
-        bool existe_material_por_nombre(string nombre);
+        bool existe_material_por_nombre(string nombre_material);
 
         /*
          * Pre: -
@@ -82,16 +70,28 @@ class Materiales{
         
     private:
         /*
+         * Pre: recibe el nombre de un material existente
+         * Post: devuelve la cantidad del material
+         */      
+        int devolver_cantidad_material(string nombre_material);
+
+        /*
          * Pre: Recibe un objeto Material.
          * Post: Ingresa el objeto en un vector dinámico.
          */
         void agregar_material(Material* material);
 
         /*
-         * Pre:
-         * Post:
+         * Pre: -
+         * Post: Imprimira un mensaje por pantalla
          */
         void imprimir_mensaje_recolectando_recursos_producidos();
+
+        /*
+         * Pre: El material_buscar tiene que estar si o si dentro de materiales.
+         * Post: Devuelve el indice donde esta el material_buscar
+         */
+        int buscar_material(string material_buscar);
 
         
 };

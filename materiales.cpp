@@ -21,23 +21,6 @@ Materiales::~Materiales(){
     delete [] this->materiales;
 }
 
-void Materiales::agregar_material(Material* material){
-    int tope_viejo = this->total_materiales;
-
-    Material** nuevos_materiales = new Material* [ tope_viejo + 1 ];
-
-    for ( int i = 0; i < tope_viejo; i++ )
-        nuevos_materiales[i] = this->materiales[i];
-
-    nuevos_materiales[tope_viejo] = material;
-
-    if ( this->total_materiales != 0 )
-        delete [] this->materiales;
-
-    this->materiales = nuevos_materiales;
-    this->total_materiales++;
-}
-
 int Materiales::procesar_archivo(){
 
     ifstream archivo(PATH_MATERIALES);
@@ -78,56 +61,25 @@ void Materiales::mostrar(){
     }  
 }
 
-
-int Materiales::devolver_cantidad_material(string nombre){
-    int i = 0;
-
-    while (nombre != this->materiales[i]->devolver_nombre_material()){
-        i++;
-    }
-
-    return this->materiales[i]->devolver_cantidad_material();
-}
-
 bool Materiales::hay_suficiente_material(Edificio* edificio, string material){
     bool material_suficiente = false;
 
-    if(edificio->devolver_cantidad_material(material) <= devolver_cantidad_material(material)){
-        cout << "\t»Cantidad de " << material <<": " << TXT_GREEN_34 << EMOJI_HECHO << END_COLOR << endl;
+    if(edificio->devolver_cantidad_material(material) <= devolver_cantidad_material(material))
         material_suficiente = true;
-    } else{
-        cout << "\t»Cantidad de " << material <<": " << TXT_RED_124 << EMOJI_MAL <<" (falta :" << (edificio->devolver_cantidad_material(material) - devolver_cantidad_material(material)) << ")" << END_COLOR << endl;
-    }
 
     return material_suficiente;
 }
 
-void Materiales::sumar_restar_cantidad_material(int cantidad, string nombre){
+void Materiales::sumar_restar_cantidad_material(int cantidad, string nombre_material){
     int i = 0;
 
-    while (nombre != this->materiales[i]->devolver_nombre_material()){
+    while ( nombre_material != this->materiales[i]->devolver_nombre_material() )
         i++;
-    }
 
     this->materiales[i]->sumar_restar(cantidad);
 }
 
-int Materiales::buscar_material(string material_buscar){
-    bool encontrado = false;
-    int i = 0;
-
-    while ((i < this->total_materiales) && !(encontrado)){
-        if(this->materiales[i]->devolver_nombre_material() == material_buscar)
-            encontrado = true;
-        else
-            i++;
-    }
-    return i;
-}
-
-void Materiales::recolectar_recursos_producidos(Mapa* mapa){
-    system("clear");
-    
+void Materiales::recolectar_recursos_producidos(Mapa* mapa){    
     for (int i = 0; i < mapa->devolver_cantidad_filas(); i++){
         for (int j = 0; j < mapa->devolver_cantidad_columnas(); j++){
             if( ( mapa->devolver_casillero(i, j)->esta_ocupado() ) && (mapa->devolver_casillero(i, j)->devolver_tipo_terreno() == TERRENO )  ){
@@ -147,20 +99,6 @@ void Materiales::recolectar_recursos_producidos(Mapa* mapa){
         }
     }
     imprimir_mensaje_recolectando_recursos_producidos();
-}
-
-void Materiales::imprimir_mensaje_recolectando_recursos_producidos() {
-    cout << "\tRecolectando recursos producidos... " << EMOJI_BUSQUEDA << endl;
-
-    sleep(2);
-    system("clear");
-
-    cout << TXT_BOLD;
-    cout << "\t»Se han recolectado los recursos producidos con exito" << EMOJI_HECHO <<endl;
-    cout << END_COLOR;
-    
-    sleep(2);
-    system("clear");
 }
 
 bool Materiales::existe_material_por_nombre(string nombre){
@@ -184,6 +122,58 @@ void Materiales::cerrar(){
     for (int i = 0; i < cantidad_de_materiales; i++){
         archivo_materiales << this -> materiales[i] ->devolver_nombre_material() << " " << this -> materiales[i] ->devolver_cantidad_material() << "\n";
     }
+}
 
+int Materiales::devolver_cantidad_material(string nombre){
+    int i = 0;
 
+    while (nombre != this->materiales[i]->devolver_nombre_material())
+        i++;
+
+    return this->materiales[i]->devolver_cantidad_material();
+}
+
+void Materiales::agregar_material(Material* material){
+    int tope_viejo = this->total_materiales;
+
+    Material** nuevos_materiales = new Material* [ tope_viejo + 1 ];
+
+    for ( int i = 0; i < tope_viejo; i++ )
+        nuevos_materiales[i] = this->materiales[i];
+
+    nuevos_materiales[tope_viejo] = material;
+
+    if ( this->total_materiales != 0 )
+        delete [] this->materiales;
+
+    this->materiales = nuevos_materiales;
+    this->total_materiales++;
+}
+
+void Materiales::imprimir_mensaje_recolectando_recursos_producidos() {
+    system("clear");
+    cout << "\tRecolectando recursos producidos... " << EMOJI_BUSQUEDA << endl;
+
+    sleep(2);
+    system("clear");
+
+    cout << TXT_BOLD;
+    cout << "\t»Se han recolectado los recursos producidos con exito" << EMOJI_HECHO <<endl;
+    cout << END_COLOR;
+    
+    sleep(2);
+    system("clear");
+}
+
+int Materiales::buscar_material(string material_buscar){
+    bool encontrado = false;
+    int i = 0;
+
+    while ((i < this->total_materiales) && !(encontrado)){
+        if(this->materiales[i]->devolver_nombre_material() == material_buscar)
+            encontrado = true;
+        else
+            i++;
+    }
+    return i;
 }
