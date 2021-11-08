@@ -2,6 +2,7 @@
 #include "colors.h"
 #include "emojis.h"
 #include "materiales.h"
+#include "constantes.h"
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
@@ -68,7 +69,7 @@ int Juego::procesar_archivo_ubicaciones() {
 void Juego::mensaje_bienvenida(){
     system("clear");
     cout << TXT_BOLD << TXT_DARK_YELLOW_3 << "\
-\t\t     ___      .__   __.  _______  ____    ____ .______     ______    __       __       _______.             \n\
+\t\t     ___      .__   __.  _______  ____    ____ .______     ______    __       __       _______    \n\
 \t\t    /   \\     |  \\ |  | |       \\ \\   \\  /   / |   _  \\   /  __  \\  |  |     |  |     /       | _    \n\
 \t\t   /  ^  \\    |   \\|  | |  .--.  | \\   \\/   /  |  |_)  | |  |  |  | |  |     |  |    |   (----`(_)      \n\
 \t\t  /  /_\\  \\   |  . `  | |  |  |  |  \\_    _/   |   ___/  |  |  |  | |  |     |  |     \\   \\            \n\
@@ -144,27 +145,27 @@ void Juego::imprimir_mensaje_esperar(int tiempo) {
 void Juego::mostrar_opciones(){
 
     cout << TXT_LIGHT_AQUA_43;
-    cout << "\t\t\t\t\t╔════╦═════════════════════════════════════╗" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_UNO    << " ║ Construir edificio por nombre.      ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_DOS    << " ║ Listar los edificios construidos.   ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_TRES   << " ║ Listar todos los edificios.         ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_CUATRO << " ║ Demoler un edificio por coordenada. ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_CINCO  << " ║ Mostrar mapa.                       ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_SEIS  << " ║ Consultar coordenada.               ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_SIETE  << " ║ Mostrar inventario.                 ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_OCHO  << " ║ Recolectar recursos producidos.     ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_NUEVE  << " ║ Lluvia de recursos.                 ║" << endl;
-    cout << "\t\t\t\t\t╠────╬─────────────────────────────────────╣" << endl;
-    cout << "\t\t\t\t\t║ " << EMOJI_DIEZ   << " ║ Guarda y salir                      ║" << endl;
-    cout << "\t\t\t\t\t╚════╩═════════════════════════════════════╝" << endl;
+    cout << "\t\t\t\t\t╔════╦═══════════════════════════════════════╗" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_UNO << " ║" << END_COLOR <<" Construir edificio por nombre " << EMOJI_EDIFICIO_CONSTRUCION << TXT_LIGHT_AQUA_43 << "       ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_DOS << " ║" << END_COLOR <<" Listar los edificios construidos " << EMOJI_LISTA << TXT_LIGHT_AQUA_43 << "   ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_TRES << " ║" << END_COLOR <<" Listar todos los edificios " << EMOJI_LISTA  << TXT_LIGHT_AQUA_43 << "         ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_CUATRO << " ║" << END_COLOR <<" Demoler un edificio por coordenada " << EMOJI_MINA  << TXT_LIGHT_AQUA_43 <<" ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_CINCO << " ║" << END_COLOR <<" Mostrar mapa " << EMOJI_MAPA  << TXT_LIGHT_AQUA_43 << "                        ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_SEIS << " ║" << END_COLOR <<" Consultar coordenada " << EMOJI_BRUJULA << TXT_LIGHT_AQUA_43 << "               ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_SIETE << " ║" << END_COLOR <<" Mostrar inventario " << EMOJI_INVENTARIO << TXT_LIGHT_AQUA_43 << "                 ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_OCHO << " ║" << END_COLOR <<" Recolectar recursos producidos " << EMOJI_BUSQUEDA << TXT_LIGHT_AQUA_43 << "     ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_NUEVE << " ║" << END_COLOR <<" Lluvia de recursos " << EMOJI_LLUVIA << TXT_LIGHT_AQUA_43 << "                  ║" << endl;
+    cout << "\t\t\t\t\t╠────╬───────────────────────────────────────╣" << endl;
+    cout << "\t\t\t\t\t║ " << EMOJI_DIEZ << " ║" << END_COLOR <<" Guarda y salir " << EMOJI_GUARDA_SALIR << TXT_LIGHT_AQUA_43 << "                     ║" << endl;
+    cout << "\t\t\t\t\t╚════╩═══════════════════════════════════════╝" << endl;
     cout << END_COLOR;
 }
 

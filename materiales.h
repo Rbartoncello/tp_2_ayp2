@@ -7,14 +7,6 @@
 
 using namespace std;
 
-const string PIEDRA = "piedra";
-const string MADERA = "madera";
-const string METAL = "metal";
-
-const int AUMENTAR_CANTIDAD_PIEDRA = 15;
-const int AUMENTAR_CANTIDAD_MADERA = 25;
-const int AUMENTAR_CANTIDAD_METAL = 40;
-
 class Materiales{
     private:
         Material** materiales;

@@ -1,11 +1,9 @@
 #ifndef CASILLERO_TRANSITABLE_H
-#define CASILLERO__RANSITABLEH
+#define CASILLERO__RANSITABLE_H
 
 #include "iostream"
 #include <string>
 #include "casillero.h"
-
-
 
 class Casillero_transitable : public Casillero{
     private:

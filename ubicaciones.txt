@@ -1,2 +1,3 @@
 mina (4, 7)
 fabrica (7, 2)
+escuela (19, 19)

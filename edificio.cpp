@@ -1,5 +1,6 @@
 #include "edificio.h"
 #include "materiales.h"
+#include "constantes.h"
 #include <iostream>
 #include <string>
 
@@ -56,5 +57,5 @@ void Edificio::mostrar(){
 }
 
 void Edificio::imprimir_resumen(){
-    cout <<"\tSoy un edificio de nombre " << nombre_edificio << " y me encuentro en el casillero consultado."<< endl;
+    cout <<"\tSoy un edificio de nombre " << nombre_edificio << " ( " << emoji << " ) y me encuentro en el casillero consultado."<< endl;
 }

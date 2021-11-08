@@ -3,13 +3,12 @@
 #include "colors.h"
 #include "emojis.h"
 #include "edificios.h"
+#include "constantes.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
 #include <iomanip>
-
-const string PATH_MATERIALES = "materiales.txt";
 
 Materiales::Materiales(){
     this->total_materiales = 0;

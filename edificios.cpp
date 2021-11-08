@@ -2,13 +2,12 @@
 #include "juego.h"
 #include "colors.h"
 #include "emojis.h"
+#include "constantes.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
 #include <iomanip>
-
-const string PATH_EDIFICIO = "edificios.txt";
 
 Edificios::Edificios(){
     this->total_edificios = 0;

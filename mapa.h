@@ -7,16 +7,6 @@
 #include "casillero_construible.h"
 using namespace std;
 
-const int MIN_GENERAR_PIEDRA = 1;
-const int MAX_GENERAR_PIEDRA = 2;
-
-const int MIN_GENERAR_MADERA = 0;
-const int MAX_GENERAR_MADERA = 2;
-
-const int MIN_GENERAR_METAL = 2;
-const int MAX_GENERAR_METAL = 4;
-
-const char CAMINO = 'C', TERRENO = 'T', LAGO = 'L';
 
 class Mapa{
     private:
@@ -186,6 +176,12 @@ class Mapa{
          * Post: Me muestra por pantalla la lista de objetos que parecen en el mapa.
          */
         void mostrar_objetos_mapa();
+
+        /*
+         * Pre: -
+         * Post: Me devuleve TRUE si el si por lo menos hay como minimo 7 casilleros transitables no ocupados.
+         */
+        bool hay_lugar_minimo_material();
 };
 
 #endif

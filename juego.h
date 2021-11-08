@@ -1,34 +1,11 @@
 
-#ifndef TP_2_AYP2_JUEGO_H
-#define TP_2_AYP2_JUEGO_H
+#ifndef JUEGO_H
+#define JUEGO_H
 
 #include <fstream>
 #include "edificios.h"
 #include "materiales.h"
 #include "mapa.h"
-
-const string PATH_UBICACIONES = "ubicaciones.txt";
-
-const int MIN_OPCION = 1;
-const int MAX_OPCION = 10;
-
-const int AFIRMATIVO = 1;
-const int NEGATIVO = 2;
-
-const int ERROR = -1;
-
-const int CONSTRUIR_EDIFICIO_NOMBRE = 1;
-const int LISTAR_EDIFICIOS_CONSTRUIDOS = 2;
-const int LISTAR_TODOS_EDIFICIOS = 3;
-const int DEMOLER_EDIFICIO_COORDENADA = 4;
-const int MOSTAR_MAPA = 5;
-const int CONSULTAR_COORDENADA = 6;
-const int MOSTRAR_INVENTARIO = 7;
-const int RECOLECTAR_RECURSOS = 8;
-const int LLUVIA_RECURSOS = 9;
-const int GUARDA_SALIR = 10;
-
-const string VERSION_PGM = "2.0";
 
 class Juego {
     private:
@@ -68,15 +45,11 @@ class Juego {
         */
         void mensaje_bienvenida();
 
-        
-
         /*
          * Pre: -
          * Post: Guarda en los archivos todos los cambios hechos durante el juego
          */
         void cerrar();
-
-    
     private:
         /*
         * Pre: -
@@ -208,9 +181,7 @@ class Juego {
          * Post: repite el input hasta que se cumpla la condicion pedida (0 y n_columna).
         */
         void validar_columna(int &columna);
-
-
 };
 
 
-#endif //TP_2_AYP2_JUEGO_H
+#endif //JUEGO_H

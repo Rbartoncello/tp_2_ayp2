@@ -5,6 +5,7 @@ CMakeFiles/tp_2_ayp2.dir/casillero.cpp.o: \
  ../casillero.cpp \
  ../casillero.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../material.h
 CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: \
@@ -14,6 +15,7 @@ CMakeFiles/tp_2_ayp2.dir/casillero_construible.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../mapa.h \
  ../material.h
@@ -22,6 +24,7 @@ CMakeFiles/tp_2_ayp2.dir/casillero_inaccesible.cpp.o: \
  ../casillero_inaccesible.cpp \
  ../casillero_inaccesible.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../material.h
 CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: \
@@ -29,6 +32,7 @@ CMakeFiles/tp_2_ayp2.dir/casillero_transitable.cpp.o: \
  ../casillero_transitable.cpp \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../material.h
 CMakeFiles/tp_2_ayp2.dir/edificio.cpp.o: \
@@ -37,6 +41,7 @@ CMakeFiles/tp_2_ayp2.dir/edificio.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.cpp \
  ../edificio.h \
  ../mapa.h \
@@ -48,6 +53,7 @@ CMakeFiles/tp_2_ayp2.dir/edificios.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../edificios.cpp \
  ../edificios.h \
@@ -62,6 +68,7 @@ CMakeFiles/tp_2_ayp2.dir/juego.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../edificios.h \
  ../emojis.h \
@@ -76,6 +83,7 @@ CMakeFiles/tp_2_ayp2.dir/main.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../edificios.h \
  ../juego.h \
@@ -89,6 +97,7 @@ CMakeFiles/tp_2_ayp2.dir/mapa.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../edificios.h \
  ../emojis.h \
@@ -103,6 +112,7 @@ CMakeFiles/tp_2_ayp2.dir/material.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../emojis.h \
  ../mapa.h \
@@ -115,6 +125,7 @@ CMakeFiles/tp_2_ayp2.dir/materiales.cpp.o: \
  ../casillero_inaccesible.h \
  ../casillero_transitable.h \
  ../colors.h \
+ ../constantes.h \
  ../edificio.h \
  ../edificios.h \
  ../emojis.h \

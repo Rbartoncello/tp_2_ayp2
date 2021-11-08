@@ -2,6 +2,7 @@
 #include "juego.h"
 #include "materiales.h"
 #include "emojis.h"
+#include "constantes.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -10,10 +11,7 @@
 #include <unistd.h>
 #include <iomanip>
 
-
 using namespace std;
-
-const string PATH_MAPA = "mapa.txt";
 
 Mapa::Mapa(){
     this->cantidad_filas = 0;
@@ -91,13 +89,19 @@ int Mapa::procesar_archivo(){
 
 void Mapa::mostrar_objetos_mapa(){
     cout << endl;
-    cout << TXT_UNDERLINE << TXT_BOLD <<"\tEdificio:\t\t\tMateriales" << END_COLOR << endl;
-    cout << "\t-Mina ( " << EMOJI_MINA << " )\t\t\t-Piedra ( " << EMOJI_PIEDRA << "  )" << endl;
-    cout << "\t-Aserradero ( " << EMOJI_ASERRADERO << " )\t\t-Madera ( " << EMOJI_MADERA << "  )" << endl;
-    cout << "\t-Fabrica ( " << EMOJI_FABRICA << " )\t\t\t-Metal ( " << EMOJI_METAL << " )" << endl;
-    cout << "\t-Escuela ( " << EMOJI_ESCUELA << " )" << endl;
-    cout << "\t-Obelisco ( " << EMOJI_OBELISCO << " )" << endl;
-    cout << "\t-Planta eléctrica ( " << EMOJI_PLANTA_ENERGIA << " )" << endl;
+    cout << TXT_LIGHT_PURPLE_104;
+    cout <<"■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■" << endl;
+    cout << END_COLOR;
+    cout << TXT_LIGHT_PURPLE_104 << "║" << END_COLOR << "\t" << TXT_UNDERLINE << TXT_BOLD << "Edificio:\t\t\tMateriales" << END_COLOR << TXT_LIGHT_PURPLE_104 << "\t    ║" << END_COLOR << endl;
+    cout << TXT_LIGHT_PURPLE_104 << "■" << END_COLOR << "\t-Mina ( " << EMOJI_MINA << " )\t\t\t-Piedra ( " << EMOJI_PIEDRA << "  )" << TXT_LIGHT_PURPLE_104 << "\t    ■" << END_COLOR << endl;
+    cout << TXT_LIGHT_PURPLE_104 << "║" << END_COLOR << "\t-Aserradero ( " << EMOJI_ASERRADERO << " )\t\t-Madera ( " << EMOJI_MADERA << "  )" << TXT_LIGHT_PURPLE_104 << "\t    ║" << END_COLOR << endl;
+    cout << TXT_LIGHT_PURPLE_104 << "■" << END_COLOR << "\t-Fabrica ( " << EMOJI_FABRICA << " )\t\t\t-Metal ( " << EMOJI_METAL << " )" << TXT_LIGHT_PURPLE_104 << "\t    ■" << END_COLOR <<endl;
+    cout << TXT_LIGHT_PURPLE_104 << "║" << END_COLOR << "\t-Escuela ( " << EMOJI_ESCUELA << " )"  TXT_LIGHT_PURPLE_104 << "\t\t\t\t\t    ║" << END_COLOR << endl;
+    cout << TXT_LIGHT_PURPLE_104 << "■" << END_COLOR << "\t-Obelisco ( " << EMOJI_OBELISCO << " )" << TXT_LIGHT_PURPLE_104 << "\t\t\t\t    ■" << END_COLOR << endl;
+    cout << TXT_LIGHT_PURPLE_104 << "║" << END_COLOR << "\t-Planta eléctrica ( " << EMOJI_PLANTA_ENERGIA << " )" << TXT_LIGHT_PURPLE_104 << "\t\t\t    ║" << END_COLOR << endl;
+    cout << TXT_LIGHT_PURPLE_104;
+    cout <<"■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■ ═ ■" << endl;
+    cout << END_COLOR;
     cout << endl;
 }
 
@@ -250,21 +254,49 @@ void Mapa::agregar_materiales(std::string material, int minimo, int maximo){
         this->casilleros[fila_aleatoria][columna_aleatoria]->agregar_material(material);
     }
 }
+bool Mapa::hay_lugar_minimo_material(){
+    bool hay_lugar = false;
+    int sumatoria_lugares = 0;
+    int i = 0;
+    int j = 0;
+
+    while( ( i < this->devolver_cantidad_filas() ) && !(hay_lugar) ){
+        while( ( j < this->devolver_cantidad_columnas() ) && !(hay_lugar) ){
+            if(se_puede_generar_material(i, j))
+                sumatoria_lugares++;
+            if (sumatoria_lugares == 7)
+                hay_lugar = true;
+            else
+                j++;
+            
+        }
+        j = 0;
+        i++;
+    }
+
+    return hay_lugar;
+}
 
 void Mapa::lluvia_recursos(){
     system("clear");
-    cout << "\tLluvia de recursos ... " << EMOJI_LLUVIA << " " << EMOJI_LLUVIA_CON_TRUENOS << " " << EMOJI_LLUVIA << endl;
-    cout << "\t[Por favor espere]" << endl;
+    if (hay_lugar_minimo_material()){
+        
+        cout << "\tLluvia de recursos ... " << EMOJI_LLUVIA << " " << EMOJI_LLUVIA_CON_TRUENOS << " " << EMOJI_LLUVIA << endl;
+        cout << "\t[Por favor espere]" << endl;
 
-    agregar_materiales(PIEDRA, MIN_GENERAR_PIEDRA, MAX_GENERAR_PIEDRA);
-    agregar_materiales(MADERA, MIN_GENERAR_MADERA, MAX_GENERAR_MADERA);
-    agregar_materiales(METAL, MIN_GENERAR_METAL, MAX_GENERAR_METAL);
+        agregar_materiales(PIEDRA, MIN_GENERAR_PIEDRA, MAX_GENERAR_PIEDRA);
+        agregar_materiales(MADERA, MIN_GENERAR_MADERA, MAX_GENERAR_MADERA);
+        agregar_materiales(METAL, MIN_GENERAR_METAL, MAX_GENERAR_METAL);
 
-    system("clear");
-    cout << TXT_BOLD;
-    cout << "\tSe ha agregado recursos al mapa con exito " << EMOJI_HECHO << endl << endl;
-    cout << END_COLOR;
-    sleep(1);
+        system("clear");
+        cout << TXT_BOLD;
+        cout << "\tSe ha agregado recursos al mapa con exito " << EMOJI_HECHO << endl << endl;
+        cout << END_COLOR;
+        sleep(1);
+    } else {
+        cout << "No es posible agregar materiales en el mapa ya que no hay más lugar" << endl;
+        sleep(2);
+    }
     system("clear");
 }
 

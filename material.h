@@ -1,5 +1,6 @@
 #ifndef TP_2_AYP2_MATERIAL_H
 #define TP_2_AYP2_MATERIAL_H
+#include "constantes.h"
 #include <string>
 
 using namespace std;

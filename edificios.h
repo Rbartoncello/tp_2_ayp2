@@ -6,14 +6,6 @@
 
 using namespace std;
 
-const string EDIFICIO_MINA = "mina";
-const string EDIFICIO_ASERRADERO = "aserradero";
-const string EDIFICIO_FABRICA = "fabrica";
-const string EDIFICIO_ESCUELA = "escuela";
-const string EDIFICIO_OBELISCO = "obelisco";
-const string EDIFICIO_PLANTA_ELECTRICA = "planta electrica";
-const string PLANTA = "planta";
-
 class Edificios{
     private:
         Edificio** edificios;
