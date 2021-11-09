@@ -45,6 +45,12 @@ class Materiales{
         bool hay_suficiente_material(Edificio* edificio, string nombre_material);
 
         /*
+         * PRE: -
+         * POST: Me imprimira por pantalla los materiales necesarios para el edificio, comparando con los disponibles.
+        */
+        void imprimir_materiales_necesarios(Edificio* edificio);
+
+        /*
          * Pre: Tiene que a ver un material con nombre_material si o si dentro de materiales.
          * Post: Me sumara si cantidad es > 0  o me restara si cantidad < 0 el material de nombre_material del inventario
          */
@@ -93,7 +99,11 @@ class Materiales{
          */
         int buscar_material(string material_buscar);
 
-        
+        /*
+         * PRE: -
+         * POST: Devolvera un string, que representa un emoji, dependiendo si la cant_material_inventario es suficiente para cant_material_necesario.
+        */
+        string chequear_status(int cant_material_inventario, int cant_material_necesario);
 };
 
 #endif

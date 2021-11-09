@@ -64,12 +64,6 @@ class Juego {
         void imprimir_mensaje_esperar(int tiempo);
 
         /*
-        * Pre: -
-        * Post: Imprimira por pantalla AFIRMATIVA y NEGATIVA.
-        */
-        void imprimir_mensaje_opcion_afirmativa_negativa();
-
-        /*
          * Pre: -
          * Post: Imprime por pantalla las opciones.
         */
@@ -92,6 +86,12 @@ class Juego {
          * Post: repite el input hasta que se cumpla la condicion pedida (AFIRMATIVO y NEGATIVO).
         */
         void validar_opcion_construir(int &opcion_elegida);
+
+        /*
+         * Pre: -
+         * Post: Me imprimira por pantalla la action_realizada.
+        */
+        void imprimir_procesamiento_accion(string action_realizada, string nombre_edificio, string emoji_edificio);
 
         /*
          * Pre: -

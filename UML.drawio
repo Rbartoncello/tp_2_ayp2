@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-        <mxGraphModel dx="964" dy="2879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2067" dy="2879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
@@ -354,21 +354,21 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="xGXZ_tOPPtuFmqoxac-9-253" value="Juego" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="90" y="800" width="300" height="960" as="geometry"/>
+                    <mxGeometry x="-330" y="810" width="560" height="990" as="geometry"/>
                 </mxCell>
                 <mxCell id="xGXZ_tOPPtuFmqoxac-9-254" value="- edificios: *Edificios " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="30" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="30" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <UserObject label="&amp;nbsp;- materiales: *Materiales" link="https://github.com/Rbartoncello/tp_2_ayp2" id="DX40YdvMPcdN43nip_q0-0">
                     <mxCell style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                        <mxGeometry y="60" width="300" height="30" as="geometry"/>
+                        <mxGeometry y="60" width="560" height="30" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="DX40YdvMPcdN43nip_q0-1" value="&amp;nbsp;- mapa: *Mapa" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="90" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="90" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="xGXZ_tOPPtuFmqoxac-9-256" value="+ cargar_juego()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="120" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="120" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="xGXZ_tOPPtuFmqoxac-9-257" value="" style="endArrow=none;html=1;rounded=0;entryX=1.005;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.006;exitY=-0.058;exitDx=0;exitDy=0;exitPerimeter=0;" parent="xGXZ_tOPPtuFmqoxac-9-253" source="xGXZ_tOPPtuFmqoxac-9-256" target="xGXZ_tOPPtuFmqoxac-9-256" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -377,85 +377,88 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-2" value="+ Juego()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="150" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="150" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-4" value="+ ~Juego()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="180" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="180" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-5" value="+ jugar()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="210" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="210" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-6" value="+ mensaje_bienvenida()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="240" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="240" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-7" value="+ cerrar()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="270" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="270" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-8" value="- imprimir_mensaje_error()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="300" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="300" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-9" value="- imprimir_mensaje_esperar(tiempo: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="330" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="330" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-10" value="- imprimir_mensaje_opcion_afirmativa_negativa()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="360" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="360" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-12" value="- pedir_opcion()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="390" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="390" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-11" value="- mostrar_opciones()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="420" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="420" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-13" value="- validar_opcion_ingresada(&amp;amp;opcion_elegida: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="450" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="450" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-14" value="- validar_opcion_construir(&amp;amp;opcion_elegida: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="480" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="480" width="560" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="- imprimir_precesamiento_accion(accion_realizada: string,nombre_edificio: string, emoji_edificio: string)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xGXZ_tOPPtuFmqoxac-9-253">
+                    <mxGeometry y="510" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-15" value="- procesar_opcion(opcion: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="510" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="540" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-17" value="- imprimir_mensaje_error_ingreso()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="540" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="570" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-16" value="- imprimir_mensaje_guardado()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="570" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="600" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-18" value="- es_ocpcion_valida(opcion: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="600" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="630" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-19" value="- pedir_nombre()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="630" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="660" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-20" value="- calcular_costos(edificio: Edicficio*)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="660" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="690" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-21" value="- construir_edificio_nombre()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="690" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="720" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-22" value="- demoler_edificio_por_coordenada()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="720" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="750" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-24" value="- procesar_archivo_ubicaciones()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="750" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="780" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-23" value="- mostrar_coordenada()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="780" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="810" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-25" value="- pedir_fila()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="810" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="840" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-27" value="- pedir_columna()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="840" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="870" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-26" value="- mensaje_enter_continuar()" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="870" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="900" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-28" value="- validar_fila(&amp;amp;fila: int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="900" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="930" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-29" value="- validar_columna(&amp;amp;columna int)" style="text;whiteSpace=wrap;html=1;" parent="xGXZ_tOPPtuFmqoxac-9-253" vertex="1">
-                    <mxGeometry y="930" width="300" height="30" as="geometry"/>
+                    <mxGeometry y="960" width="560" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-62" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="xGXZ_tOPPtuFmqoxac-9-253" source="DX40YdvMPcdN43nip_q0-8" target="DX40YdvMPcdN43nip_q0-8" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -472,13 +475,13 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-30" value="Materiales" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="1110" y="870" width="380" height="480" as="geometry"/>
+                    <mxGeometry x="1060" y="870" width="480" height="540" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-31" value="- materiales: **Material" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="30" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="30" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-32" value="- total_material: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="60" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="60" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-33" value="" style="endArrow=none;html=1;rounded=0;entryX=1.002;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.015;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="DX40YdvMPcdN43nip_q0-30" source="DX40YdvMPcdN43nip_q0-34" target="DX40YdvMPcdN43nip_q0-34" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -487,40 +490,43 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-34" value="+ Materiales()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="90" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="90" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-35" value="+ ~Materiales() " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="120" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="120" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-36" value="+ procesar_archivo()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="150" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="150" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-37" value="+ mostrar()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="180" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="180" width="480" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="DX40YdvMPcdN43nip_q0-39" value="+ hay_suficioente_material(edificio: *Edificio, material: material)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="210" width="380" height="30" as="geometry"/>
+                <mxCell id="9" value="+ hay_suficioente_material(edificio: *Edificio, material: material)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="DX40YdvMPcdN43nip_q0-30">
+                    <mxGeometry y="210" width="480" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="DX40YdvMPcdN43nip_q0-39" value="+ imprimir_materiales_necesario(edificio: *Edificio)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
+                    <mxGeometry y="240" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-40" value="+ sumar_restar_cantidad_material(cantidad: int, nombre, strring)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="240" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="270" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-41" value="+ recolectar_recursos_producidos(mapa: *Mapa)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="270" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="300" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-43" value="+ existe_material_por_nombre(nombre: string)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="300" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="330" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-44" value="+ cerrar()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="330" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="360" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-45" value="- agregar_material(material: *Material)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="360" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="390" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-38" value="- devolver_cantidad_material(nombre: string) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="390" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="420" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-46" value="- imprimir_mensaje_recolectado_recursos_producidos()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="420" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="450" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-63" value="" style="endArrow=none;html=1;rounded=0;exitX=0.001;exitY=0.004;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="DX40YdvMPcdN43nip_q0-30" source="DX40YdvMPcdN43nip_q0-45" target="DX40YdvMPcdN43nip_q0-45" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -529,7 +535,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="DX40YdvMPcdN43nip_q0-42" value="- buscar_material(material_buscar: string) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="DX40YdvMPcdN43nip_q0-30" vertex="1">
-                    <mxGeometry y="450" width="380" height="30" as="geometry"/>
+                    <mxGeometry y="480" width="480" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="- checkar_status(cant_material_inventario: int,cant_material_necesario: int) : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="DX40YdvMPcdN43nip_q0-30">
+                    <mxGeometry y="510" width="480" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="DX40YdvMPcdN43nip_q0-47" target="DX40YdvMPcdN43nip_q0-77" edge="1">
                     <mxGeometry relative="1" as="geometry"/>

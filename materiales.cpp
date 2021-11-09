@@ -70,6 +70,36 @@ bool Materiales::hay_suficiente_material(Edificio* edificio, string material){
     return material_suficiente;
 }
 
+void Materiales::imprimir_materiales_necesarios(Edificio* edificio){
+
+    cout << TXT_BOLD;
+    cout << "\t╔═════════╦═══════════════════════╦══════════════════════════╦════════╗" << endl;
+    cout << "\t║/////////║ Materiales necesarios ║ Materiales en inventario ║ Estado ║" << endl;
+    cout << "\t╠═════════╬═══════════════════════╬══════════════════════════╬════════╣" << endl;
+    cout << END_COLOR;
+
+    int piedra_inventario = devolver_cantidad_material(PIEDRA);
+    int piedra_edificio = edificio->devolver_cantidad_material(PIEDRA);
+    
+    string status = chequear_status(piedra_inventario, piedra_edificio);
+    cout << "\t║ " << PIEDRA << "  │" << setfill(' ') << setw(12) << piedra_edificio << setfill(' ') << setw(14) << "│" << setfill(' ') << setw(14) << piedra_inventario << setfill(' ') << setw(18) << "│   " << status << "   ║" << endl;
+    cout << "\t╠─────────┼───────────────────────┼──────────────────────────┼────────╣" << endl;
+    
+    int madera_inventario = devolver_cantidad_material(MADERA);
+    int madera_edificio = edificio->devolver_cantidad_material(MADERA);
+
+    status = chequear_status(madera_inventario, madera_edificio);
+    cout << "\t║ " << MADERA << "  │" << setfill(' ') << setw(12) << madera_edificio << setfill(' ') << setw(14) << "│" << setfill(' ') << setw(14) << madera_inventario << setfill(' ') << setw(18) << "│   " << status << "   ║" << endl;
+    cout << "\t╠─────────┼───────────────────────┼──────────────────────────┼────────╣" << endl;
+    
+    int metal_inventario = devolver_cantidad_material(METAL);
+    int metal_edificio = edificio->devolver_cantidad_material(METAL);
+
+    status = chequear_status(metal_inventario, metal_edificio);
+    cout << "\t║  " << METAL << "  │" << setfill(' ') << setw(12) << metal_edificio << setfill(' ') << setw(14) << "│" << setfill(' ') << setw(14) << metal_inventario << setfill(' ') << setw(18) << "│   " << status << "   ║" << endl;
+    cout << "\t╚═════════╩═══════════════════════╩══════════════════════════╩════════╝" << endl;
+}
+
 void Materiales::sumar_restar_cantidad_material(int cantidad, string nombre_material){
     int i = 0;
 
@@ -176,4 +206,13 @@ int Materiales::buscar_material(string material_buscar){
             i++;
     }
     return i;
+}
+
+string Materiales::chequear_status(int cant_material_inventario, int cant_material_necesario){
+    string status = EMOJI_MAL;
+
+    if (cant_material_inventario >= cant_material_necesario)
+        status = EMOJI_HECHO;
+
+    return status;
 }
