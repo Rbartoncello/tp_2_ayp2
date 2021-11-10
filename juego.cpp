@@ -248,7 +248,7 @@ string Juego::pedir_nombre(){
     system("clear");
     string nombre_dado;
     cout << "Ingrese el nombre del edificio: ";
-    getline(cin, nombre_dado);
+    cin.ignore();
     getline(cin, nombre_dado);
     return nombre_dado;
 }
@@ -421,7 +421,7 @@ void Juego::demoler_edificio_por_coordenada(){
 
 void Juego::mensaje_enter_continuar(){
     cout << "Presione [ENTER] para continuar"<< endl;
-    cin.get();
+    cin.ignore();
     cin.get();
     system("clear");
 }
