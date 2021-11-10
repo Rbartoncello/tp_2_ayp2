@@ -1,3 +1,0 @@
-madera 300
-metal 980
-piedra 1015
