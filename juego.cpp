@@ -34,27 +34,6 @@ int Juego::cargar_juego() {
     return ejecucion;
 }
 
-void Juego::jugar(){
-
-    int opcion_elegida = 0;
-
-    this->mostrar_opciones();
-
-    opcion_elegida = pedir_opcion();
-
-    this->validar_opcion_ingresada(opcion_elegida);
-
-    while(opcion_elegida != GUARDA_SALIR){
-        this->procesar_opcion(opcion_elegida);
-        this->mostrar_opciones();
-        opcion_elegida = this->pedir_opcion();
-        this->validar_opcion_ingresada(opcion_elegida);
-
-    }
-
-    this->imprimir_mensaje_guardado();
-}
-
 void Juego::mensaje_bienvenida(){
     system("clear");
     cout << TXT_BOLD << TXT_DARK_YELLOW_3 << "\
@@ -94,9 +73,30 @@ void Juego::mensaje_bienvenida(){
     system("clear");
 }
 
+void Juego::jugar(){
+
+    int opcion_elegida = 0;
+
+    mostrar_opciones();
+
+    opcion_elegida = pedir_opcion();
+
+    validar_opcion_ingresada(opcion_elegida);
+
+    while(opcion_elegida != GUARDA_SALIR){
+        procesar_opcion(opcion_elegida);
+        mostrar_opciones();
+
+        opcion_elegida = pedir_opcion();
+        validar_opcion_ingresada(opcion_elegida);
+    }
+
+    imprimir_mensaje_guardado();
+}
+
 void Juego::cerrar(){
     this->materiales->cerrar();
-    this->mapa->cerrar_ubicaciones(PATH_UBICACIONES);
+    this->mapa->cerrar();
 }
 
 void Juego::imprimir_mensaje_error() {
@@ -230,12 +230,11 @@ int Juego::procesar_archivo_ubicaciones() {
             getline(archivo, columna, ')');
             getline(archivo, basura);
 
-            if(edificios->existe_edificio_por_nombre(nombre)){
-                Edificio *edificio_auxiliar = this->edificios->buscar_edificio_por_nombre(nombre);
-                this->mapa->agregar_edificio_a_casillero(edificio_auxiliar, stoi(fila), stoi(columna));
-            }
-            if(materiales->existe_material_por_nombre(nombre)){
-                this->mapa->agregar_material_a_casillero(nombre, stoi(fila), stoi(columna));
+            if(edificios->existe_edificio(nombre)){
+                Edificio *edificio_auxiliar = this->edificios->buscar_edificio(nombre);
+                this->mapa->agregar_edificio(edificio_auxiliar, stoi(fila), stoi(columna));
+            } else if(materiales->existe_material(nombre)){
+                this->mapa->agregar_material(nombre, stoi(fila), stoi(columna));
             }
         }
 
@@ -246,6 +245,7 @@ int Juego::procesar_archivo_ubicaciones() {
 
 string Juego::pedir_nombre(){
     system("clear");
+
     string nombre_dado;
     cout << "Ingrese el nombre del edificio: ";
     cin.ignore();
@@ -339,15 +339,15 @@ void Juego::imprimir_procesamiento_accion(string action_realizada, string nombre
 
 void Juego::construir_edificio_nombre(){
     
-    string nombre_edificio = this->pedir_nombre();
+    string nombre_edificio = pedir_nombre();
 
-    if (!this->edificios->existe_edificio_por_nombre(nombre_edificio)){
+    if ( !this->edificios->existe_edificio(nombre_edificio) ){
         cout << "No se ha encontrado el edificio: " << nombre_edificio << endl;
         imprimir_mensaje_esperar(2);
     } else{
-        Edificio* edificio = this->edificios->buscar_edificio_por_nombre(nombre_edificio);
+        Edificio* edificio = this->edificios->buscar_edificio(nombre_edificio);
 
-        if (this->calcular_costos(edificio)){
+        if (calcular_costos(edificio)){
             cout << endl << "\tLa construccion es posible, desea realizarla? ";
             cout << TXT_BOLD << TXT_GREEN_118 <<  AFIRMATIVO << ") SI ";
             cout << TXT_BOLD << TXT_LIGHT_RED_9 <<  NEGATIVO << ") NO " << END_COLOR << endl;
@@ -355,7 +355,7 @@ void Juego::construir_edificio_nombre(){
             int desea_construir = pedir_opcion();
             validar_opcion_construir(desea_construir);
 
-            if (desea_construir == AFIRMATIVO){
+            if ( desea_construir == AFIRMATIVO ){
                 mapa->mostrar();
 
                 int fila = pedir_fila();
@@ -364,11 +364,11 @@ void Juego::construir_edificio_nombre(){
                 int columna = pedir_columna();
                 validar_columna(columna);
 
-                if ( !(mapa->se_puede_construir(fila,columna) ) ){
+                if ( !( mapa->se_puede_construir(fila,columna) ) ){
                     cout << "No sera posible construir en la posicion ( " << fila << ", " << columna << " )" << endl;
                     imprimir_mensaje_esperar(2);
                 } else{
-                    mapa->agregar_edificio_a_casillero(edificio, fila, columna);
+                    mapa->agregar_edificio(edificio, fila, columna);
                     
                     materiales->sumar_restar_cantidad_material( -( edificio->devolver_piedra() ),PIEDRA );
                     materiales->sumar_restar_cantidad_material( -( edificio->devolver_madera() ),MADERA );
@@ -376,9 +376,8 @@ void Juego::construir_edificio_nombre(){
 
                     imprimir_procesamiento_accion(CONSTRUYENDO, edificio->devolver_nombre_edificio(), edificio->devolver_emoji());           
                 }
-            } else {
+            } else
                 system("clear");
-            }
         } else {
             system("clear");
             cout << "El edificio " << nombre_edificio << " no podra ser construido!" << endl;
@@ -393,6 +392,7 @@ void Juego::demoler_edificio_por_coordenada(){
 
     if(this->mapa->hay_algun_edificio_construido()){
         mapa->mostrar();
+        
         int fila = pedir_fila(); 
         validar_fila(fila);
 

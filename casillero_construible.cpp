@@ -35,9 +35,9 @@ void Casillero_construible::mostrar(){
 }
 
 void Casillero_construible::mostrar_casillero(){
-    cout << "\t\t║" << setfill(' ') << setw(16) << this->devolver_nombre_edificio() << "( " << this->devolver_edificio()->devolver_emoji() << " )" << setfill(' ') << setw(4);
-    cout << "│" << setfill(' ') << setw(4) << this->devolver_pos_y() << setfill(' ') << setw(5);
-    cout << "│" << setfill(' ') << setw(5) << this->devolver_pos_x() << setfill(' ') << setw(7);
+    cout << "\t\t║" << setfill(' ') << setw(16) << devolver_nombre_edificio() << "( " << devolver_edificio()->devolver_emoji() << " )" << setfill(' ') << setw(4);
+    cout << "│" << setfill(' ') << setw(4) << devolver_pos_y() << setfill(' ') << setw(5);
+    cout << "│" << setfill(' ') << setw(5) << devolver_pos_x() << setfill(' ') << setw(7);
     cout << "│" << setfill(' ') << setw(11);
 }
 

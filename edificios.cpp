@@ -93,9 +93,7 @@ int Edificios::procesar_archivo(){
             archivo >> metal;
             archivo >> max_cant_permitidos;
 
-            Edificio* edificio  = new Edificio (nombre, emoji, stoi(piedra), stoi(madera), stoi(metal), stoi   (max_cant_permitidos));
-
-            agregar_edificio(edificio);
+            agregar_edificio(new Edificio (nombre, emoji, stoi(piedra), stoi(madera), stoi(metal), stoi(max_cant_permitidos)));
         }
         archivo.close();
     }
@@ -123,7 +121,7 @@ string Edificios::buscar_tipo_emoji(string nombre_edificio){
     return emoji;  
 }
 
-bool Edificios::existe_edificio_por_nombre(string nombre){
+bool Edificios::existe_edificio(string nombre){
     int i = 0;
     bool encontrado = false;
 
@@ -136,12 +134,11 @@ bool Edificios::existe_edificio_por_nombre(string nombre){
     return encontrado;
 }
 
-Edificio* Edificios::buscar_edificio_por_nombre(string nombre){
+Edificio* Edificios::buscar_edificio(string nombre){
     int i = 0;
 
-    while (nombre != this->edificios[i]->devolver_nombre_edificio()){
+    while (nombre != this->edificios[i]->devolver_nombre_edificio())
         i++;
-    }
 
     return this->edificios[i];
 }

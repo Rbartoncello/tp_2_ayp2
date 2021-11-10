@@ -131,7 +131,7 @@ void Materiales::recolectar_recursos_producidos(Mapa* mapa){
     imprimir_mensaje_recolectando_recursos_producidos();
 }
 
-bool Materiales::existe_material_por_nombre(string nombre){
+bool Materiales::existe_material(string nombre){
     int i = 0;
     bool encontrado = false;
 

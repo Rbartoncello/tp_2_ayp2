@@ -20,8 +20,6 @@ class Edificio {
          */
         Edificio(string nombre_edificio, string emoji, int piedra, int madera, int metal, int   maxima_cantidad_permitidos);
 
-        //~Edificio();
-
         /*
          * Pre: -
          * Post: Me muestra por pantalla el objeto tipo Edificio.

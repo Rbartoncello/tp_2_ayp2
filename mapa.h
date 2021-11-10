@@ -52,13 +52,13 @@ class Mapa{
          * Pre: edificio bien hecho, fila y columna en indice de la matriz
          * Post: Agrega al casillero marcado el edificio pasado por parametro
          */
-        void agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna);
+        void agregar_edificio(Edificio* edificio, int fila, int columna);
 
         /*
          * Pre: nombre de material,fila y columna en indice de la matriz
          * Post: Agrega al casillero marcado el material pasado por parametro
          */
-        void agregar_material_a_casillero(string material, int fila, int columna);
+        void agregar_material(string material, int fila, int columna);
 
         /*
          * Pre: Recibe coordenadas que pertenecen al dominio de la matriz y donde hay un edificio construido
@@ -138,7 +138,11 @@ class Mapa{
         */
         bool hay_algun_edificio_construido();
 
-        void cerrar_ubicaciones(string path);
+        /*
+         * Pre: -
+         * Post: Guarda en PATH_UBICACIONES los materiales y edificios que quedaron en el juego actual
+         */
+        void cerrar();
 
     private:
         /*

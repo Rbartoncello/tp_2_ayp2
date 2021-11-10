@@ -1,5 +1,5 @@
-#ifndef TP_2_AYP2_MATERIAL_H
-#define TP_2_AYP2_MATERIAL_H
+#ifndef MATERIAL_H
+#define MATERIAL_H
 #include "constantes.h"
 #include <string>
 
@@ -29,7 +29,6 @@ class Material{
         * Pre: -.
         * Post: Me va agregar un emoji en el atributo emoji dependiendo si es piedra, madera o metal.
         */
-
         string agregar_emoji(string nombre_matertial);
 
         /*
@@ -76,4 +75,4 @@ class Material{
 };
 
 
-#endif //TP_2_AYP2_MATERIAL_H
+#endif //MATERIAL_H

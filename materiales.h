@@ -66,7 +66,7 @@ class Materiales{
          * Pre: -
          * Post: Devuelve true si existe un material con ese nombre
         */
-        bool existe_material_por_nombre(string nombre_material);
+        bool existe_material(string nombre_material);
 
         /*
          * Pre: -

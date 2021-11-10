@@ -141,7 +141,7 @@ void Mapa::mostrar(){
     mostrar_objetos_mapa();
 }
 
-void Mapa::agregar_edificio_a_casillero(Edificio* edificio, int fila, int columna){
+void Mapa::agregar_edificio(Edificio* edificio, int fila, int columna){
     this->casilleros[fila][columna]->agregar_edificio(edificio);
 }
 
@@ -319,12 +319,12 @@ bool Mapa::hay_algun_edificio_construido(){
     return hay_edificio;
 }
 
-void Mapa::agregar_material_a_casillero(string material, int fila, int columna){
+void Mapa::agregar_material(string material, int fila, int columna){
     this->casilleros[fila][columna]->agregar_material(material);
 }
 
-void Mapa::cerrar_ubicaciones(string path){
-    ofstream archivo_ubicaciones(path);
+void Mapa::cerrar(){
+    ofstream archivo_ubicaciones(PATH_UBICACIONES);
 
     for (int i = 0; i < this->cantidad_filas; i++){
         for (int j = 0; j < this->cantidad_columnas; j++){

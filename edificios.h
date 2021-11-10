@@ -38,16 +38,16 @@ class Edificios{
         void mostar(Mapa* mapa);
 
         /*
-         * Pre: Recibe un string (tiene que haber un edificio con el mismo nombre)
-         * Post: Busca un edificio con tal nombre y lo devuelve
+         * Pre: Tiene que haber un edificio con nombre_edificio.
+         * Post: Busca un edificio con nombre_edificio y lo devuelve.
         */
-        Edificio* buscar_edificio_por_nombre(string nombre);
+        Edificio* buscar_edificio(string nombre_edificio);
 
         /*
          * Pre: -
-         * Post: devuelve true si existe un edificio con ese nombre
+         * Post: Devuelve TRUE si existe un edificio con ese nombre y FALSE en caso contrario.
         */
-        bool existe_edificio_por_nombre(string nombre);
+        bool existe_edificio(string nombre_edificio);
         
     private:
 
@@ -58,14 +58,14 @@ class Edificios{
         void agregar_edificio(Edificio* edificio);
 
         /*
-         * Pre: Recibe un nombre existente
+         * Pre: Recibe un nombre_edificio existente
          * Post: devuelve el emoji de ese edificio
         */
         string buscar_tipo_emoji(string nombre_edificio);
 
         /*
          * Pre: 
-         * Post: devuelve TRUE el nombre_edificio es mina, aserradero o fabrica y FALSE en caso contrario.
+         * Post: Devuelve TRUE el nombre_edificio es mina, aserradero o fabrica y FALSE en caso contrario.
          */
         bool brinda_material(string nombre_edificio);
 
